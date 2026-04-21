@@ -337,9 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateStats() {
         const totals = {};
-        let rawAccumulation = 0; // Накопление радиации
-        let rawOutput = 0;       // Вывод радиации
+        let rawAccumulation = 0;
+        let rawOutput = 0;
 
+        // ---------- Сбор данных ----------
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
             if (!artData) return;
@@ -363,6 +364,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         totals['Радиация'] = rawAccumulation - rawOutput;
 
+        // ---------- Группировка статов ----------
+        const groups = {
+            '• Радиация': ['Радиация'],
+            '• Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
+            '• Еда и Вода': ['Еда', 'Вода'],
+            '• Лечение': ['Лечение переломов', 'Лечение порезов', 'Кровь', 'Здоровье'],
+            '• Параметры': ['Выносливость', 'Высота прыжка', 'Температура', 'Шанс на порез', 'Шанс перелома']
+        };
+
+        // Распределяем статы по группам
+        const grouped = {};
+        const ungrouped = {};
+
+        for (const [key, value] of Object.entries(totals)) {
+            if (Math.abs(value) < 0.01) continue; // Скрываем нули
+
+            let placed = false;
+            for (const [groupName, members] of Object.entries(groups)) {
+                if (members.includes(key)) {
+                    if (!grouped[groupName]) grouped[groupName] = [];
+                    grouped[groupName].push({ key, value });
+                    placed = true;
+                    break;
+                }
+            }
+            if (!placed) {
+                ungrouped[key] = value;
+            }
+        }
+
         // ---------- Логика цветов ----------
         const goodPositive = [
             'Вода', 'Выносливость', 'Высота прыжка', 'Еда',
@@ -372,33 +403,60 @@ document.addEventListener('DOMContentLoaded', () => {
         const badPositive = ['Шанс на порез', 'Шанс перелома'];
 
         function getColorClass(key, value) {
-            if (key === 'Радиация') {
-                return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
-            }
-            if (key === 'Температура') {
-                return (value >= -20 && value <= 40) ? '' : 'negative';
-            }
-            if (goodPositive.includes(key)) {
-                return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
-            }
-            if (badPositive.includes(key)) {
-                return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
-            }
+            if (key === 'Радиация') return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
+            if (key === 'Температура') return (value >= -20 && value <= 40) ? '' : 'negative';
+            if (goodPositive.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+            if (badPositive.includes(key)) return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
         // ---------- Рендер ----------
         statsPanel.innerHTML = '';
-        Object.keys(totals).sort().forEach(k => {
-            const val = totals[k];
-            if (Math.abs(val) < 0.01) return; // Скрываем нули
 
-            const colorClass = getColorClass(k, val);
-            const row = document.createElement('div');
-            row.className = `stat-row ${colorClass}`.trim();
-            row.innerHTML = `<span>${k}</span><span>${val > 0 ? '+' : ''}${parseFloat(val.toFixed(2))}</span>`;
-            statsPanel.appendChild(row);
+        // Рендерим группы в заданном порядке
+        const groupOrder = ['• Радиация', '• Защита', '• Еда и Вода', '• Лечение', '• Параметры'];
+        
+        groupOrder.forEach(groupName => {
+            if (!grouped[groupName] || grouped[groupName].length === 0) return;
+            
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'stat-group';
+            
+            const header = document.createElement('div');
+            header.className = 'stat-group-header';
+            header.textContent = groupName;
+            groupDiv.appendChild(header);
+            
+            grouped[groupName].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
+                const row = document.createElement('div');
+                row.className = `stat-row ${getColorClass(key, value)}`.trim();
+                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
+                groupDiv.appendChild(row);
+            });
+            
+            statsPanel.appendChild(groupDiv);
         });
+
+        // Рендерим негруппированные статы (если есть)
+        if (Object.keys(ungrouped).length > 0) {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'stat-group';
+            
+            const header = document.createElement('div');
+            header.className = 'stat-group-header';
+            header.textContent = '• Остальное';
+            groupDiv.appendChild(header);
+            
+            Object.keys(ungrouped).sort().forEach(key => {
+                const value = ungrouped[key];
+                const row = document.createElement('div');
+                row.className = `stat-row ${getColorClass(key, value)}`.trim();
+                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
+                groupDiv.appendChild(row);
+            });
+            
+            statsPanel.appendChild(groupDiv);
+        }
     }
 
     function getSavedBuilds() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; } }
