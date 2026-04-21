@@ -1,0 +1,22 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* Футер */
+.footer-button:hover {
+    background-color: #ffaa00;
+}
+
+/* Кнопка Discord */
+.footer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffb000;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: 0.3s;
+}

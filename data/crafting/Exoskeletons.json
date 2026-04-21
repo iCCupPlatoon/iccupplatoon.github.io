@@ -1,0 +1,927 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1000
+            }
+        ],
+        "image": "Era_Exoskeleton.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 1 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 1 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1500
+            }
+        ],
+        "image": "Era_Exoskeleton.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 2 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 2 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 2000
+            }
+        ],
+        "image": "Era_Exoskeleton.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 3 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 3 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 3000
+            }
+        ],
+        "image": "Era_Exoskeleton.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 4 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 5
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 5
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 150
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 150
+            }
+        ],
+        "image": "CJ_Materials_Circuit_Board.png",
+        "description": "Модуль снижения отдачи для экзоскелета.",
+        "item_name": "Модуль снижения отдачи"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1000
+            }
+        ],
+        "image": "Grotesk_Exo.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 1 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 1 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1500
+            }
+        ],
+        "image": "Grotesk_Exo.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 2 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 2 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 2000
+            }
+        ],
+        "image": "Grotesk_Exo.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 3 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет 3 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 3000
+            }
+        ],
+        "image": "Grotesk_Exo.png",
+        "description": "Экспериментальный образец военного экзоскелета.",
+        "item_name": "Экзоскелет 4 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1000
+            }
+        ],
+        "image": "TNRJ_Exo.png",
+        "description": "Прочный и функциональный экзоскелет.",
+        "item_name": "Экзоскелет Ратник 1 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет Ратник 1 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 1500
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 1500
+            }
+        ],
+        "image": "TNRJ_Exo.png",
+        "description": "Прочный и функциональный экзоскелет.",
+        "item_name": "Экзоскелет Ратник 2 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет Ратник 2 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 2000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 2000
+            }
+        ],
+        "image": "TNRJ_Exo.png",
+        "description": "Прочный и функциональный экзоскелет.",
+        "item_name": "Экзоскелет Ратник 3 образца"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Экзоскелет Ратник 3 образца",
+                
+                "count": 1
+
+            },
+            {
+                "class_name": "Лебедка",
+                
+
+                "quantity": 10
+            },
+            {
+                "class_name": "Печатная плата",
+                
+                "count": 10
+
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Пучок проводов",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Диод",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Резистор",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Медная катушка",
+                
+
+                "quantity": 3000
+            },
+            {
+                "class_name": "Отвертка",
+                
+
+                "quantity": 3000
+            }
+        ],
+        "image": "TNRJ_Exo.png",
+        "description": "Прочный и функциональный экзоскелет.",
+        "item_name": "Экзоскелет Ратник 4 образца"
+    }
+]

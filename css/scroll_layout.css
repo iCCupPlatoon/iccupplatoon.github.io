@@ -1,0 +1,90 @@
+/* 
+  Scroll Layout & Scrollbar Styles
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* ======================
+   Базовый layout страницы
+====================== */
+
+html, body {
+    height: 100%;
+    overflow: hidden; /* ⛔ отключаем прокрутку страницы */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Центральная область */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* main не скроллится */
+}
+
+/* ======================
+   Детекторы — скролл сетки
+====================== */
+
+.furniture-grid {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* ======================
+   Артефакты — скролл сетки
+====================== */
+
+.artefact-grid {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+/* ======================
+   СТИЛЬ СКРОЛЛА
+====================== */
+
+/* WebKit (Chrome, Edge, Safari) */
+.furniture-grid::-webkit-scrollbar,
+.artefact-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.furniture-grid::-webkit-scrollbar-track,
+.artefact-grid::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 4px;
+}
+
+.furniture-grid::-webkit-scrollbar-thumb,
+.artefact-grid::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #ffb000,
+        #c48a00
+    );
+    border-radius: 4px;
+}
+
+/* Hover */
+.furniture-grid::-webkit-scrollbar-thumb:hover,
+.artefact-grid::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        180deg,
+        #ffd36a,
+        #ffb000
+    );
+}
+
+/* Firefox */
+.furniture-grid,
+.artefact-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #ffb000 #1c1c1c;
+}

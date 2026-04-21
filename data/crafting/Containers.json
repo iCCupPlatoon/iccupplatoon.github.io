@@ -1,0 +1,158 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Ящик для хранения 10-ти частей мутантов",
+                "quantity": 0
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 3
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 10
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 5
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 5
+            },
+            {
+                "class_name": "Кусочки пластика",
+                "quantity": 5
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 5
+            }
+        ],
+        "image": "BoxMutants.png",
+        "description": "Изнутри исходит странный запах, перед открытием, используйте противогаз.",
+        "item_name": "Ящик для хранения 20-ти частей мутантов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ящик для хранения 20-ти частей мутантов",
+                "count": 1
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 3
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 25
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 10
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 10
+            },
+            {
+                "class_name": "Кусочки пластика",
+                "quantity": 10
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 10
+            }
+        ],
+        "image": "BoxMutants.png",
+        "description": "Изнутри исходит странный запах, перед открытием, используйте противогаз.",
+        "item_name": "Ящик для хранения 30-ти частей мутантов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ящик для хранения 30-ти частей мутантов",
+                "count": 1
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 3
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 50
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 25
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 25
+            },
+            {
+                "class_name": "Кусочки пластика",
+                "quantity": 15
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 25
+            }
+        ],
+        "image": "BoxMutants.png",
+        "description": "Изнутри исходит странный запах, перед открытием, используйте противогаз.",
+        "item_name": "Ящик для хранения 50-ти частей мутантов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 175
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 175
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 175
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 175
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 175
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 175
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 175
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 175
+            },
+            {
+                "class_name": "Плоскогубцы",
+                "quantity": 175
+            },
+            {
+                "class_name": "Кусочки пластика",
+                "quantity": 90
+            },
+            {
+                "class_name": "Леска",
+                "quantity": 175
+            }
+        ],
+        "image": "Case_repair.png",
+        "description": "Способен чинить.",
+        "item_name": "Кейс чинилка"
+    }
+]

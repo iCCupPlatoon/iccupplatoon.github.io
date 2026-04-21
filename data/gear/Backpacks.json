@@ -1,0 +1,344 @@
+[
+    {
+        "name": "Туристический рюкзак",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Туристический рюкзак.",
+                "images": [
+                    "images/gear/Backpacks/turist/turist_backpack_1.png",
+                    "images/gear/Backpacks/turist/turist_backpack_2.png",
+                    "images/gear/Backpacks/turist/turist_backpack_3.png",
+                    "images/gear/Backpacks/turist/turist_backpack_4.png",
+                    "images/gear/Backpacks/turist/turist_backpack_5.png",
+                    "images/gear/Backpacks/turist/turist_backpack_6.png",
+                    "images/gear/Backpacks/turist/turist_backpack_7.png",
+                    "images/gear/Backpacks/turist/turist_backpack_8.png",
+                    "images/gear/Backpacks/turist/turist_backpack_9.png",
+                    "images/gear/Backpacks/turist/turist_backpack_10.png",
+                    "images/gear/Backpacks/turist/turist_backpack_11.png",
+                    "images/gear/Backpacks/turist/turist_backpack_12.png",
+                    "images/gear/Backpacks/turist/turist_backpack_13.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Туристический рюкзак — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 6 оружий, 2 рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 800
+                }
+            }
+        ]
+    },
+    {
+        "name": "Рюкзак Купол",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Рюкзак Купол.",
+                "images": [
+                    "images/gear/Backpacks/kupol/kupol_backpack_1.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_2.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_3.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_4.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_5.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_6.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_7.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_8.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_9.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_10.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_11.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_12.png",
+                    "images/gear/Backpacks/kupol/kupol_backpack_13.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак Купол — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, 2 рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 800
+                }
+            }
+        ]
+    },
+    {
+        "name": "Экзоскелет I образца",
+        "variants": [
+            {
+                "rank": "Тир I",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_1_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_1_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет I образца — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 500,
+                    "Артефакты": 0
+                }
+            },
+            {
+                "rank": "Тир II",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_1_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_1_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет I образца — Защита от радиации: 0. Вместимость: 750 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 2.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 750,
+                    "Артефакты": 2
+                }
+            },
+            {
+                "rank": "Тир III",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_1_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_1_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет I образца — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5
+                }
+            },
+            {
+                "rank": "Тир IV",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_1_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_1_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет I образца — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5,
+                    "Скорость": 1.5
+                }
+            }
+        ]
+    },
+    {
+        "name": "Экзоскелет II образца",
+        "variants": [
+            {
+                "rank": "Тир I",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_2_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_2_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет II образца — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 500,
+                    "Артефакты": 0
+                }
+            },
+            {
+                "rank": "Тир II",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_2_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_2_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет II образца — Защита от радиации: 0. Вместимость: 750 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 2.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 750,
+                    "Артефакты": 2
+                }
+            },
+            {
+                "rank": "Тир III",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_2_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_2_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет II образца — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5
+                }
+            },
+            {
+                "rank": "Тир IV",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_obraz_2_1.png",
+                    "images/gear/Backpacks/exo/exo_obraz_2_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет II образца — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5,
+                    "Скорость": 1.5
+                }
+            }
+        ]
+    },
+    {
+        "name": "Экзоскелет Ратник",
+        "variants": [
+            {
+                "rank": "Тир I",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_ratnik_1.png",
+                    "images/gear/Backpacks/exo/exo_ratnik_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет Ратник — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 500,
+                    "Артефакты": 0
+                }
+            },
+            {
+                "rank": "Тир II",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_ratnik_1.png",
+                    "images/gear/Backpacks/exo/exo_ratnik_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет Ратник — Защита от радиации: 0. Вместимость: 750 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 2.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 750,
+                    "Артефакты": 2
+                }
+            },
+            {
+                "rank": "Тир III",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_ratnik_1.png",
+                    "images/gear/Backpacks/exo/exo_ratnik_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет Ратник — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5
+                }
+            },
+            {
+                "rank": "Тир IV",
+                "description": "Можно надеть с ранга ветеран.",
+                "images": [
+                    "images/gear/Backpacks/exo/exo_ratnik_1.png",
+                    "images/gear/Backpacks/exo/exo_ratnik_2.png"
+                ],
+                "slots": [
+                    {
+                        "backpack": 1,
+                        "description": "Экзоскелет Ратник — Защита от радиации: 0. Вместимость: 1000 слотов. Крепления: иньектор, модуль снижения отдачи. Активные артефакты: 5.",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Кол-во слотов": 1000,
+                    "Артефакты": 5,
+                    "Скорость": 1.5
+                }
+            }
+        ]
+    }
+]

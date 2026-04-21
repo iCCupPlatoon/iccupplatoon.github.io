@@ -1,0 +1,116 @@
+<!-- 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор артефактов - GroteskStalker PvE Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Основные css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/artifact_calc.css">
+    <!-- Компоненты css -->
+    <link rel="stylesheet" href="css/components/garland.css">
+    <link rel="stylesheet" href="css/components/fon.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+</head>
+<body>
+    <!-- гирлянда -->
+    <div id="garland"></div>
+
+    <header>
+        <h1>Калькулятор Артефактов</h1>
+    </header>
+
+    <!-- меню -->
+    <div id="nav"></div>
+
+    <div class="container">
+        <main id="content">
+            <!-- Вкладка артефактов -->
+            <div id="artifacts-tab" class="tab-content" style="display:flex; gap:2%;">
+
+                <!-- Левая колонка: выбранные артефакты -->
+                <div class="artifact-column">
+                    <h3>Выбранные артефакты</h3>
+
+                    <div style="display:flex; gap:5px; margin-bottom:5px; flex-wrap:wrap;">
+                        <button id="clear-build">Очистить сборку</button>
+                        <button id="confirm-artifact">Выбрать артефакт</button>
+                        <button id="save-build">Сохранить сборку</button>
+                        <button id="load-build">Загрузить сборку</button>
+                        <button id="share-build">Поделиться сборкой</button>
+                    </div>
+
+                    <div id="artifact-count">Количество артефактов: 0</div>
+                    <ul id="selected-artifacts"></ul>
+                </div>
+
+                <!-- Средняя колонка: свойства артефакта -->
+                <div class="artifact-column">
+                    <h3>Свойства выбранного артефакта</h3>
+
+                    <div id="artifact-properties" class="outlined-box">
+                        Выберите артефакт
+                    </div>
+
+                    <!-- Управление тиром -->
+                    <div class="control-block outlined-box">
+                        <h4>Тир</h4>
+                        <div class="vertical-select">
+                            <div class="value-box" id="tier-value">1</div>
+                            <div class="arrows">
+                                <div class="arrow up" id="tier-up">▲</div>
+                                <div class="arrow down" id="tier-down">▼</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Управление копиями -->
+                    <div class="control-block outlined-box">
+                        <h4>Копии</h4>
+                        <div class="vertical-select">
+                            <div class="value-box" id="copies-value">1</div>
+                            <div class="arrows">
+                                <div class="arrow up" id="copies-up">▲</div>
+                                <div class="arrow down" id="copies-down">▼</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: итоговые характеристики -->
+                <div class="artifact-column">
+                    <h3>Итоговые характеристики</h3>
+                    <div id="calculation-result" class="outlined-box">
+                        Итоговые характеристики появятся здесь...
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- футер -->
+    <div id="footer"></div>
+
+    <!-- Модальное окно артефактов -->
+    <div id="artifact-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="artifact-search" placeholder="Поиск артефактов...">
+            <div id="artifact-list"></div>
+        </div>
+    </div>
+    
+    <!-- Компоненты js -->
+    <script src="js/components/components.js"></script>
+    <!-- Основные js -->
+    <script src="js/artifact_calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+.rank-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    min-height: 685px;       /* минимальная высота */
+    
+    flex: 1;
+    overflow-y: auto;
+}
+
+.rank-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.rank-container::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 4px;
+}
+
+.rank-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffb000, #c48a00);
+    border-radius: 4px;
+}
+
+.rank-container::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffd36a, #ffb000);
+}
+
+/* Firefox */
+.rank-container {
+    scrollbar-width: thin;
+    scrollbar-color: #ffb000 #1c1c1c;
+}
+
+.rank-card {
+    background: #2b2b2b;
+    border-left: 6px solid var(--clr);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    transition: .25s;
+}
+
+.rank-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--clr);
+}
+
+.rank-card h2 {
+    color: var(--clr);
+    margin-bottom: 10px;
+}
+
+.rank-card p {
+    color: #ccc;
+    font-size: 15px;
+}
+
+.rank-card .role {
+    color: var(--clr);
+    font-weight: bold;
+}

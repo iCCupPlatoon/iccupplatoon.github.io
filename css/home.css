@@ -1,0 +1,205 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* Контейнер для контента и сайдбаров */
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    gap: 20px;
+    min-height: 693px;
+}
+
+/* Левый и правый сайдбары */
+.sidebar, .sidebar-updates {
+    flex: 0 0 250px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-left: 4px solid #ffb000;
+    border-radius: 5px;
+}
+
+/* Кнопка магазина */
+.sidebar-button {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffb000;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.sidebar-button:hover {
+    background-color: #ffaa00;
+}
+
+/* Основной контент */
+main#content {
+    flex: 1;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Центральная новость */
+.main-news {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #333333;
+    border-left: 6px solid #ffb000;
+    border-radius: 8px;
+}
+
+/* Список обновлений */
+.sidebar-updates ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-updates li {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background-color: #333333;
+    border-left: 3px solid #ffb000;
+    border-radius: 5px;
+}
+
+/* Серверный список */
+.server-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.server-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+}
+
+.server-list li strong {
+    color: #ffb000;
+}
+
+/* ===== ФИКС ПРОКРУТКИ ОБНОВЛЕНИЙ ===== */
+
+/* Базовая высота */
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Основной layout */
+.container {
+    display: flex;
+    height: calc(100vh - 260px); /* header + nav */
+}
+
+/* Оба сайдбара */
+.sidebar {
+    flex-shrink: 0;
+}
+
+/* Сайдбар обновлений */
+.sidebar-updates {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Список обновлений со скроллом */
+#updatesList {
+    flex: 1;
+    overflow-y: auto;
+    margin: 0;
+    padding-right: 6px;
+}
+
+/* (необязательно) красивый скролл */
+#updatesList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#updatesList::-webkit-scrollbar-track {
+    background: #111;
+}
+
+#updatesList::-webkit-scrollbar-thumb {
+    background: #ffb000;
+    border-radius: 4px;
+}
+
+/* ===== Мобильная адаптация ===== */
+@media (max-width: 768px) {
+    /* Контейнер: ставим блоки вертикально */
+    .container {
+        flex-direction: column;
+        height: auto; /* убираем фиксированную высоту */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    /* Сайдбары: делают ширину 100% и убирают фиксированную ширину */
+    .sidebar, .sidebar-updates {
+        flex: none;
+        width: 100%;
+        border-left: none;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    /* Основной контент: ширина 100%, меньше паддинга */
+    main#content {
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* Навигация: делаем вертикальной */
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Скрыть гирлянду или уменьшить её размер */
+    .garland {
+        display: none;
+    }
+
+    /* Скролл обновлений: можно увеличить высоту контейнера */
+    .sidebar-updates {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    /* Меньшие шрифты для мелких элементов */
+    .sidebar-button, .footer-button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .server-list li, .sidebar-updates li {
+        font-size: 14px;
+    }
+
+    /* Основная новость */
+    .main-news {
+        padding: 10px;
+    }
+}

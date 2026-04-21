@@ -1,0 +1,62 @@
+<!-- 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аномалии — GroteskStalker PvE</title>
+
+    <!-- Основные css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/anomalies.css">
+    <!-- Основные js -->
+    <script src="js/anomalies.js" defer></script>
+    <!-- Компоненты css -->
+    <link rel="stylesheet" href="css/components/garland.css">
+    <link rel="stylesheet" href="css/components/fon.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+    <!-- Компоненты js -->
+    <script src="js/components/components.js"></script>
+</head>
+<body>
+    <!-- гирлянда -->
+    <div id="garland"></div>
+
+    <header>
+        <h1>Аномалии</h1>
+    </header>
+
+    <!-- меню -->
+    <div id="nav"></div>
+
+    <div class="container anomalies-container">
+        <!-- Список аномалий -->
+        <aside class="anomaly-list">
+            <ul id="anomalies-list">
+                <!-- Заполняется JS -->
+            </ul>
+        </aside>
+
+        <!-- Карточка с описанием -->
+        <main class="anomaly-detail" id="anomaly-detail">
+    <h2>Выберите аномалию</h2>
+
+    <img id="anomaly-image" style="display:none;">
+
+    <video id="anomaly-video" autoplay loop muted playsinline style="display:none; width:800px; height:400px; object-fit:cover;">
+    <source id="anomaly-video-source" src="" type="video/mp4">
+</video>
+
+    <p id="anomaly-description"></p>
+</main>
+    </div>
+
+    <!-- футер -->
+    <div id="footer"></div>
+
+</body>
+</html>

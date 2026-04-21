@@ -1,0 +1,3071 @@
+[
+    {
+        "name": "Горка",
+        "variants": [
+            {
+                "rank": "Новичок",
+                "description": "Описание Горки...",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 34. Вместимость: 36 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 34. Вместимость: 100 слотов. Крепления: подсумок, кабура, фляга. Активные артефакты: 1.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Разгрузка — Защита от радиации: 34. Вместимость: 64 слота. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 34. Вместимость: 100 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 300,
+                    "Защита": 30,
+                    "Защита от радиации": 238
+                },
+                "images": [
+                    "images/gear/combat/Gorka/gorka_1.png",
+                    "images/gear/combat/Gorka/gorka_2.png",
+                    "images/gear/combat/Gorka/gorka_3.png",
+                    "images/gear/combat/Gorka/gorka_4.png",
+                    "images/gear/combat/Gorka/gorka_5.png",
+                    "images/gear/combat/Gorka/gorka_6.png",
+                    "images/gear/combat/Gorka/gorka_7.png",
+                    "images/gear/combat/Gorka/gorka_8.png",
+                    "images/gear/combat/Gorka/gorka_9.png",
+                    "images/gear/combat/Gorka/gorka_10.png",
+                    "images/gear/combat/Gorka/gorka_11.png",
+                    "images/gear/combat/Gorka/gorka_12.png",
+                    "images/gear/combat/Gorka/gorka_13.png"
+                ]
+            },
+            {
+                "rank": "Ветеран",
+                "description": "Описание Горки...",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 34. Вместимость: 150 слотов. Крепления: 5 под магазины. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 34. Вместимость: 220 слотов. Крепления: . Активные артефакты: 7.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Куртка — Защита от радиации: 34. Вместимость: 600 слотов. Крепления: ножны, кабура, фляга. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 34. Вместимость: 220 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Шлем — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Шлем — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Шлем — Защита от радиации: 34. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1190,
+                    "Защита": 70,
+                    "Защита от радиации": 238
+                },
+                "images": [
+                    "images/gear/combat/Gorka/gorka_1.png",
+                    "images/gear/combat/Gorka/gorka_2.png",
+                    "images/gear/combat/Gorka/gorka_3.png",
+                    "images/gear/combat/Gorka/gorka_4.png",
+                    "images/gear/combat/Gorka/gorka_5.png",
+                    "images/gear/combat/Gorka/gorka_6.png",
+                    "images/gear/combat/Gorka/gorka_7.png",
+                    "images/gear/combat/Gorka/gorka_8.png",
+                    "images/gear/combat/Gorka/gorka_9.png",
+                    "images/gear/combat/Gorka/gorka_10.png",
+                    "images/gear/combat/Gorka/gorka_11.png",
+                    "images/gear/combat/Gorka/gorka_12.png",
+                    "images/gear/combat/Gorka/gorka_13.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Новая Заря",
+        "variants": [
+            {
+                "rank": "Новичок",
+                "description": "Описание Зари...",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронепластина — Защита от радиации: 38. Вместимость: 100 слотов. Крепления: пистолет, бинт, нож , гранаты. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 38. Вместимость: 180 слотов. Крепления: . Активные артефакты: 3.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 38. Вместимость: 250 слотов. Крепления: 5 подсумков, нож, пистолет. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 38. Вместимость: 180 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 220 слотов. Крепления: рация. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Капюшен — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Газовая Маска — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 850,
+                    "Защита": 50,
+                    "Защита от радиации": 304
+                },
+                "images": [
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_1.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_2.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_3.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_4.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_5.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_6.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_7.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_8.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_9.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_10.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_11.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_12.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_13.png"
+                ]
+            },
+            {
+                "rank": "Ветеран",
+                "description": "Описание Зари...",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронепластина — Защита от радиации: 38. Вместимость: 150 слотов. Крепления: пистолет, бинт, нож, рация, 5 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 38. Вместимость: 230 слотов. Крепления: . Активные артефакты: 7.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 38. Вместимость: 450 слотов. Крепления: 5 подсумков, ножа, пистолета. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 38. Вместимость: 230 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Штаны — Защита от радиации: 0. Вместимость: 280 слотов. Крепления: рацию, 4 оружия. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Капюшен — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Газовая Маска — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 38. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1340,
+                    "Защита": 75,
+                    "Защита от радиации": 304
+                },
+                "images": [
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_1.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_2.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_3.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_4.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_5.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_6.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_7.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_8.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_9.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_10.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_11.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_12.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_13.png"
+                ]
+            },
+            {
+                "rank": "Легенда 3",
+                "description": "Описание Зари.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронепластина — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: 5 подсумков, ножа, пистолета. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: 8 оружий. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Капюшен — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Газовая Маска — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1630,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_1.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_2.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_3.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_4.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_5.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_6.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_7.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_8.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_9.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_10.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_11.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_12.png",
+                    "images/gear/combat/Zarya/Zarya_A/Zarya_A_13.png"
+                ]
+            },
+            {
+                "rank": "Вариант В",
+                "description": "Новая Заря.",
+                "stats": {
+                    "Защита": 0,
+                    "Защита от радиации": 0
+                },
+                "images": [
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_1.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_2.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_3.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_4.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_5.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_6.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_7.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_8.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_9.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_10.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_11.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_12.png",
+                    "images/gear/combat/Zarya/Zarya_B/Zarya_B_13.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Булат",
+        "variants": [
+            {
+                "rank": "Легенда 3",
+                "description": "Булат.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: кабура, ножны, подсумки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: 8 оружий, флягу, рацию. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ, фонарик. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2130,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Bulat/bulat_1.png",
+                    "images/gear/combat/Bulat/bulat_2.png",
+                    "images/gear/combat/Bulat/bulat_3.png",
+                    "images/gear/combat/Bulat/bulat_4.png",
+                    "images/gear/combat/Bulat/bulat_5.png",
+                    "images/gear/combat/Bulat/bulat_6.png",
+                    "images/gear/combat/Bulat/bulat_7.png",
+                    "images/gear/combat/Bulat/bulat_8.png",
+                    "images/gear/combat/Bulat/bulat_9.png",
+                    "images/gear/combat/Bulat/bulat_10.png",
+                    "images/gear/combat/Bulat/bulat_11.png",
+                    "images/gear/combat/Bulat/bulat_12.png",
+                    "images/gear/combat/Bulat/bulat_13.png",
+                    "images/gear/combat/Bulat/bulat_14.png",
+                    "images/gear/combat/Bulat/bulat_15.png",
+                    "images/gear/combat/Bulat/bulat_16.png",
+                    "images/gear/combat/Bulat/bulat_17.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "Булат.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 58. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 58. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 58. Вместимость: 800 слотов. Крепления: кабура, ножны, подсумки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 58. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, фляга, рация. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 58. Вместимость: 0 слотов. Крепления: ПНВ, фонарик. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз — Защита от радиации: 58. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 58. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 58. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2830,
+                    "Защита": 90,
+                    "Защита от радиации": 464
+                },
+                "images": [
+                    "images/gear/combat/Bulat/bulat_1.png",
+                    "images/gear/combat/Bulat/bulat_2.png",
+                    "images/gear/combat/Bulat/bulat_3.png",
+                    "images/gear/combat/Bulat/bulat_4.png",
+                    "images/gear/combat/Bulat/bulat_5.png",
+                    "images/gear/combat/Bulat/bulat_6.png",
+                    "images/gear/combat/Bulat/bulat_7.png",
+                    "images/gear/combat/Bulat/bulat_8.png",
+                    "images/gear/combat/Bulat/bulat_9.png",
+                    "images/gear/combat/Bulat/bulat_10.png",
+                    "images/gear/combat/Bulat/bulat_11.png",
+                    "images/gear/combat/Bulat/bulat_12.png",
+                    "images/gear/combat/Bulat/bulat_13.png",
+                    "images/gear/combat/Bulat/bulat_14.png",
+                    "images/gear/combat/Bulat/bulat_15.png",
+                    "images/gear/combat/Bulat/bulat_16.png",
+                    "images/gear/combat/Bulat/bulat_17.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Монохром",
+        "variants": [
+            {
+                "rank": "Легенда 1",
+                "description": "Монохром.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 41. Вместимость: 180 слотов. Крепления: 6 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 41. Вместимость: 290 слотов. Крепления: . Активные артефакты: 8.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 41. Вместимость: 600 слотов. Крепления: кабура, фляга, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 41. Вместимость: 290 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1360,
+                    "Защита": 80,
+                    "Защита от радиации": 328
+                },
+                "images": [
+                    "images/gear/combat/Monochom/Monochom_1.png",
+                    "images/gear/combat/Monochom/Monochom_2.png",
+                    "images/gear/combat/Monochom/Monochom_3.png",
+                    "images/gear/combat/Monochom/Monochom_4.png",
+                    "images/gear/combat/Monochom/Monochom_5.png",
+                    "images/gear/combat/Monochom/Monochom_6.png",
+                    "images/gear/combat/Monochom/Monochom_7.png"
+                ]
+            },
+            {
+                "rank": "Легенда 3",
+                "description": "Монохром.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: кабура, фляга, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1630,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Monochom/Monochom_1.png",
+                    "images/gear/combat/Monochom/Monochom_2.png",
+                    "images/gear/combat/Monochom/Monochom_3.png",
+                    "images/gear/combat/Monochom/Monochom_4.png",
+                    "images/gear/combat/Monochom/Monochom_5.png",
+                    "images/gear/combat/Monochom/Monochom_6.png",
+                    "images/gear/combat/Monochom/Monochom_7.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "Монохром.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 56. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 56. Вместимость: 800 слотов. Крепления: кабура, фляга, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 448
+                },
+                "images": [
+                    "images/gear/combat/Monochom/Monochom_1.png",
+                    "images/gear/combat/Monochom/Monochom_2.png",
+                    "images/gear/combat/Monochom/Monochom_3.png",
+                    "images/gear/combat/Monochom/Monochom_4.png",
+                    "images/gear/combat/Monochom/Monochom_5.png",
+                    "images/gear/combat/Monochom/Monochom_6.png",
+                    "images/gear/combat/Monochom/Monochom_7.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Носорог",
+        "variants": [
+            {
+                "rank": "Легенда 1",
+                "description": "Носорог.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 47. Вместимость: 180 слотов. Крепления: 6 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 47. Вместимость: 290 слотов. Крепления: . Активные артефакты: 8.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 47. Вместимость: 600 слотов. Крепления:  4 подсумка, фляга. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 47. Вместимость: 290 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 47. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Распиратор — Защита от радиации: 47. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 47. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 47. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1360,
+                    "Защита": 80,
+                    "Защита от радиации": 376
+                },
+                "images": [
+                    "images/gear/combat/Nosorog/Nosorog_1.png",
+                    "images/gear/combat/Nosorog/Nosorog_2.png",
+                    "images/gear/combat/Nosorog/Nosorog_3.png",
+                    "images/gear/combat/Nosorog/Nosorog_4.png",
+                    "images/gear/combat/Nosorog/Nosorog_5.png",
+                    "images/gear/combat/Nosorog/Nosorog_6.png",
+                    "images/gear/combat/Nosorog/Nosorog_7.png",
+                    "images/gear/combat/Nosorog/Nosorog_8.png",
+                    "images/gear/combat/Nosorog/Nosorog_9.png"
+                ]
+            },
+            {
+                "rank": "Легенда 3",
+                "description": "Носорог.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: 4 подсумка, фляга. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Распиратор — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1630,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Nosorog/Nosorog_1.png",
+                    "images/gear/combat/Nosorog/Nosorog_2.png",
+                    "images/gear/combat/Nosorog/Nosorog_3.png",
+                    "images/gear/combat/Nosorog/Nosorog_4.png",
+                    "images/gear/combat/Nosorog/Nosorog_5.png",
+                    "images/gear/combat/Nosorog/Nosorog_6.png",
+                    "images/gear/combat/Nosorog/Nosorog_7.png",
+                    "images/gear/combat/Nosorog/Nosorog_8.png",
+                    "images/gear/combat/Nosorog/Nosorog_9.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Син",
+        "variants": [
+            {
+                "rank": "Легенда 3",
+                "description": "Син.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 44. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 44. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 44. Вместимость: 700 слотов. Крепления: фляга, ножны, кабура. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 44. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: 8 оружий, 2 рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    },
+                    {
+                        "bandage": 1,
+                        "description": "Плащ — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Bandage.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2130,
+                    "Защита": 85,
+                    "Защита от радиации": 352
+                },
+                "images": [
+                    "images/gear/combat/Sin/Sin_1.png",
+                    "images/gear/combat/Sin/Sin_2.png",
+                    "images/gear/combat/Sin/Sin_3.png",
+                    "images/gear/combat/Sin/Sin_4.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "Син.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 800 слотов. Крепления:  фляга, ножны, кабура. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, 2 рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    },
+                    {
+                        "bandage": 1,
+                        "description": "Плащ — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Bandage.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2830,
+                    "Защита": 90,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Sin/Sin_1.png",
+                    "images/gear/combat/Sin/Sin_2.png",
+                    "images/gear/combat/Sin/Sin_3.png",
+                    "images/gear/combat/Sin/Sin_4.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Скат",
+        "variants": [
+            {
+                "rank": "Легенда 3",
+                "description": "Скат.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 44. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 44. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 44. Вместимость: 700 слотов. Крепления: кабура, подсумок, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 44. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 500 слотов. Крепления: 8 оружий, фляга, 2 рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: фонарик, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 44. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2130,
+                    "Защита": 85,
+                    "Защита от радиации": 352
+                },
+                "images": [
+                    "images/gear/combat/Skat/Skat_1.png",
+                    "images/gear/combat/Skat/Skat_2.png",
+                    "images/gear/combat/Skat/Skat_3.png",
+                    "images/gear/combat/Skat/Skat_4.png",
+                    "images/gear/combat/Skat/Skat_5.png",
+                    "images/gear/combat/Skat/Skat_6.png",
+                    "images/gear/combat/Skat/Skat_7.png",
+                    "images/gear/combat/Skat/Skat_8.png",
+                    "images/gear/combat/Skat/Skat_9.png",
+                    "images/gear/combat/Skat/Skat_10.png",
+                    "images/gear/combat/Skat/Skat_11.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "Скат.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 800 слотов. Крепления: кабура, подсумок, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, флягу, рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: фонарик, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2830,
+                    "Защита": 90,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Skat/Skat_1.png",
+                    "images/gear/combat/Skat/Skat_2.png",
+                    "images/gear/combat/Skat/Skat_3.png",
+                    "images/gear/combat/Skat/Skat_4.png",
+                    "images/gear/combat/Skat/Skat_5.png",
+                    "images/gear/combat/Skat/Skat_6.png",
+                    "images/gear/combat/Skat/Skat_7.png",
+                    "images/gear/combat/Skat/Skat_8.png",
+                    "images/gear/combat/Skat/Skat_9.png",
+                    "images/gear/combat/Skat/Skat_10.png",
+                    "images/gear/combat/Skat/Skat_11.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Вудмен",
+        "variants": [
+            {
+                "rank": "Легенда 3",
+                "description": "Вудмен.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 59. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 59. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 59. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 59. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 59. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 59. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 930,
+                    "Защита": 85,
+                    "Защита от радиации": 354
+                },
+                "images": [
+                    "images/gear/combat/Woodman/Woodman_1.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ЭОО",
+        "variants": [
+            {
+                "rank": "Легенда 3",
+                "description": "ЭОО.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: кабура, фляга, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1630,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Armor16/Armor16_1.png",
+                    "images/gear/combat/Armor16/Armor16_2.png",
+                    "images/gear/combat/Armor16/Armor16_3.png",
+                    "images/gear/combat/Armor16/Armor16_4.png",
+                    "images/gear/combat/Armor16/Armor16_5.png",
+                    "images/gear/combat/Armor16/Armor16_6.png",
+                    "images/gear/combat/Armor16/Armor16_7.png",
+                    "images/gear/combat/Armor16/Armor16_8.png",
+                    "images/gear/combat/Armor16/Armor16_9.png",
+                    "images/gear/combat/Armor16/Armor16_10.png",
+                    "images/gear/combat/Armor16/Armor16_11.png",
+                    "images/gear/combat/Armor16/Armor16_12.png",
+                    "images/gear/combat/Armor16/Armor16_13.png",
+                    "images/gear/combat/Armor16/Armor16_14.png",
+                    "images/gear/combat/Armor16/Armor16_15.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "ЭОО.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 56. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 56. Вместимость: 700 слотов. Крепления: кабура, фляга, ножны. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1930,
+                    "Защита": 90,
+                    "Защита от радиации": 448
+                },
+                "images": [
+                    "images/gear/combat/Armor16/Armor16_1.png",
+                    "images/gear/combat/Armor16/Armor16_2.png",
+                    "images/gear/combat/Armor16/Armor16_3.png",
+                    "images/gear/combat/Armor16/Armor16_4.png",
+                    "images/gear/combat/Armor16/Armor16_5.png",
+                    "images/gear/combat/Armor16/Armor16_6.png",
+                    "images/gear/combat/Armor16/Armor16_7.png",
+                    "images/gear/combat/Armor16/Armor16_8.png",
+                    "images/gear/combat/Armor16/Armor16_9.png",
+                    "images/gear/combat/Armor16/Armor16_10.png",
+                    "images/gear/combat/Armor16/Armor16_11.png",
+                    "images/gear/combat/Armor16/Armor16_12.png",
+                    "images/gear/combat/Armor16/Armor16_13.png",
+                    "images/gear/combat/Armor16/Armor16_14.png",
+                    "images/gear/combat/Armor16/Armor16_15.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Варфайтер",
+        "variants": [
+            {
+                "rank": "Легенда 1",
+                "description": "Варфайтер.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 41. Вместимость: 180 слотов. Крепления: 6 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 41. Вместимость: 290 слотов. Крепления: . Активные артефакты: 8.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 41. Вместимость: 600 слотов. Крепления: фляга, ножны, кабура. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 41. Вместимость: 290 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 41. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1360,
+                    "Защита": 80,
+                    "Защита от радиации": 328
+                },
+                "images": [
+                    "images/gear/combat/Warfaiter/Warfaiter_1.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_2.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_3.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_4.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_5.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_6.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_7.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_8.png"
+                ]
+            },
+            {
+                "rank": "Легенда 3",
+                "description": "Варфайтер.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 50. Вместимость: 230 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: 9.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 50. Вместимость: 700 слотов. Крепления: фляга, ножны, кабура. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 350 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Штаны — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1630,
+                    "Защита": 85,
+                    "Защита от радиации": 400
+                },
+                "images": [
+                    "images/gear/combat/Warfaiter/Warfaiter_1.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_2.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_3.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_4.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_5.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_6.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_7.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_8.png"
+                ]
+            },
+            {
+                "rank": "Легенда Х",
+                "description": "Варфайтер.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет — Защита от радиации: 56. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Ремень — Защита от радиации: 56. Вместимость: 800 слотов. Крепления: фляга, ножны, кабура. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны — Защита от радиации: 56. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Маска — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Ботинки — Защита от радиации: 56. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 448
+                },
+                "images": [
+                    "images/gear/combat/Warfaiter/Warfaiter_1.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_2.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_3.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_4.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_5.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_6.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_7.png",
+                    "images/gear/combat/Warfaiter/Warfaiter_8.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Бандит",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание Бандита.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Длинный Кожаный Плаш — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Свитер — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Универсальный Ремень с подсумками — Защита от радиации: 50. Вместимость: 800 слотов. Крепления: кабура, ножны, фляга. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны Рекрут — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Балаклава — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки ОЗС-9П Кремний — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 415
+                },
+                "images": [
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_1.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_2.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_3.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_4.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_5.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_6.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_7.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_8.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_9.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_10.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_11.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_12.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_13.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_14.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_15.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_16.png",
+                    "images/gear/combat/Bandit_Plash/Bandit_Plash_17.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "СПЕ-10в",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание СПЕ-10в.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет СПЕ-10в — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 3 подсумка, 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка СПЕ-10в — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 1,
+                        "description": "Универсальный Ремень с подсумками — Защита от радиации: 50. Вместимость: 800 слотов. Крепления: кабура, ножны, фляга. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны СПЕ-10в — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 подсумка, кобура, ножны. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем СНД8 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: фонарик, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ХМ-40 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 530
+                },
+                "images": [
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_1.png",
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_2.png",
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_3.png",
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_4.png",
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_5.png",
+                    "images/gear/combat/CPE_10B/CPE_10B/CPE_10B_6.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "СПЕ-13Т",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание СПЕ-13Т.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет СПЕ-13Т — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 2 подсумка, 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка СПЕ-13Т — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны СПЕ-13Т — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Комплект экзоскелета — Защита от радиации: 0. Вместимость: 800 слотов. Крепления:  8 оружий, 2 рации, фляга. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем АРП-106 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления:  фонарик, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ППМ-65 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 480
+                },
+                "images": [
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_1.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_2.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_3.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_4.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_5.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_6.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_A/CPE_13T_A_7.png"
+                ]
+            },
+            {
+                "rank": "Вариант В",
+                "description": "Описание СПЕ-13Т.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Бронежилет СПЕ-13Т — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 2 подсумка, 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка СПЕ-13Т — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны СПЕ-13Т — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Комплект экзоскелета — Защита от радиации: 0. Вместимость: 800 слотов. Крепления:  8 оружий, 2 рации, фляга. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем АРП-106 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления:  фонарик, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ППМ-65 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 2030,
+                    "Защита": 90,
+                    "Защита от радиации": 480
+                },
+                "images": [
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_1.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_2.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_3.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_4.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_5.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_6.png",
+                    "images/gear/combat/CPE_13T/CPE_13T_B/CPE_13T_B_7.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ОЗС-9Д",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание ОЗС-9Д.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Жилет ОЗС-9Д — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка ОЗС-9Д — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны ОЗС-9Д — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 подсумка. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем ОЗС-12П — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: фонарь, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ХМ-40 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 480
+                },
+                "images": [
+                    "images/gear/combat/OZS_9D/OZS_9D_1.png",
+                    "images/gear/combat/OZS_9D/OZS_9D_2.png",
+                    "images/gear/combat/OZS_9D/OZS_9D_3.png",
+                    "images/gear/combat/OZS_9D/OZS_9D_4.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ОЗС-9П",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание ОЗС-9П.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Жилет ОЗС-9П — Защита от радиации: 50. Вместимость: 330 слотов. Крепления:  8 магазинов, 3 подсумка. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка ОЗС-9П — Защита от радиации: 50. Вместимость: 450 слотов. Крепления:  2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны ОЗС-9П — Защита от радиации: 50. Вместимость: 450 слотов. Крепления:  подсумок, ножны, кабура. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Перчатки ОЗС-9П — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 315
+                },
+                "images": [
+                    "images/gear/combat/OZS_9P/OZS_9P_1.png",
+                    "images/gear/combat/OZS_9P/OZS_9P_2.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ОЗС-12П",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание ОЗС-12П.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Жилет ОЗС-12П — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка ОЗС-12П — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны ОЗС-12П — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 подсумка. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем ОЗС-12П — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: фонарь, ПНВ. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ПМК-20 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 480
+                },
+                "images": [
+                    "images/gear/combat/OZS_12P/OZS_12P_1.png",
+                    "images/gear/combat/OZS_12P/OZS_12P_2.png",
+                    "images/gear/combat/OZS_12P/OZS_12P_3.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Рекрут",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание Рекрута.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Жилет Рекрута — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов, 4 подсумка, ножны, фляга. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка Рекрут — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны Рекрут — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: ножны. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Рюкзак Рекрут — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, флягу, рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 1,
+                        "description": "Противогаз ГП-4У — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 430
+                },
+                "images": [
+                    "images/gear/combat/Recryt/Recryt_1.png",
+                    "images/gear/combat/Recryt/Recryt_2.png",
+                    "images/gear/combat/Recryt/Recryt_3.png",
+                    "images/gear/combat/Recryt/Recryt_4.png",
+                    "images/gear/combat/Recryt/Recryt_5.png",
+                    "images/gear/combat/Recryt/Recryt_6.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Рутил-6Д",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание Рутил-6Д.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Жилет Рутил-6Д — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка Рутил-6Д — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 нашивки. Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны Рутил-6Д — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: подсумок, ножны, кабура. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 1,
+                        "description": "Военный рюкзак — Защита от радиации: 0. Вместимость: 800 слотов. Крепления: 8 оружий, флягу, рации. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем Рутил-6Д — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ, фонарь. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 1,
+                        "description": "Очки Рутил-6Д — Защита от радиации: 0. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 430
+                },
+                "images": [
+                    "images/gear/combat/RYTIL_6D/RYTIL_6D_1.png",
+                    "images/gear/combat/RYTIL_6D/RYTIL_6D_2.png",
+                    "images/gear/combat/RYTIL_6D/RYTIL_6D_3.png",
+                    "images/gear/combat/RYTIL_6D/RYTIL_6D_4.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ОЗС-20/25",
+        "variants": [
+            {
+                "rank": "Легенда Х",
+                "description": "Описание ОЗС-20/25.",
+                "slots": [
+                    {
+                        "vest": 1,
+                        "description": "Средний Бронежилет ОЗС-20 — Защита от радиации: 50. Вместимость: 330 слотов. Крепления: 8 магазинов. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Vest.png"
+                        ]
+                    },
+                    {
+                        "jacket": 1,
+                        "description": "Куртка ОЗС-20 — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: . Активные артефакты: 10.",
+                        "images": [
+                            "images/slots/Jacket.png"
+                        ]
+                    },
+                    {
+                        "belt": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Belt.png"
+                        ]
+                    },
+                    {
+                        "pants": 1,
+                        "description": "Штаны ОЗС-20 — Защита от радиации: 50. Вместимость: 450 слотов. Крепления: 2 подсумока. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Pants.png"
+                        ]
+                    },
+                    {
+                        "backpack": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Backpack.png"
+                        ]
+                    },
+                    {
+                        "helmet": 1,
+                        "description": "Шлем ОЗС-20 — Защита от радиации: 50. Вместимость: 0 слотов. Крепления: ПНВ, фонарь. Активные артефакты: .",
+                        "images": [
+                            "images/slots/Helmet.png"
+                        ]
+                    },
+                    {
+                        "mask": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Mask.png"
+                        ]
+                    },
+                    {
+                        "glasses": 0,
+                        "description": "",
+                        "images": [
+                            "images/slots/Glasses.png"
+                        ]
+                    },
+                    {
+                        "gloves": 1,
+                        "description": "Универсальные Перчатки Дюраль-М1 — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Gloves.png"
+                        ]
+                    },
+                    {
+                        "boots": 1,
+                        "description": "Универсальные Ботинки ОЗС-М Мастер — Защита от радиации: 115. Вместимость: 0 слотов. Крепления: . Активные артефакты: .",
+                        "images": [
+                            "images/slots/Boots.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Общее кол-во слотов": 1230,
+                    "Защита": 90,
+                    "Защита от радиации": 430
+                },
+                "images": [
+                    "images/gear/combat/OZS_20/OZS_20_1.png",
+                    "images/gear/combat/OZS_20/OZS_20_2.png"
+                ]
+            }
+        ]
+    }
+]

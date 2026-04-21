@@ -1,0 +1,428 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 3 артефакта",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 75
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 45
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 40
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 35
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 4 встроенных места под артефакты.",
+        "item_name": "Ремень на 4 артефакта"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 3 артефакта",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 75
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 45
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 40
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 35
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 4 встроенных места под артефакты.",
+        "item_name": "Ремень на 4 артефакта"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 4 артефакта",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 85
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 55
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 50
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 45
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 5 встроенных мест под артефакты.",
+        "item_name": "Ремень на 5 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 4 артефакта",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 85
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 55
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 50
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 45
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 5 встроенных мест под артефакты.",
+        "item_name": "Ремень на 5 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 5 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 95
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 65
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 60
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 55
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 6 встроенных мест под артефакты.",
+        "item_name": "Ремень на 6 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 5 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 95
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 65
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 60
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 55
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 6 встроенных мест под артефакты.",
+        "item_name": "Ремень на 6 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 6 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 115
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 85
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 80
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 75
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 7 встроенных мест под артефакты.",
+        "item_name": "Ремень на 7 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 6 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 115
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 85
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 80
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 75
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 7 встроенных мест под артефакты.",
+        "item_name": "Ремень на 7 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 7 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 135
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 105
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 95
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 80
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 100
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 80
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 8 встроенных мест под артефакты.",
+        "item_name": "Ремень на 8 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 7 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 135
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 105
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 95
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 80
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 100
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 80
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 8 встроенных мест под артефакты.",
+        "item_name": "Ремень на 8 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 8 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 155
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 125
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 115
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 100
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 120
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 100
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 9 встроенных мест под артефакты.",
+        "item_name": "Ремень на 9 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 8 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 155
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 125
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 115
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 100
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 120
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 100
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 9 встроенных мест под артефакты.",
+        "item_name": "Ремень на 9 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 9 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 185
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 155
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 145
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 130
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 150
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 130
+            }
+        ],
+        "image": "Grotesk_Belt.png",
+        "description": "Ремень под 10 встроенных мест под артефакты.",
+        "item_name": "Ремень на 10 артефактов"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Ремень на 9 артефактов",
+                "count": 1
+            },
+            {
+                "class_name": "Черная ткань",
+                "quantity": 185
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 155
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 145
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 130
+            },
+            {
+                "class_name": "Нитки",
+                "quantity": 150
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 130
+            }
+        ],
+        "image": "Grotesk_Beltb.png",
+        "description": "Ремень под 10 встроенных мест под артефакты.",
+        "item_name": "Ремень на 10 артефактов"
+    }
+]

@@ -1,0 +1,111 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Ящик для патронов",
+                "count": 1
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 200
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 350
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 200
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 175
+            },
+            {
+                "class_name": "Кусочки пластика",
+                "quantity": 100
+            },
+            {
+                "class_name": "Слесарная ножовка",
+                "quantity": 10
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 2
+            }
+        ],
+        "image": "AmmoReloader.png",
+        "description": "Автозарядник магазинов.",
+        "item_name": "Автозарядник"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Автозарядник",
+                "count": 1
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 15
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 20
+            }
+        ],
+        "image": "AmmoReloader.png",
+        "description": "Автозарядник магазинов.",
+        "item_name": "Аномальный автозарядник"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Аномальный автозарядник",
+                "count": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 110
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 3000
+            },
+            {
+                "class_name": "Свеча накаливания",
+                "count": 10
+            }
+        ],
+        "image": "Case_ammo.png",
+        "description": "Способен заряжать.",
+        "item_name": "Кейс заряжайка"
+    }
+]

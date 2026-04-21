@@ -1,0 +1,1322 @@
+{
+    "AmmoBox": {
+        "image": "AmmoBox.png"
+    },
+    "NewCJ_Materials_CalibrationTools": {
+        "image": "NewCJ_Materials_CalibrationTools.png"
+    },
+    "NewCJ_Materials_RoughTools": {
+        "image": "NewCJ_Materials_RoughTools.png"
+    },
+    "NewCJ_Materials_ThinTools": {
+        "image": "NewCJ_Materials_ThinTools.png"
+    },
+    "NewCJ_Materials_Copper": {
+        "image": "NewCJ_Materials_Copper.png"
+    },
+    "NewCJ_Materials_plastic": {
+        "image": "NewCJ_Materials_plastic.png"
+    },
+    "bSak_T_Hacksaw": {
+        "image": "bSak_T_Hacksaw.png"
+    },
+    "NewCJ_Materials_winch": {
+        "image": "NewCJ_Materials_winch.png"
+    },
+    "AmmoReloader": {
+        "image": "AmmoReloader.png"
+    },
+    "CJ_Materials_Circuit_Board": {
+        "image": "CJ_Materials_Circuit_Board.png"
+    },
+    "NewCJ_Materials_GunPowder": {
+        "image": "NewCJ_Materials_GunPowder.png"
+    },
+    "Nail": {
+        "image": "Nail.png"
+    },
+    "Ammo_338LM_FMJ": {
+        "image": "Ammo_338LM_FMJ.png"
+    },
+    "bMF_Artefact_Plamya": {
+        "image": "bMF_Artefact_Plamya.png"
+    },
+    "Ammo_408_AP": {
+        "image": "Ammo_408_AP.png"
+    },
+    "bMF_Artefact_Dusha": {
+        "image": "bMF_Artefact_Dusha.png"
+    },
+    "Ammo_9x39": {
+        "image": "Ammo_9x39.png"
+    },
+    "bMF_Artefact_snejinka": {
+        "image": "bMF_Artefact_snejinka.png"
+    },
+    "NewCJ_Materials_Fabric_Reinforced": {
+        "image": "NewCJ_Materials_Fabric_Reinforced.png"
+    },
+    "NewCJ_Materials_wire": {
+        "image": "NewCJ_Materials_wire.png"
+    },
+    "NewSak_C_Diod": {
+        "image": "NewSak_C_Diod.png"
+    },
+    "NewSak_C_Rezistor": {
+        "image": "NewSak_C_Rezistor.png"
+    },
+    "NewCJ_Materials_threads": {
+        "image": "NewCJ_Materials_threads.png"
+    },
+    "NewSak_T_Screwdriver": {
+        "image": "NewSak_T_Screwdriver.png"
+    },
+    "OMI_Armor43_BackPack": {
+        "image": "OMI_Armor43_BackPack.png"
+    },
+    "OMI_Armor43_belt": {
+        "image": "OMI_Armor43_belt.png"
+    },
+    "OMI_Armor43_Body": {
+        "image": "OMI_Armor43_Body.png"
+    },
+    "OMI_Armor43_Body_ChistoeNebo": {
+        "image": "OMI_Armor43_Body_ChistoeNebo.png"
+    },
+    "OMI_Armor43_Body_Desert": {
+        "image": "OMI_Armor43_Body_Desert.png"
+    },
+    "OMI_Armor43_Body_Dolg": {
+        "image": "OMI_Armor43_Body_Dolg.png"
+    },
+    "OMI_Armor43_Body_Monolit": {
+        "image": "OMI_Armor43_Body_Monolit.png"
+    },
+    "OMI_Armor43_Body_Naem": {
+        "image": "OMI_Armor43_Body_Naem.png"
+    },
+    "OMI_Armor43_Body_orangecamo": {
+        "image": "OMI_Armor43_Body_orangecamo.png"
+    },
+    "OMI_Armor43_Body_orangegeometry": {
+        "image": "OMI_Armor43_Body_orangegeometry.png"
+    },
+    "OMI_Armor43_Body_redcamo": {
+        "image": "OMI_Armor43_Body_redcamo.png"
+    },
+    "OMI_Armor43_Body_Stalker": {
+        "image": "OMI_Armor43_Body_Stalker.png"
+    },
+    "OMI_Armor43_Body_Svoboda": {
+        "image": "OMI_Armor43_Body_Svoboda.png"
+    },
+    "OMI_Armor43_Body_white": {
+        "image": "OMI_Armor43_Body_white.png"
+    },
+    "OMI_Armor43_Boots": {
+        "image": "OMI_Armor43_Boots.png"
+    },
+    "OMI_Armor43_Boots_ChistoeNebo": {
+        "image": "OMI_Armor43_Boots_ChistoeNebo.png"
+    },
+    "OMI_Armor43_Boots_desert": {
+        "image": "OMI_Armor43_Boots_desert.png"
+    },
+    "OMI_Armor43_Boots_Dolg": {
+        "image": "OMI_Armor43_Boots_Dolg.png"
+    },
+    "OMI_Armor43_Boots_Monolit": {
+        "image": "OMI_Armor43_Boots_Monolit.png"
+    },
+    "OMI_Armor43_Boots_Naem": {
+        "image": "OMI_Armor43_Boots_Naem.png"
+    },
+    "OMI_Armor43_Boots_orangecamo": {
+        "image": "OMI_Armor43_Boots_orangecamo.png"
+    },
+    "OMI_Armor43_Boots_orangegeometry": {
+        "image": "OMI_Armor43_Boots_orangegeometry.png"
+    },
+    "OMI_Armor43_Boots_redcamo": {
+        "image": "OMI_Armor43_Boots_redcamo.png"
+    },
+    "OMI_Armor43_Boots_Stalker": {
+        "image": "OMI_Armor43_Boots_Stalker.png"
+    },
+    "OMI_Armor43_Boots_Svoboda": {
+        "image": "OMI_Armor43_Boots_Svoboda.png"
+    },
+    "OMI_Armor43_Boots_white": {
+        "image": "OMI_Armor43_Boots_white.png"
+    },
+    "OMI_Armor43_ChemHelmet": {
+        "image": "OMI_Armor43_ChemHelmet.png"
+    },
+    "OMI_Armor43_ChemHelmet_Desert": {
+        "image": "OMI_Armor43_ChemHelmet_Desert.png"
+    },
+    "OMI_Armor43_ChemHelmet_Dolg": {
+        "image": "OMI_Armor43_ChemHelmet_Dolg.png"
+    },
+    "OMI_Armor43_ChemHelmet_Monolit": {
+        "image": "OMI_Armor43_ChemHelmet_Monolit.png"
+    },
+    "OMI_Armor43_ChemHelmet_orangecamo": {
+        "image": "OMI_Armor43_ChemHelmet_orangecamo.png"
+    },
+    "OMI_Armor43_ChemHelmet_orangegeometry": {
+        "image": "OMI_Armor43_ChemHelmet_orangegeometry.png"
+    },
+    "OMI_Armor43_ChemHelmet_redcamo": {
+        "image": "OMI_Armor43_ChemHelmet_redcamo.png"
+    },
+    "OMI_Armor43_ChemHelmet_svoboda": {
+        "image": "OMI_Armor43_ChemHelmet_svoboda.png"
+    },
+    "OMI_Armor43_ChemHelmet_white": {
+        "image": "OMI_Armor43_ChemHelmet_white.png"
+    },
+    "OMI_Armor43_ChemHood": {
+        "image": "OMI_Armor43_ChemHood.png"
+    },
+    "OMI_Armor43_ChemHood_ChistoeNebo": {
+        "image": "OMI_Armor43_ChemHood_ChistoeNebo.png"
+    },
+    "OMI_Armor43_ChemHood_Desert": {
+        "image": "OMI_Armor43_ChemHood_Desert.png"
+    },
+    "OMI_Armor43_ChemHood_Dolg": {
+        "image": "OMI_Armor43_ChemHood_Dolg.png"
+    },
+    "OMI_Armor43_ChemHood_Monolit": {
+        "image": "OMI_Armor43_ChemHood_Monolit.png"
+    },
+    "OMI_Armor43_ChemHood_Naem": {
+        "image": "OMI_Armor43_ChemHood_Naem.png"
+    },
+    "OMI_Armor43_ChemHood_orangecamo": {
+        "image": "OMI_Armor43_ChemHood_orangecamo.png"
+    },
+    "OMI_Armor43_ChemHood_orangegeometry": {
+        "image": "OMI_Armor43_ChemHood_orangegeometry.png"
+    },
+    "OMI_Armor43_ChemHood_redcamo": {
+        "image": "OMI_Armor43_ChemHood_redcamo.png"
+    },
+    "OMI_Armor43_ChemHood_Stalker": {
+        "image": "OMI_Armor43_ChemHood_Stalker.png"
+    },
+    "OMI_Armor43_ChemHood_Svoboda": {
+        "image": "OMI_Armor43_ChemHood_Svoboda.png"
+    },
+    "OMI_Armor43_ChemHood_white": {
+        "image": "OMI_Armor43_ChemHood_white.png"
+    },
+    "OMI_Armor43_GasMask": {
+        "image": "OMI_Armor43_GasMask.png"
+    },
+    "OMI_Armor43_Glove": {
+        "image": "OMI_Armor43_Glove.png"
+    },
+    "OMI_Armor43_Helmet": {
+        "image": "OMI_Armor43_Helmet.png"
+    },
+    "OMI_Armor43_Helmet_Desert": {
+        "image": "OMI_Armor43_Helmet_Desert.png"
+    },
+    "OMI_Armor43_Helmet_Dolg": {
+        "image": "OMI_Armor43_Helmet_Dolg.png"
+    },
+    "OMI_Armor43_Helmet_Monolit": {
+        "image": "OMI_Armor43_Helmet_Monolit.png"
+    },
+    "OMI_Armor43_Helmet_orangecamo": {
+        "image": "OMI_Armor43_Helmet_orangecamo.png"
+    },
+    "OMI_Armor43_Helmet_orangegeometry": {
+        "image": "OMI_Armor43_Helmet_orangegeometry.png"
+    },
+    "OMI_Armor43_Helmet_redcamo": {
+        "image": "OMI_Armor43_Helmet_redcamo.png"
+    },
+    "OMI_Armor43_Helmet_Svoboda": {
+        "image": "OMI_Armor43_Helmet_Svoboda.png"
+    },
+    "OMI_Armor43_Helmet_white": {
+        "image": "OMI_Armor43_Helmet_white.png"
+    },
+    "OMI_Armor43_Hood": {
+        "image": "OMI_Armor43_Hood.png"
+    },
+    "OMI_Armor43_Hood_ChistoeNebo": {
+        "image": "OMI_Armor43_Hood_ChistoeNebo.png"
+    },
+    "OMI_Armor43_Hood_Desert": {
+        "image": "OMI_Armor43_Hood_Desert.png"
+    },
+    "OMI_Armor43_Hood_Dolg": {
+        "image": "OMI_Armor43_Hood_Dolg.png"
+    },
+    "OMI_Armor43_Hood_Monolit": {
+        "image": "OMI_Armor43_Hood_Monolit.png"
+    },
+    "OMI_Armor43_Hood_Naem": {
+        "image": "OMI_Armor43_Hood_Naem.png"
+    },
+    "OMI_Armor43_Hood_orangecamo": {
+        "image": "OMI_Armor43_Hood_orangecamo.png"
+    },
+    "OMI_Armor43_Hood_orangegeometry": {
+        "image": "OMI_Armor43_Hood_orangegeometry.png"
+    },
+    "OMI_Armor43_Hood_redcamo": {
+        "image": "OMI_Armor43_Hood_redcamo.png"
+    },
+    "OMI_Armor43_Hood_Stalker": {
+        "image": "OMI_Armor43_Hood_Stalker.png"
+    },
+    "OMI_Armor43_Hood_Svoboda": {
+        "image": "OMI_Armor43_Hood_Svoboda.png"
+    },
+    "OMI_Armor43_Hood_white": {
+        "image": "OMI_Armor43_Hood_white.png"
+    },
+    "OMI_Armor43_Pants": {
+        "image": "OMI_Armor43_Pants.png"
+    },
+    "OMI_Armor43_Pants_ChistoeNebo": {
+        "image": "OMI_Armor43_Pants_ChistoeNebo.png"
+    },
+    "OMI_Armor43_Pants_desert": {
+        "image": "OMI_Armor43_Pants_desert.png"
+    },
+    "OMI_Armor43_Pants_Dolg": {
+        "image": "OMI_Armor43_Pants_Dolg.png"
+    },
+    "OMI_Armor43_Pants_Monolit": {
+        "image": "OMI_Armor43_Pants_Monolit.png"
+    },
+    "OMI_Armor43_Pants_Naem": {
+        "image": "OMI_Armor43_Pants_Naem.png"
+    },
+    "OMI_Armor43_Pants_orangecamo": {
+        "image": "OMI_Armor43_Pants_orangecamo.png"
+    },
+    "OMI_Armor43_Pants_orangegeometry": {
+        "image": "OMI_Armor43_Pants_orangegeometry.png"
+    },
+    "OMI_Armor43_Pants_redcamo": {
+        "image": "OMI_Armor43_Pants_redcamo.png"
+    },
+    "OMI_Armor43_Pants_Stalker": {
+        "image": "OMI_Armor43_Pants_Stalker.png"
+    },
+    "OMI_Armor43_Pants_Svoboda": {
+        "image": "OMI_Armor43_Pants_Svoboda.png"
+    },
+    "OMI_Armor43_Pants_white": {
+        "image": "OMI_Armor43_Pants_white.png"
+    },
+    "OMI_Armor43_Vest": {
+        "image": "OMI_Armor43_Vest.png"
+    },
+    "OMI_Armor43_VestShort": {
+        "image": "OMI_Armor43_VestShort.png"
+    },
+    "OMI_Armor43_VestShort_ChistoeNebo": {
+        "image": "OMI_Armor43_VestShort_ChistoeNebo.png"
+    },
+    "OMI_Armor43_VestShort_Desert": {
+        "image": "OMI_Armor43_VestShort_Desert.png"
+    },
+    "OMI_Armor43_VestShort_Dolg": {
+        "image": "OMI_Armor43_VestShort_Dolg.png"
+    },
+    "OMI_Armor43_VestShort_Monolit": {
+        "image": "OMI_Armor43_VestShort_Monolit.png"
+    },
+    "OMI_Armor43_VestShort_Naem": {
+        "image": "OMI_Armor43_VestShort_Naem.png"
+    },
+    "bOMI_Armor43_VestShort_orangecamo": {
+        "image": "bOMI_Armor43_VestShort_orangecamo.png"
+    },
+    "OMI_Armor43_VestShort_orangegeometry": {
+        "image": "OMI_Armor43_VestShort_orangegeometry.png"
+    },
+    "OMI_Armor43_VestShort_redcamo": {
+        "image": "OMI_Armor43_VestShort_redcamo.png"
+    },
+    "OMI_Armor43_VestShort_Stalkers": {
+        "image": "OMI_Armor43_VestShort_Stalkers.png"
+    },
+    "OMI_Armor43_VestShort_Svoboda": {
+        "image": "OMI_Armor43_VestShort_Svoboda.png"
+    },
+    "OMI_Armor43_VestShort_white": {
+        "image": "OMI_Armor43_VestShort_white.png"
+    },
+    "OMI_Armor43_Vest_ChistoeNebo": {
+        "image": "OMI_Armor43_Vest_ChistoeNebo.png"
+    },
+    "OMI_Armor43_Vest_Desert": {
+        "image": "OMI_Armor43_Vest_Desert.png"
+    },
+    "OMI_Armor43_Vest_Dolg": {
+        "image": "OMI_Armor43_Vest_Dolg.png"
+    },
+    "OMI_Armor43_Vest_Naem": {
+        "image": "OMI_Armor43_Vest_Naem.png"
+    },
+    "OMI_Armor43_Vest_orangecamo": {
+        "image": "OMI_Armor43_Vest_orangecamo.png"
+    },
+    "OMI_Armor43_Vest_orangegeometry": {
+        "image": "OMI_Armor43_Vest_orangegeometry.png"
+    },
+    "OMI_Armor43_Vest_redcamo": {
+        "image": "OMI_Armor43_Vest_redcamo.png"
+    },
+    "OMI_Armor43_Vest_Stalkers": {
+        "image": "OMI_Armor43_Vest_Stalkers.png"
+    },
+    "OMI_Armor43_Vest_Svoboda": {
+        "image": "OMI_Armor43_Vest_Svoboda.png"
+    },
+    "OMI_Armor43_Vest_white": {
+        "image": "OMI_Armor43_Vest_white.png"
+    },
+    "NewCJ_Materials_Fabric_Black": {
+        "image": "NewCJ_Materials_Fabric_Black.png"
+    },
+    "NewSak_T_Pliers": {
+        "image": "NewSak_T_Pliers.png"
+    },
+    "BoxMutants": {
+        "image": "BoxMutants.png"
+    },
+    "BoxMutants20": {
+        "image": "BoxMutants20.png"
+    },
+    "BoxMutants30": {
+        "image": "BoxMutants30.png"
+    },
+    "CJ_Materials_crate_AssaultRifle": {
+        "image": "CJ_Materials_crate_AssaultRifle.png"
+    },
+    "SFP_EcologBig_Boots": {
+        "image": "SFP_EcologBig_Boots.png"
+    },
+    "SFP_EcologBig_Helm": {
+        "image": "SFP_EcologBig_Helm.png"
+    },
+    "SFP_EcologBig_pants": {
+        "image": "SFP_EcologBig_pants.png"
+    },
+    "SFP_EcologBig_tors": {
+        "image": "SFP_EcologBig_tors.png"
+    },
+    "AmmoReloaderupgrade": {
+        "image": "AmmoReloaderupgrade.png"
+    },
+    "GlowPlug": {
+        "image": "GlowPlug.png"
+    },
+    "NewCJ_Materials_Line": {
+        "image": "NewCJ_Materials_Line.png"
+    },
+    "DamageBoost_5": {
+        "image": "DamageBoost_5.png"
+    },
+    "DamageBoost_95": {
+        "image": "DamageBoost_95.png"
+    },
+    "DamageBoost_100": {
+        "image": "DamageBoost_100.png"
+    },
+    "DamageBoost_105": {
+        "image": "DamageBoost_105.png"
+    },
+    "DamageBoost_110": {
+        "image": "DamageBoost_110.png"
+    },
+    "DamageBoost_115": {
+        "image": "DamageBoost_115.png"
+    },
+    "DamageBoost_120": {
+        "image": "DamageBoost_120.png"
+    },
+    "DamageBoost_125": {
+        "image": "DamageBoost_125.png"
+    },
+    "DamageBoost_130": {
+        "image": "DamageBoost_130.png"
+    },
+    "DamageBoost_135": {
+        "image": "DamageBoost_135.png"
+    },
+    "DamageBoost_140": {
+        "image": "DamageBoost_140.png"
+    },
+    "DamageBoost_10": {
+        "image": "DamageBoost_10.png"
+    },
+    "DamageBoost_145": {
+        "image": "DamageBoost_145.png"
+    },
+    "DamageBoost_150": {
+        "image": "DamageBoost_150.png"
+    },
+    "DamageBoost_155": {
+        "image": "DamageBoost_155.png"
+    },
+    "DamageBoost_160": {
+        "image": "DamageBoost_160.png"
+    },
+    "DamageBoost_165": {
+        "image": "DamageBoost_165.png"
+    },
+    "DamageBoost_170": {
+        "image": "DamageBoost_170.png"
+    },
+    "DamageBoost_175": {
+        "image": "DamageBoost_175.png"
+    },
+    "DamageBoost_180": {
+        "image": "DamageBoost_180.png"
+    },
+    "DamageBoost_185": {
+        "image": "DamageBoost_185.png"
+    },
+    "DamageBoost_190": {
+        "image": "DamageBoost_190.png"
+    },
+    "DamageBoost_15": {
+        "image": "DamageBoost_15.png"
+    },
+    "DamageBoost_195": {
+        "image": "DamageBoost_195.png"
+    },
+    "DamageBoost_20": {
+        "image": "DamageBoost_20.png"
+    },
+    "DamageBoost_25": {
+        "image": "DamageBoost_25.png"
+    },
+    "DamageBoost_30": {
+        "image": "DamageBoost_30.png"
+    },
+    "DamageBoost_35": {
+        "image": "DamageBoost_35.png"
+    },
+    "DamageBoost_40": {
+        "image": "DamageBoost_40.png"
+    },
+    "DamageBoost_45": {
+        "image": "DamageBoost_45.png"
+    },
+    "DamageBoost_50": {
+        "image": "DamageBoost_50.png"
+    },
+    "DamageBoost_55": {
+        "image": "DamageBoost_55.png"
+    },
+    "DamageBoost_60": {
+        "image": "DamageBoost_60.png"
+    },
+    "DamageBoost_65": {
+        "image": "DamageBoost_65.png"
+    },
+    "DamageBoost_70": {
+        "image": "DamageBoost_70.png"
+    },
+    "DamageBoost_75": {
+        "image": "DamageBoost_75.png"
+    },
+    "DamageBoost_80": {
+        "image": "DamageBoost_80.png"
+    },
+    "DamageBoost_85": {
+        "image": "DamageBoost_85.png"
+    },
+    "DamageBoost_90": {
+        "image": "DamageBoost_90.png"
+    },
+    "DS_ArtCont_5": {
+        "image": "DS_ArtCont_5.png"
+    },
+    "Era_Exoskeleton_LVL1": {
+        "image": "Era_Exoskeleton_LVL1.png"
+    },
+    "Era_Exoskeleton_LVL2": {
+        "image": "Era_Exoskeleton_LVL2.png"
+    },
+    "Era_Exoskeleton_LVL3": {
+        "image": "Era_Exoskeleton_LVL3.png"
+    },
+    "WoodenStick": {
+        "image": "WoodenStick.png"
+    },
+    "Glock19": {
+        "image": "Glock19.png"
+    },
+    "NewCJ_Materials_Scrap": {
+        "image": "NewCJ_Materials_Scrap.png"
+    },
+    "NewCJ_Materials_nuts": {
+        "image": "NewCJ_Materials_nuts.png"
+    },
+    "Grotesk_Belt9": {
+        "image": "Grotesk_Belt9.png"
+    },
+    "Grotesk_Belt9b": {
+        "image": "Grotesk_Belt9b.png"
+    },
+    "Grotesk_Belt3": {
+        "image": "Grotesk_Belt3.png"
+    },
+    "Grotesk_Belt3b": {
+        "image": "Grotesk_Belt3b.png"
+    },
+    "Grotesk_Belt4": {
+        "image": "Grotesk_Belt4.png"
+    },
+    "Grotesk_Belt4b": {
+        "image": "Grotesk_Belt4b.png"
+    },
+    "Grotesk_Belt5": {
+        "image": "Grotesk_Belt5.png"
+    },
+    "Grotesk_Belt5b": {
+        "image": "Grotesk_Belt5b.png"
+    },
+    "Grotesk_Belt6": {
+        "image": "Grotesk_Belt6.png"
+    },
+    "Grotesk_Belt6b": {
+        "image": "Grotesk_Belt6b.png"
+    },
+    "Grotesk_Belt7": {
+        "image": "Grotesk_Belt7.png"
+    },
+    "Grotesk_Belt7b": {
+        "image": "Grotesk_Belt7b.png"
+    },
+    "Grotesk_Belt8": {
+        "image": "Grotesk_Belt8.png"
+    },
+    "Grotesk_Belt8b": {
+        "image": "Grotesk_Belt8b.png"
+    },
+    "Grotesk_Exo": {
+        "image": "Grotesk_Exo.png"
+    },
+    "Grotesk_Exo_LVL2": {
+        "image": "Grotesk_Exo_LVL2.png"
+    },
+    "Grotesk_Exo_LVL3": {
+        "image": "Grotesk_Exo_LVL3.png"
+    },
+    "Kuvalda_AK74": {
+        "image": "Kuvalda_AK74.png"
+    },
+    "Kuvalda_AKMN": {
+        "image": "Kuvalda_AKMN.png"
+    },
+    "Kuvalda_AKS74U": {
+        "image": "Kuvalda_AKS74U.png"
+    },
+    "Kuvalda_AKS74U939": {
+        "image": "Kuvalda_AKS74U939.png"
+    },
+    "bMF_Artefact_Fountain": {
+        "image": "bMF_Artefact_Fountain.png"
+    },
+    "Kuvalda_Ammo_12x7mm": {
+        "image": "Kuvalda_Ammo_12x7mm.png"
+    },
+    "Kuvalda_ASH12_Mag_30rnd": {
+        "image": "Kuvalda_ASH12_Mag_30rnd.png"
+    },
+    "Kuvalda_ASVAL": {
+        "image": "Kuvalda_ASVAL.png"
+    },
+    "Kuvalda_KS23": {
+        "image": "Kuvalda_KS23.png"
+    },
+    "Kuvalda_M4Benelli": {
+        "image": "Kuvalda_M4Benelli.png"
+    },
+    "Kuvalda_RSH12": {
+        "image": "Kuvalda_RSH12.png"
+    },
+    "Kuvalda_DP28": {
+        "image": "Kuvalda_DP28.png"
+    },
+    "Kuvalda_F2000": {
+        "image": "Kuvalda_F2000.png"
+    },
+    "Kuvalda_F2000338": {
+        "image": "Kuvalda_F2000338.png"
+    },
+    "bMF_Artefact_Shar": {
+        "image": "bMF_Artefact_Shar.png"
+    },
+    "Kuvalda_FN57": {
+        "image": "Kuvalda_FN57.png"
+    },
+    "Kuvalda_FN57939_mag_30rnd": {
+        "image": "Kuvalda_FN57939_mag_30rnd.png"
+    },
+    "Kuvalda_G28": {
+        "image": "Kuvalda_G28.png"
+    },
+    "Kuvalda_G36": {
+        "image": "Kuvalda_G36.png"
+    },
+    "Kuvalda_G36338": {
+        "image": "Kuvalda_G36338.png"
+    },
+    "Kuvalda_HK416A5": {
+        "image": "Kuvalda_HK416A5.png"
+    },
+    "Kuvalda_HoneyBadger": {
+        "image": "Kuvalda_HoneyBadger.png"
+    },
+    "Kuvalda_HoneyBadger408_Mag_30Rnd": {
+        "image": "Kuvalda_HoneyBadger408_Mag_30Rnd.png"
+    },
+    "Kuvalda_LR300": {
+        "image": "Kuvalda_LR300.png"
+    },
+    "Kuvalda_LR300408_Mag_30Rnd": {
+        "image": "Kuvalda_LR300408_Mag_30Rnd.png"
+    },
+    "Kuvalda_M200_Mag_7rnd": {
+        "image": "Kuvalda_M200_Mag_7rnd.png"
+    },
+    "Kuvalda_M4A1": {
+        "image": "Kuvalda_M4A1.png"
+    },
+    "Kuvalda_M4A1338": {
+        "image": "Kuvalda_M4A1338.png"
+    },
+    "Kuvalda_M4A1_456": {
+        "image": "Kuvalda_M4A1_456.png"
+    },
+    "Kuvalda_M4A1_456338": {
+        "image": "Kuvalda_M4A1_456338.png"
+    },
+    "Kuvalda_M82A1_Mag_10Rnd": {
+        "image": "Kuvalda_M82A1_Mag_10Rnd.png"
+    },
+    "Kuvalda_M9A3": {
+        "image": "Kuvalda_M9A3.png"
+    },
+    "Kuvalda_Mag_M9A3939_30rnd": {
+        "image": "Kuvalda_Mag_M9A3939_30rnd.png"
+    },
+    "Kuvalda_Mag_SVU12755_20Rnd": {
+        "image": "Kuvalda_Mag_SVU12755_20Rnd.png"
+    },
+    "Kuvalda_Mag_SVU12755_40Rnd": {
+        "image": "Kuvalda_Mag_SVU12755_40Rnd.png"
+    },
+    "Kuvalda_Mag_TT939_30rnd": {
+        "image": "Kuvalda_Mag_TT939_30rnd.png"
+    },
+    "Kuvalda_MCX_Spear408_Mag_10Rnd": {
+        "image": "Kuvalda_MCX_Spear408_Mag_10Rnd.png"
+    },
+    "Kuvalda_MCX_Spear408_Mag_20Rnd": {
+        "image": "Kuvalda_MCX_Spear408_Mag_20Rnd.png"
+    },
+    "Kuvalda_SA80": {
+        "image": "Kuvalda_SA80.png"
+    },
+    "Kuvalda_MG42": {
+        "image": "Kuvalda_MG42.png"
+    },
+    "Kuvalda_Mk18": {
+        "image": "Kuvalda_Mk18.png"
+    },
+    "Kuvalda_Mk18_Mag_10Rnd": {
+        "image": "Kuvalda_Mk18_Mag_10Rnd.png"
+    },
+    "Kuvalda_Mk18408_Mag_20Rnd": {
+        "image": "Kuvalda_Mk18408_Mag_20Rnd.png"
+    },
+    "Kuvalda_MK47": {
+        "image": "Kuvalda_MK47.png"
+    },
+    "Kuvalda_MK47338": {
+        "image": "Kuvalda_MK47338.png"
+    },
+    "Kuvalda_PKM939": {
+        "image": "Kuvalda_PKM939.png"
+    },
+    "Kuvalda_PKM": {
+        "image": "Kuvalda_PKM.png"
+    },
+    "Kuvalda_PP91": {
+        "image": "Kuvalda_PP91.png"
+    },
+    "Kuvalda_PPSH": {
+        "image": "Kuvalda_PPSH.png"
+    },
+    "Kuvalda_RPD": {
+        "image": "Kuvalda_RPD.png"
+    },
+    "Kuvalda_RPK16": {
+        "image": "Kuvalda_RPK16.png"
+    },
+    "Kuvalda_RPK16939": {
+        "image": "Kuvalda_RPK16939.png"
+    },
+    "Kuvalda_SIGMCX_Spear": {
+        "image": "Kuvalda_SIGMCX_Spear.png"
+    },
+    "Kuvalda_SKS": {
+        "image": "Kuvalda_SKS.png"
+    },
+    "Kuvalda_SVD408_10Rnd": {
+        "image": "Kuvalda_SVD408_10Rnd.png"
+    },
+    "Kuvalda_SVD408_20Rnd": {
+        "image": "Kuvalda_SVD408_20Rnd.png"
+    },
+    "Kuvalda_SVDanom_10Rnd": {
+        "image": "Kuvalda_SVDanom_10Rnd.png"
+    },
+    "Kuvalda_SVDanom_20Rnd": {
+        "image": "Kuvalda_SVDanom_20Rnd.png"
+    },
+    "Kuvalda_SVDS": {
+        "image": "Kuvalda_SVDS.png"
+    },
+    "bMF_Artefact_Medallion": {
+        "image": "bMF_Artefact_Medallion.png"
+    },
+    "bMF_Artefact_izolator": {
+        "image": "bMF_Artefact_izolator.png"
+    },
+    "Kuvalda_SVU": {
+        "image": "Kuvalda_SVU.png"
+    },
+    "Kuvalda_TT": {
+        "image": "Kuvalda_TT.png"
+    },
+    "Kuvalda_TT_Reshala": {
+        "image": "Kuvalda_TT_Reshala.png"
+    },
+    "Kuvalda_Val_Mag408_30rnd": {
+        "image": "Kuvalda_Val_Mag408_30rnd.png"
+    },
+    "Kuvalda_VSS": {
+        "image": "Kuvalda_VSS.png"
+    },
+    "bMF_Artefact_Gimlet": {
+        "image": "bMF_Artefact_Gimlet.png"
+    },
+    "bMF_Artefact_Bat": {
+        "image": "bMF_Artefact_Bat.png"
+    },
+    "Kuvalda_VSSK12799_Mag_20Rnd": {
+        "image": "Kuvalda_VSSK12799_Mag_20Rnd.png"
+    },
+    "Kuvalda_VSSK12799": {
+        "image": "Kuvalda_VSSK12799.png"
+    },
+    "Kuvalda_VSSMag40830": {
+        "image": "Kuvalda_VSSMag40830.png"
+    },
+    "Kuvalda_VSSMaganom30": {
+        "image": "Kuvalda_VSSMaganom30.png"
+    },
+    "Kvld_PalmStanag338_100Rnd": {
+        "image": "Kvld_PalmStanag338_100Rnd.png"
+    },
+    "Kvld_PP91939_Mag_30Rnd": {
+        "image": "Kvld_PP91939_Mag_30Rnd.png"
+    },
+    "Mag_AKMN408_30Rnd": {
+        "image": "Mag_AKMN408_30Rnd.png"
+    },
+    "Mag_AKS74U_30Rnd939": {
+        "image": "Mag_AKS74U_30Rnd939.png"
+    },
+    "Mag_AKS74U_30Rnd939anom": {
+        "image": "Mag_AKS74U_30Rnd939anom.png"
+    },
+    "Mag_Glock939_30Rnd": {
+        "image": "Mag_Glock939_30Rnd.png"
+    },
+    "Mag_MP5_30Rnd939": {
+        "image": "Mag_MP5_30Rnd939.png"
+    },
+    "Mag_MP5_30Rnd939anom": {
+        "image": "Mag_MP5_30Rnd939anom.png"
+    },
+    "Mag_VSS_10Rnd": {
+        "image": "Mag_VSS_10Rnd.png"
+    },
+    "Mag_VSS_20Rnd": {
+        "image": "Mag_VSS_20Rnd.png"
+    },
+    "Mag_VSS_40Rnd": {
+        "image": "Mag_VSS_40Rnd.png"
+    },
+    "MF_Artefact_Batb": {
+        "image": "MF_Artefact_Batb.png"
+    },
+    "MF_Artefact_Batt3": {
+        "image": "MF_Artefact_Batt3.png"
+    },
+    "bMF_Artefact_Battery": {
+        "image": "bMF_Artefact_Battery.png"
+    },
+    "MF_Artefact_Batteryb": {
+        "image": "MF_Artefact_Batteryb.png"
+    },
+    "MF_Artefact_Batteryt3": {
+        "image": "MF_Artefact_Batteryt3.png"
+    },
+    "bMF_Artefact_Angel": {
+        "image": "bMF_Artefact_Angel.png"
+    },
+    "MF_Artefact_Black_Angelb": {
+        "image": "MF_Artefact_Black_Angelb.png"
+    },
+    "MF_Artefact_Black_Angelt3": {
+        "image": "MF_Artefact_Black_Angelt3.png"
+    },
+    "bMF_Artefact_Blood": {
+        "image": "bMF_Artefact_Blood.png"
+    },
+    "MF_Artefact_Bloodb": {
+        "image": "MF_Artefact_Bloodb.png"
+    },
+    "MF_Artefact_Bloodt3": {
+        "image": "MF_Artefact_Bloodt3.png"
+    },
+    "bMF_Artefact_Chelust": {
+        "image": "bMF_Artefact_Chelust.png"
+    },
+    "MF_Artefact_Chelustb": {
+        "image": "MF_Artefact_Chelustb.png"
+    },
+    "MF_Artefact_Chelustt3": {
+        "image": "MF_Artefact_Chelustt3.png"
+    },
+    "bMF_Artefact_Compass": {
+        "image": "bMF_Artefact_Compass.png"
+    },
+    "MF_Artefact_Compassb": {
+        "image": "MF_Artefact_Compassb.png"
+    },
+    "MF_Artefact_Compasst3": {
+        "image": "MF_Artefact_Compasst3.png"
+    },
+    "bMF_Artefact_Dragunov": {
+        "image": "bMF_Artefact_Dragunov.png"
+    },
+    "MF_Artefact_Dragunovb": {
+        "image": "MF_Artefact_Dragunovb.png"
+    },
+    "MF_Artefact_Dragunovt3": {
+        "image": "MF_Artefact_Dragunovt3.png"
+    },
+    "MF_Artefact_Dushab": {
+        "image": "MF_Artefact_Dushab.png"
+    },
+    "MF_Artefact_Dushat3": {
+        "image": "MF_Artefact_Dushat3.png"
+    },
+    "MF_Artefact_Fountainb": {
+        "image": "MF_Artefact_Fountainb.png"
+    },
+    "MF_Artefact_Fountaint3": {
+        "image": "MF_Artefact_Fountaint3.png"
+    },
+    "bMF_Artefact_Generator": {
+        "image": "bMF_Artefact_Generator.png"
+    },
+    "MF_Artefact_Generatorb": {
+        "image": "MF_Artefact_Generatorb.png"
+    },
+    "MF_Artefact_Generatort3": {
+        "image": "MF_Artefact_Generatort3.png"
+    },
+    "MF_Artefact_Gimlettb": {
+        "image": "MF_Artefact_Gimlettb.png"
+    },
+    "MF_Artefact_Gimlett3": {
+        "image": "MF_Artefact_Gimlett3.png"
+    },
+    "bMF_Artefact_Glaz": {
+        "image": "bMF_Artefact_Glaz.png"
+    },
+    "MF_Artefact_Glazb": {
+        "image": "MF_Artefact_Glazb.png"
+    },
+    "MF_Artefact_Glazt3": {
+        "image": "MF_Artefact_Glazt3.png"
+    },
+    "bMF_Artefact_Gravi": {
+        "image": "bMF_Artefact_Gravi.png"
+    },
+    "MF_Artefact_Gravib": {
+        "image": "MF_Artefact_Gravib.png"
+    },
+    "MF_Artefact_Gravit3": {
+        "image": "MF_Artefact_Gravit3.png"
+    },
+    "MF_Artefact_izolatorb": {
+        "image": "MF_Artefact_izolatorb.png"
+    },
+    "MF_Artefact_izolatort3": {
+        "image": "MF_Artefact_izolatort3.png"
+    },
+    "bMF_Artefact_Kolobok": {
+        "image": "bMF_Artefact_Kolobok.png"
+    },
+    "MF_Artefact_Kolobokb": {
+        "image": "MF_Artefact_Kolobokb.png"
+    },
+    "MF_Artefact_Kolobokt3": {
+        "image": "MF_Artefact_Kolobokt3.png"
+    },
+    "bMF_Artefact_Kristall": {
+        "image": "bMF_Artefact_Kristall.png"
+    },
+    "MF_Artefact_Kristallb": {
+        "image": "MF_Artefact_Kristallb.png"
+    },
+    "MF_Artefact_Kristallt3": {
+        "image": "MF_Artefact_Kristallt3.png"
+    },
+    "MF_Artefact_Lighthousetb": {
+        "image": "MF_Artefact_Lighthousetb.png"
+    },
+    "MF_Artefact_Lighthouset3": {
+        "image": "MF_Artefact_Lighthouset3.png"
+    },
+    "bMF_Artefact_Lighthouse": {
+        "image": "bMF_Artefact_Lighthouse.png"
+    },
+    "bMF_Artefact_Mamabus": {
+        "image": "bMF_Artefact_Mamabus.png"
+    },
+    "MF_Artefact_Mamabusb": {
+        "image": "MF_Artefact_Mamabusb.png"
+    },
+    "MF_Artefact_Mamabust3": {
+        "image": "MF_Artefact_Mamabust3.png"
+    },
+    "MF_Artefact_Medallionb": {
+        "image": "MF_Artefact_Medallionb.png"
+    },
+    "MF_Artefact_Medalliont3": {
+        "image": "MF_Artefact_Medalliont3.png"
+    },
+    "bMF_Artefact_Medusa": {
+        "image": "bMF_Artefact_Medusa.png"
+    },
+    "MF_Artefact_Medusab": {
+        "image": "MF_Artefact_Medusab.png"
+    },
+    "MF_Artefact_Medusat3": {
+        "image": "MF_Artefact_Medusat3.png"
+    },
+    "bMF_Artefact_myso": {
+        "image": "bMF_Artefact_myso.png"
+    },
+    "MF_Artefact_mysob": {
+        "image": "MF_Artefact_mysob.png"
+    },
+    "MF_Artefact_mysot3": {
+        "image": "MF_Artefact_mysot3.png"
+    },
+    "bMF_Artefact_Oasis": {
+        "image": "bMF_Artefact_Oasis.png"
+    },
+    "MF_Artefact_Oasisb": {
+        "image": "MF_Artefact_Oasisb.png"
+    },
+    "MF_Artefact_Oasist3": {
+        "image": "MF_Artefact_Oasist3.png"
+    },
+    "bMF_Artefact_Phantom": {
+        "image": "bMF_Artefact_Phantom.png"
+    },
+    "MF_Artefact_Phantomb": {
+        "image": "MF_Artefact_Phantomb.png"
+    },
+    "MF_Artefact_Phantomt3": {
+        "image": "MF_Artefact_Phantomt3.png"
+    },
+    "MF_Artefact_Plamyab": {
+        "image": "MF_Artefact_Plamyab.png"
+    },
+    "MF_Artefact_Plamyat3": {
+        "image": "MF_Artefact_Plamyat3.png"
+    },
+    "bMF_Artefact_Puzir": {
+        "image": "bMF_Artefact_Puzir.png"
+    },
+    "MF_Artefact_Puzirb": {
+        "image": "MF_Artefact_Puzirb.png"
+    },
+    "MF_Artefact_Puzirt3": {
+        "image": "MF_Artefact_Puzirt3.png"
+    },
+    "bMF_Artefact_Ribka": {
+        "image": "bMF_Artefact_Ribka.png"
+    },
+    "MF_Artefact_Ribkab": {
+        "image": "MF_Artefact_Ribkab.png"
+    },
+    "MF_Artefact_Ribkat3": {
+        "image": "MF_Artefact_Ribkat3.png"
+    },
+    "MF_Artefact_Sharb": {
+        "image": "MF_Artefact_Sharb.png"
+    },
+    "MF_Artefact_Shart3": {
+        "image": "MF_Artefact_Shart3.png"
+    },
+    "bMF_Artefact_shturval": {
+        "image": "bMF_Artefact_shturval.png"
+    },
+    "MF_Artefact_shturvalb": {
+        "image": "MF_Artefact_shturvalb.png"
+    },
+    "MF_Artefact_shturvalt3": {
+        "image": "MF_Artefact_shturvalt3.png"
+    },
+    "bMF_Artefact_Signet": {
+        "image": "bMF_Artefact_Signet.png"
+    },
+    "MF_Artefact_Signetb": {
+        "image": "MF_Artefact_Signetb.png"
+    },
+    "MF_Artefact_Signett3": {
+        "image": "MF_Artefact_Signett3.png"
+    },
+    "bMF_Artefact_SkullMiser": {
+        "image": "bMF_Artefact_SkullMiser.png"
+    },
+    "MF_Artefact_SkullMiserb": {
+        "image": "MF_Artefact_SkullMiserb.png"
+    },
+    "MF_Artefact_SkullMisert3": {
+        "image": "MF_Artefact_SkullMisert3.png"
+    },
+    "MF_Artefact_snejinkab": {
+        "image": "MF_Artefact_snejinkab.png"
+    },
+    "MF_Artefact_snejinkat3": {
+        "image": "MF_Artefact_snejinkat3.png"
+    },
+    "bMF_Artefact_Star": {
+        "image": "bMF_Artefact_Star.png"
+    },
+    "MF_Artefact_Starb": {
+        "image": "MF_Artefact_Starb.png"
+    },
+    "MF_Artefact_Start3": {
+        "image": "MF_Artefact_Start3.png"
+    },
+    "bMF_Artefact_StoneFlower": {
+        "image": "bMF_Artefact_StoneFlower.png"
+    },
+    "MF_Artefact_StoneFlowerb": {
+        "image": "MF_Artefact_StoneFlowerb.png"
+    },
+    "MF_Artefact_StoneFlowert3": {
+        "image": "MF_Artefact_StoneFlowert3.png"
+    },
+    "bMF_Artefact_Svet": {
+        "image": "bMF_Artefact_Svet.png"
+    },
+    "MF_Artefact_Svetb": {
+        "image": "MF_Artefact_Svetb.png"
+    },
+    "MF_Artefact_Svett3": {
+        "image": "MF_Artefact_Svett3.png"
+    },
+    "bMF_Artefact_Vspiska": {
+        "image": "bMF_Artefact_Vspiska.png"
+    },
+    "MF_Artefact_Vspiskab": {
+        "image": "MF_Artefact_Vspiskab.png"
+    },
+    "MF_Artefact_Vspiskat3": {
+        "image": "MF_Artefact_Vspiskat3.png"
+    },
+    "bMF_Artefact_Vyvert": {
+        "image": "bMF_Artefact_Vyvert.png"
+    },
+    "MF_Artefact_Vyvertb": {
+        "image": "MF_Artefact_Vyvertb.png"
+    },
+    "MF_Artefact_Vyvertt3": {
+        "image": "MF_Artefact_Vyvertt3.png"
+    },
+    "MF_Detector_Echo": {
+        "image": "MF_Detector_Echo.png"
+    },
+    "MF_Detector_Bear": {
+        "image": "MF_Detector_Bear.png"
+    },
+    "MF_Detector_Veles": {
+        "image": "MF_Detector_Veles.png"
+    },
+    "MF_Detector_Gilka": {
+        "image": "MF_Detector_Gilka.png"
+    },
+    "MP5K939": {
+        "image": "MP5K939.png"
+    },
+    "NewCJ_Materials_DuctTape": {
+        "image": "NewCJ_Materials_DuctTape.png"
+    },
+    "NewCJ_Materials_Glass": {
+        "image": "NewCJ_Materials_Glass.png"
+    },
+    "TNRJ_Exo": {
+        "image": "TNRJ_Exo.png"
+    },
+    "TNRJ_Exo_LVL2": {
+        "image": "TNRJ_Exo_LVL2.png"
+    },
+    "TNRJ_Exo_LVL3": {
+        "image": "TNRJ_Exo_LVL3.png"
+    },
+    "bart_bandit_obolochka3_body": {
+        "image": "bart_bandit_obolochka3_body.png"
+    },
+    "bart_Body_Obolochka3_Black": {
+        "image": "bart_Body_Obolochka3_Black.png"
+    },
+    "bart_Body_Obolochka3_EMR": {
+        "image": "bart_Body_Obolochka3_EMR.png"
+    },
+    "bart_Body_Obolochka3_Flora": {
+        "image": "bart_Body_Obolochka3_Flora.png"
+    },
+    "bart_Body_Obolochka3_Green": {
+        "image": "bart_Body_Obolochka3_Green.png"
+    },
+    "bart_clearsky_obolochka3_body": {
+        "image": "bart_clearsky_obolochka3_body.png"
+    },
+    "bart_duty_obolochka3_body": {
+        "image": "bart_duty_obolochka3_body.png"
+    },
+    "bart_freedom_obolochka3_body": {
+        "image": "bart_freedom_obolochka3_body.png"
+    },
+    "bart_hunter_obolochka3_body": {
+        "image": "bart_hunter_obolochka3_body.png"
+    },
+    "bart_merc_obolochka3_body": {
+        "image": "bart_merc_obolochka3_body.png"
+    },
+    "bart_neitral4_obolochka3_body": {
+        "image": "bart_neitral4_obolochka3_body.png"
+    },
+    "bart_starosta_obolochka3_body": {
+        "image": "bart_starosta_obolochka3_body.png"
+    },
+    "bart_voenstal_obolochka3_body": {
+        "image": "bart_voenstal_obolochka3_body.png"
+    },
+    "bart_wanderer_obolochka3_body": {
+        "image": "bart_wanderer_obolochka3_body.png"
+    },
+    "TNRJ_Biohazard_Jacket": {
+        "image": "TNRJ_Biohazard_Jacket.png"
+    },
+    "TNRJ_Biohazard_Jacketb": {
+        "image": "TNRJ_Biohazard_Jacketb.png"
+    },
+    "TNRJ_Biohazard_Jacketo": {
+        "image": "TNRJ_Biohazard_Jacketo.png"
+    },
+    "TNRJ_Red_Jacket": {
+        "image": "TNRJ_Red_Jacket.png"
+    },
+    "TNRJ_Taiga_Jacket": {
+        "image": "TNRJ_Taiga_Jacket.png"
+    },
+    "TNRJ_Taiga_Jacketb": {
+        "image": "TNRJ_Taiga_Jacketb.png"
+    },
+    "TNRJ_Taiga_Jacketg": {
+        "image": "TNRJ_Taiga_Jacketg.png"
+    },
+    "up1bart_bandit_obolochka3_body": {
+        "image": "up1bart_bandit_obolochka3_body.png"
+    },
+    "up1bart_Body_Obolochka3_Black": {
+        "image": "up1bart_Body_Obolochka3_Black.png"
+    },
+    "up1bart_Body_Obolochka3_EMR": {
+        "image": "up1bart_Body_Obolochka3_EMR.png"
+    },
+    "up1bart_Body_Obolochka3_Flora": {
+        "image": "up1bart_Body_Obolochka3_Flora.png"
+    },
+    "up1bart_Body_Obolochka3_Green": {
+        "image": "up1bart_Body_Obolochka3_Green.png"
+    },
+    "up1bart_clearsky_obolochka3_body": {
+        "image": "up1bart_clearsky_obolochka3_body.png"
+    },
+    "up1bart_duty_obolochka3_body": {
+        "image": "up1bart_duty_obolochka3_body.png"
+    },
+    "up1bart_freedom_obolochka3_body": {
+        "image": "up1bart_freedom_obolochka3_body.png"
+    },
+    "up1bart_hunter_obolochka3_body": {
+        "image": "up1bart_hunter_obolochka3_body.png"
+    },
+    "up1bart_merc_obolochka3_body": {
+        "image": "up1bart_merc_obolochka3_body.png"
+    },
+    "up1bart_neitral4_obolochka3_body": {
+        "image": "up1bart_neitral4_obolochka3_body.png"
+    },
+    "up1bart_starosta_obolochka3_body": {
+        "image": "up1bart_starosta_obolochka3_body.png"
+    },
+    "up1bart_voenstal_obolochka3_body": {
+        "image": "up1bart_voenstal_obolochka3_body.png"
+    },
+    "up1bart_wanderer_obolochka3_body": {
+        "image": "up1bart_wanderer_obolochka3_body.png"
+    },
+    "up1TNRJ_Biohazard_Jacket": {
+        "image": "up1TNRJ_Biohazard_Jacket.png"
+    },
+    "up1TNRJ_Biohazard_Jacketb": {
+        "image": "up1TNRJ_Biohazard_Jacketb.png"
+    },
+    "up1TNRJ_Biohazard_Jacketo": {
+        "image": "up1TNRJ_Biohazard_Jacketo.png"
+    },
+    "up1TNRJ_Red_Jacket": {
+        "image": "up1TNRJ_Red_Jacket.png"
+    },
+    "up1TNRJ_Taiga_Jacket": {
+        "image": "up1TNRJ_Taiga_Jacket.png"
+    },
+    "up1TNRJ_Taiga_Jacketb": {
+        "image": "up1TNRJ_Taiga_Jacketb.png"
+    },
+    "up1TNRJ_Taiga_Jacketg": {
+        "image": "up1TNRJ_Taiga_Jacketg.png"
+    }
+}

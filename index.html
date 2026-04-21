@@ -1,0 +1,108 @@
+<!-- 
+  Copyright (c) 2025s Vanish7667 and bartholomewlaw
+  All Rights Reserved
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroteskStalker PvE Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Основные css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Компоненты css -->
+    <link rel="stylesheet" href="css/components/garland.css">
+    <link rel="stylesheet" href="css/components/fon.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+</head>
+<body>
+
+    <!--гирлянда -->
+<div id="garland"></div>
+
+    <header>
+        <h1>GroteskStalker PvE</h1>
+    </header>
+
+    <!-- меню -->
+    <div id="nav"></div>
+
+    <div class="container">
+        <!-- Левый сайдбар -->
+        <aside class="sidebar">
+            <a href="https://dayzgrotesk.ru/" target="_blank" class="sidebar-button">Наш магазин</a>
+
+            <section class="server-info">
+                <h3>Наши сервера</h3>
+                <ul class="server-list">
+                    <li>
+                      <strong>NewHorizon 1:</strong><br>
+                      IP: 185.189.255.166<br>
+                      PORT: 2302
+                    </li>
+
+                    <li>
+                      <strong>NewHorizon 3:</strong><br>
+                      IP: 195.18.27.180<br>
+                      PORT: 2302
+                    </li>
+
+                    <li>
+                      <strong>NewHorizon 3.5:</strong><br>
+                      IP: 195.18.27.180<br>
+                      PORT: 2303
+                    </li>
+
+                    <li>
+                      <strong>NewHorizon 4:</strong><br>
+                      IP: 80.242.59.98<br>
+                      PORT: 2302
+                    </li>
+
+                    <li>
+                      <strong>NewHorizon 5:</strong><br>
+                      IP: 80.242.59.98<br>
+                      PORT: 2303
+                    </li>
+
+                    <li>
+                      <strong>DayZone 1:</strong><br>
+                      IP: 185.189.255.166<br>
+                      PORT: 2303
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- Основной контент -->
+        <main id="content">
+            <h2>Добро пожаловать!</h2>
+            <p>Здесь собрана вся информация о серверах GroteskStalker PvE в Dayz.</p>
+            <p>Используйте вкладки сверху для навигации.</p>
+            <p>Новости:</p>
+
+            <!-- Центральная новость -->
+            <div class="main-news" id="mainNews"></div>
+        </main>
+
+        <!-- Правый (обновления) -->
+        <aside class="sidebar sidebar-updates">
+            <h3>Обновления</h3>
+            <ul id="updatesList"></ul>
+        </aside>
+    </div>
+
+    <!-- футер -->
+    <div id="footer"></div>
+    
+    <!-- Основные js -->
+    <script src="js/home.js"></script>
+    <script src="js/home-updates.js"></script>
+    <!-- Компоненты js -->
+    <script src="js/components/components.js"></script>
+</body>
+</html>

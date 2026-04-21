@@ -1,0 +1,56 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* ===== гирлянда ===== */
+
+.garland {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    pointer-events: none; 
+    z-index: 1000;
+}
+
+
+.garland::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #333, #555, #333);
+    opacity: 0.6;
+}
+
+
+.garland span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: red;
+    box-shadow: 0 0 8px currentColor;
+    animation: blink 2.5s infinite;
+}
+
+
+.garland span:nth-child(4n+1) { color: #ff3b3b; background: #ff3b3b; }
+.garland span:nth-child(4n+2) { color: #ffd93b; background: #ffd93b; }
+.garland span:nth-child(4n+3) { color: #3bff6f; background: #3bff6f; }
+.garland span:nth-child(4n)   { color: #3bc9ff; background: #3bc9ff; }
+
+.garland span:nth-child(odd)  { animation-delay: 0s; }
+.garland span:nth-child(even) { animation-delay: 1.2s; }
+
+
+@keyframes blink {
+    0%, 100% { opacity: 0.3; box-shadow: none; }
+    50% { opacity: 1; box-shadow: 0 0 12px currentColor; }
+}

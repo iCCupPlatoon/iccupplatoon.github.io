@@ -1,0 +1,270 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #ffb000;
+    margin-bottom: 10px;
+}
+
+/* Контейнер на всю ширину */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+#artifacts-tab {
+    display: flex;
+    gap: 2%;
+    width: 100%; /* растягиваем на всю ширину */
+}
+
+/* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+h3 {
+    color: #ffb000;
+    margin-bottom: 12px;
+}
+
+/* Контейнер на всю ширину */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+}
+
+#artifacts-tab {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+}
+
+/* Колонки артефактов */
+.artifact-column {
+    flex: 1;
+    padding: 18px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    height: 631px;
+    overflow-y: auto;
+    margin-right: 0;
+    font-size: 15px;
+    color: #e0e0e0;
+    min-height: 639px;
+}
+
+.artifact-column + .artifact-column {
+    margin-left: 2%;
+}
+
+/* Список выбранных артефактов */
+.artifact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0;
+    padding: 8px 10px;
+    background-color: #3b3b3b;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.artifact-item.active {
+    border: 2px solid #00bfff;
+    background-color: #4a4a4a;
+}
+
+.artifact-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-artifact-btn {
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+    margin-left: 6px;
+}
+
+/* Кнопки */
+button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 2px 0;
+    background-color: #555;
+    color: #f0f0f0;
+    border: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+button:hover { background-color: #777; }
+button:disabled { background-color: #333; cursor: not-allowed; }
+
+/* Контейнер свойств и результатов */
+.outlined-box {
+    border: 2px solid #777;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #3b3b3b;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.control-block {
+    margin-top: 10px;
+}
+
+/* Вертикальный селектор тир/копий */
+.vertical-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.value-box {
+    width: 40px;
+    height: 26px;
+    background-color: #333;
+    border: 2px solid #777;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.arrow {
+    width: 20px;
+    height: 16px;
+    background-color: #555;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.15s;
+}
+
+.arrow:hover { background-color: #777; }
+
+/* Модальное окно */
+#artifact-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-height: 80%;
+    overflow-y: auto;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    font-size: 14px;
+}
+
+.modal-content .close {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+/* Поиск в модалке */
+#artifact-search {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background-color: #555;
+    color: #f0f0f0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Список артефактов в модалке */
+#artifact-list .artifact-item {
+    padding: 6px 8px;
+    margin: 2px 0;
+    background-color: #3b3b3b;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#artifact-list .artifact-item:hover { background-color: #555; }
+
+/* Результаты расчета */
+#calculation-result p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* Адаптивность */
+@media(max-width: 1200px){
+    #artifacts-tab { flex-wrap: wrap; }
+    .artifact-column { flex: 1 1 48%; margin-left: 0; margin-bottom: 10px; }
+}
+
+@media(max-width: 900px){
+    .artifact-column { flex: 1 1 100%; margin-left: 0; margin-bottom: 10px; }
+}
+

@@ -1,0 +1,1838 @@
+[
+    {
+        "item_name": "Модуль урона +5%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 50
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 50
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 50
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 50
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 50
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 50
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 50
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +10%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 100
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 100
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 100
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 100
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 100
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 100
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 100
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 100
+            },
+            {
+                "class_name": "Модуль урона +5%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +15%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 150
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 150
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 150
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 150
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 150
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 150
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 150
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 150
+            },
+            {
+                "class_name": "Модуль урона +10%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +20%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 200
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 200
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 200
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 200
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 200
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 200
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 200
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 200
+            },
+            {
+                "class_name": "Модуль урона +15%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +25%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 250
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 250
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 250
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 250
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 250
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 250
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 250
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 250
+            },
+            {
+                "class_name": "Модуль урона +20%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +30%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 300
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 300
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 300
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 300
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 300
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 300
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 300
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 300
+            },
+            {
+                "class_name": "Модуль урона +25%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +35%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 350
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 350
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 350
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 350
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 350
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 350
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 350
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 350
+            },
+            {
+                "class_name": "Модуль урона +30%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +40%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 400
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 400
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 400
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 400
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 400
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 400
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 400
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 400
+            },
+            {
+                "class_name": "Модуль урона +35%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +45%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 450
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 450
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 450
+            },
+            {
+                "class_name": "Модуль урона +40%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +50%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 500
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 500
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 500
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 500
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 500
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 500
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 500
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 500
+            },
+            {
+                "class_name": "Модуль урона +45%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +55%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 550
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 550
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 550
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 550
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 550
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 550
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 550
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 550
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Модуль урона +50%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +60%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 600
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 600
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 600
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 600
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 600
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 600
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 600
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 600
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 2
+            },
+            {
+                "class_name": "Модуль урона +55%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +65%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 650
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 650
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 650
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 650
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 650
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 650
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 650
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 650
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 3
+            },
+            {
+                "class_name": "Модуль урона +60%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +70%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 700
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 700
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 700
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 700
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 700
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 700
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 700
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 700
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 4
+            },
+            {
+                "class_name": "Модуль урона +65%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +75%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 750
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 750
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 750
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 750
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 750
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 750
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 750
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 750
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 5
+            },
+            {
+                "class_name": "Модуль урона +70%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +80%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 800
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 800
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 800
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 800
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 800
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 800
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 800
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 800
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 6
+            },
+            {
+                "class_name": "Модуль урона +75%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +85%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 850
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 850
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 850
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 850
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 850
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 850
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 850
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 850
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 7
+            },
+            {
+                "class_name": "Модуль урона +80%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +90%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 900
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 900
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 900
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 900
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 900
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 900
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 900
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 900
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 8
+            },
+            {
+                "class_name": "Модуль урона +85%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +95%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 950
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 950
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 950
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 950
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 950
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 950
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 950
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 950
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 9
+            },
+            {
+                "class_name": "Модуль урона +90%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +100%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1000
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 10
+            },
+            {
+                "class_name": "Модуль урона +95%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +105%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1050
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 11
+            },
+            {
+                "class_name": "Модуль урона +100%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +110%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1100
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 12
+            },
+            {
+                "class_name": "Модуль урона +105%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +115%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1150
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 13
+            },
+            {
+                "class_name": "Модуль урона +110%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +120%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1200
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 14
+            },
+            {
+                "class_name": "Модуль урона +115%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +125%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1250
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 15
+            },
+            {
+                "class_name": "Модуль урона +120%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +130%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1300
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 16
+            },
+            {
+                "class_name": "Модуль урона +125%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +135%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1350
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 17
+            },
+            {
+                "class_name": "Модуль урона +130%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +140%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1400
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 18
+            },
+            {
+                "class_name": "Модуль урона +135%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +145%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1450
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 19
+            },
+            {
+                "class_name": "Модуль урона +140%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +150%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1500
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 20
+            },
+            {
+                "class_name": "Модуль урона +145%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +155%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 21
+            },
+            {
+                "class_name": "Модуль урона +150%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +160%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1600
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 22
+            },
+            {
+                "class_name": "Модуль урона +155%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +165%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1650
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 23
+            },
+            {
+                "class_name": "Модуль урона +160%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +170%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1700
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 24
+            },
+            {
+                "class_name": "Модуль урона +165%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +175%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1750
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 25
+            },
+            {
+                "class_name": "Модуль урона +170%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +180%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1800
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 26
+            },
+            {
+                "class_name": "Модуль урона +175%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +185%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1850
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 27
+            },
+            {
+                "class_name": "Модуль урона +180%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +190%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1900
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 28
+            },
+            {
+                "class_name": "Модуль урона +185%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +195%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 1950
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 29
+            },
+            {
+                "class_name": "Модуль урона +190%",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "item_name": "Модуль урона +200%",
+        "description": "...",
+        "image": "CJ_Materials_Circuit_Board.png",
+        "assemble": [
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 2000
+            },
+            {
+                "class_name": "Лебедка",
+                "quantity": 30
+            },
+            {
+                "class_name": "Модуль урона +195%",
+                "count": 1
+            }
+        ]
+    }
+]

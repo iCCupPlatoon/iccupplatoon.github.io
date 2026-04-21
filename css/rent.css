@@ -1,0 +1,254 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* ======================= */
+/* Общие стили для страниц */
+/* ======================= */
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #1c1c1c;
+    color: #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================= */
+/* Контейнер страниц       */
+/* ======================= */
+.rent-container {
+    max-width: 1400px;       /* шире */
+    margin: 20px auto;
+    padding: 0;              /* убрали лишние паддинги */
+    min-height: 693px;        /* убрали растяжение под экран */
+}
+
+/* ======================= */
+/* Основной блок с инфой   */
+/* ======================= */
+.rent-info {
+    background-color: #2a2a2a;
+    padding: 30px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.55);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-height: 693px;
+}
+
+/* Заголовки */
+.rent-info h2 {
+    color: #ffb000;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+/* Параграфы */
+.rent-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* ======================= */
+/* Ссылки                  */
+/* ======================= */
+.rent-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rent-links a {
+    background-color: #ffb000;
+    color: #111;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.rent-links a:hover {
+    background-color: #ffaa00;
+}
+
+/* ======================= */
+/* Правила списка          */
+/* ======================= */
+.rent-rules {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.rent-rules li {
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+/* ======================= */
+/* Важное предупреждение    */
+/* ======================= */
+.rent-warning {
+    margin-top: 25px;
+    padding: 20px 22px;
+    border-left: 4px solid #c94a4a; /* мягкий красный */
+    background-color: #252525;
+    border-radius: 8px;
+    box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
+}
+
+.rent-warning h3 {
+    color: #c94a4a;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.rent-warning p strong {
+    color: #fff; /* жирный белый текст */
+}
+
+.rent-warning .muted {
+    color: #999;
+    font-size: 13px;
+}
+
+/* ======================= */
+/* Расширение ящика         */
+/* ======================= */
+.mailbox-block {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: start;
+}
+
+.mailbox-image {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.mailbox-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.img-caption {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Мягкий красный warning */
+.warning-soft-red {
+    border-left: 4px solid #c94a4a;
+    background-color: #241b1b;
+}
+
+.warning-soft-red h3 {
+    color: #e07070;
+}
+
+.warning-soft-red strong {
+    color: #ffffff; /* ВАЖНО: белый жирный */
+}
+
+.warning-soft-red .muted {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* ======================= */
+/* Ссылка WarGM            */
+/* ======================= */
+.wargm-link {
+    color: #ffb000;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffb000;
+    transition: 0.2s;
+}
+
+.wargm-link:hover {
+    color: #ffaa00;
+    border-bottom-color: #ffaa00;
+}
+
+/* ======================= */
+/* Tooltip для монет        */
+/* ======================= */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.tooltip-icon {
+    cursor: pointer;
+    font-size: 16px;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+    box-shadow: 0 0 12px rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+}
+
+.tooltip-text::after {
+    content: "";position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e1e1e transparent transparent transparent;
+}
+
+/* Показ при hover */
+.tooltip-wrapper:hover .tooltip-text {
+    opacity: 1;
+}
+
+.coin-tooltip-trigger {
+    cursor: pointer;
+    margin-left: 4px;
+    font-size: 16px;
+    user-select: none;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+}
+
+/* ======================= */
+/* Адаптивность            */
+/* ======================= */
+@media (max-width: 800px) {
+    .mailbox-block {
+        grid-template-columns: 1fr;
+    }
+
+    .mailbox-image {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}

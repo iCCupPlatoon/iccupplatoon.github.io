@@ -1,0 +1,247 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_Anpeq15.png",
+        "description": "Тактический блок, совмещающий в себе лазерные целеуказатели в видимом и инфокрасном диапазоне, а также светодиодный осветитель.",
+        "item_name": "Тактический блок AN-PEQ15"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_Anpeq2.png",
+        "description": "Тактический блок, совмещающий в себе лазерный целеуказатель и светодиодный осветитель.",
+        "item_name": "Тактический блок AN-PEQ2"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_dbEbal.png",
+        "description": "Тактический блок, совмещающий в себе лазерные целеуказатели в видимом и инфокрасном диапазоне, а также светодиодный осветитель.",
+        "item_name": "Тактический блок DB-E Bal"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_GL21.png",
+        "description": "Подствольный тактический светодиодный фонарь с функцией ЛЦУ производства компании Glock. П.С - Устанавливается только лишь на пистолеты!!",
+        "item_name": "Тактический фонарь с ЛЦУ GLT 21"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_Ncstar.png",
+        "description": "Компактный тактический лазерный прицельный модуль с лазерной точкой. Производства NcSTAR.",
+        "item_name": "Тактический ЛЦУ NcSTAR-TBR"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_Perst3.png",
+        "description": "Зенит Перст-3 - это тактическое устройство, которое сочетает в себе лазерные целеуказатели как в видимом, так и в ИК-диапазоне.",
+        "item_name": "Тактический блок Zenit Perst-3"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Лебедка",
+                "quantity": 1
+            },
+            {
+                "class_name": "Печатная плата",
+                "count": 50
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 450
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 450
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 450
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 450
+            },
+            {
+                "class_name": "Медная катушка",
+                "quantity": 450
+            }
+        ],
+        "image": "Ri_Laser_Surefire_x400.png",
+        "description": "Тактический фонарь SureFire X400. Сочетает в себе светодиодный фонарь и лазерный целеуказатель.",
+        "item_name": "Тактический фонарь SureFire X400"
+    }
+]

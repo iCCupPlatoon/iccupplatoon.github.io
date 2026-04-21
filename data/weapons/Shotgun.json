@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Ружье Binelli M3 Super 90",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Ружье Binelli M3 Super 90.",
+                "obtain": "Покупка у торговцев, награда из матроских сундуков.",
+                "slots": [
+                    {
+                        "scope": 1,
+                        "description": "Прицел",
+                        "images": [
+                            "images/slots_weapon/scope.png"
+                        ]
+                    },
+                    {
+                        "muzzle": 1,
+                        "description": "Глушитель/ДТК",
+                        "images": [
+                            "images/slots_weapon/muzzle.png"
+                        ]
+                    },
+                    {
+                        "lantern": 1,
+                        "description": "Фонарик/ЛЦУ",
+                        "images": [
+                            "images/slots_weapon/lantern.png"
+                        ]
+                    },
+                    {
+                        "tactical_grip": 1,
+                        "description": "Тактическая рукоять",
+                        "images": [
+                            "images/slots_weapon/tactical_grip.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Калибр": "12k"
+                },
+                "images": [
+                    "images/weapons/Shotgun/Benelli_M3_super_12K.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Ружье Binelli M3 Super 90.",
+                "obtain": "Покупка у торговцев, награда из матроских сундуков.",
+                "slots": [
+                    {
+                        "scope": 1,
+                        "description": "Прицел",
+                        "images": [
+                            "images/slots_weapon/scope.png"
+                        ]
+                    },
+                    {
+                        "muzzle": 1,
+                        "description": "Глушитель/ДТК",
+                        "images": [
+                            "images/slots_weapon/muzzle.png"
+                        ]
+                    },
+                    {
+                        "tactical_grip": 1,
+                        "description": "Тактическая рукоять",
+                        "images": [
+                            "images/slots_weapon/tactical_grip.png"
+                        ]
+                    }
+                ],
+                "stats": {
+                    "Калибр": "12k"
+                },
+                "images": [
+                    "images/weapons/Shotgun/Benelli_M3_super_12K.png"
+                ]
+            }
+        ]
+    }
+]

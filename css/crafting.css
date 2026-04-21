@@ -1,0 +1,318 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* =========================
+   ОСНОВА
+========================= */
+body {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   КОНТЕЙНЕР КАРТОЧЕК
+========================= */
+#crafting-recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* =========================
+   КАРТОЧКИ
+========================= */
+.recipe {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 10px;
+
+    width: 220px;
+    height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.recipe h3 {
+    font-size: 1em;
+    margin: 5px 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #ffb00055;
+}
+
+/* =========================
+   КНОПКИ КАТЕГОРИЙ
+========================= */
+.category-button {
+    background-color: #444;
+    color: white;
+    padding: 10px 14px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.category-button:hover {
+    background-color: #666;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ПОИСК
+========================= */
+.crafting-search-container {
+    margin: 20px auto;
+    width: 60%;
+    max-width: 600px;
+}
+
+.crafting-search-container input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2b2b2b;
+    color: #e7a03d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.crafting-search-container input::placeholder {
+    color: #888;
+}
+
+.crafting-search-container input:focus {
+    outline: none;
+    border-color: #ffb000;
+    box-shadow: 0 0 8px #ffb00055, 0 0 12px #ffd36a33;
+}
+
+/* =========================
+   СКРОЛЛ
+========================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+/* =========================
+   МОДАЛКА (ФОН)
+========================= */
+#modalOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+}
+
+#modalOverlay.active {
+    display: block;
+}
+
+/* =========================
+   МОДАЛКА (ОКНО)
+========================= */
+#modalContent {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+
+    width: 600px;
+    max-width: 90%;
+
+    margin: 80px auto;
+    color: white;
+
+    position: relative;
+    box-shadow: 0 0 20px #000;
+}
+
+/* =========================
+   КНОПКА ЗАКРЫТИЯ
+========================= */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: #ff5722;
+    color: white;
+    border: none;
+
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    font-size: 0.9em;
+}
+
+.close-button:hover {
+    background-color: #e64a19;
+}
+
+/* =========================
+   СТРУКТУРА МОДАЛКИ
+========================= */
+.modal-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.modal-description {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* Две колонки */
+.modal-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Колонки */
+.modal-column {
+    width: 50%;
+}
+
+/* Заголовки */
+.modal-column h3 {
+    margin-bottom: 10px;
+    color: #ffb000;
+}
+
+/* Списки */
+.modal-column ul {padding-left: 18px;
+}
+
+.modal-column li {
+    margin-bottom: 6px;
+}
+
+/* =========================
+   АДАПТИВ (мобилки)
+========================= */
+@media (max-width: 600px) {
+
+    .modal-grid {
+        flex-direction: column;
+    }
+
+    .modal-column {
+        width: 100%;
+    }
+
+    .recipe {
+        width: 90%;
+        height: auto;
+    }
+
+    .recipe img {
+        height: 120px;
+    }
+}
+
+/* =========================
+   скролл
+========================= */
+
+#crafting-recipes {
+    overflow-y: auto;
+    height: 80vh;
+}
+
+/* Заголовки модалки и названия предметов */
+.modal-title,
+.recipe h3,
+.category-button {
+    color: #ffb000; /* Золотисто-оранжевый как для Крафт/Разборки */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Подзаголовки Крафт и Разборка */
+.modal-column h3 {
+    color: #ffb000; /* Совпадает с остальными заголовками */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Сами карточки */
+.recipe {
+    background-color: #2c2c2c;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px; /* фиксированная ширина */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    pointer-events: all;
+    overflow: hidden;
+}
+
+/* Кнопки категорий */
+.category-button {
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.category-button:hover {
+    background-color: #666;
+}
+
+main {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0;
+}

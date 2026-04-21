@@ -1,0 +1,173 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Детектор Отклик",
+                "count": 1
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 7
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 7
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 7
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 3
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 2
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 2
+            }
+        ],
+        "image": "MF_Detector_Bear.png",
+        "description": "...",
+        "item_name": "Детектор Медведь"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Детектор Медведь",
+                "count": 1
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 150
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 150
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 150
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 30
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 75
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 75
+            }
+        ],
+        "image": "MF_Detector_Gilka.png",
+        "description": "...",
+        "item_name": "Детектор Гилка"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Резистор",
+                "quantity": 150
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 150
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 150
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 100
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 25
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 100
+            }
+        ],
+        "image": "MF_Detector_Sonar.png",
+        "description": "...",
+        "item_name": "Звуковой Детектор аномалий Сонар"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Детектор Велес",
+                "count": 1
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 1550
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 750
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 900
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 950
+            }
+        ],
+        "image": "MF_Detector_Svarog.png",
+        "description": "...",
+        "item_name": "Детектор Сварог"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Детектор Гилка",
+                "count": 1
+            },
+            {
+                "class_name": "Резистор",
+                "quantity": 600
+            },
+            {
+                "class_name": "Диод",
+                "quantity": 600
+            },
+            {
+                "class_name": "Пучок проводов",
+                "quantity": 600
+            },
+            {
+                "class_name": "Отвертка",
+                "quantity": 250
+            },
+            {
+                "class_name": "Инструменты калибровки",
+                "quantity": 250
+            },
+            {
+                "class_name": "Инструменты тонкой работы",
+                "quantity": 250
+            }
+        ],
+        "image": "MF_Detector_Veles.png",
+        "description": "...",
+        "item_name": "Детектор Велес"
+    }
+]

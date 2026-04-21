@@ -1,0 +1,92 @@
+[
+    {
+        "id": "knife_stainless_steel",
+        "name": "Нож из нержавеющей стали",
+        "image": "images/knife/knife_stainless_steel.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Bowie_Knife",
+        "name": "Bowie Knife",
+        "image": "images/knife/bowie.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Butterfly_Knife",
+        "name": "Butterfly Knife",
+        "image": "images/knife/butterfly.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Classic_Knife",
+        "name": "Classic Knife",
+        "image": "images/knife/classic.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Falchion_Knife",
+        "name": "Falchion Knife",
+        "image": "images/knife/falchion.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Gut_Knife",
+        "name": "Gut Knife",
+        "image": "images/knife/gut.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Karambit_Knife",
+        "name": "Karambit Knife",
+        "image": "images/knife/karambit.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "M9_Bayonet",
+        "name": "M9 Bayonet",
+        "image": "images/knife/m9.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Nomad_Knife",
+        "name": "Nomad Knife",
+        "image": "images/knife/nomad.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Paracord_Knife",
+        "name": "Paracord Knife",
+        "image": "images/knife/paracord.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Skeleton_Knife",
+        "name": "Skeleton Knife",
+        "image": "images/knife/skeleton.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Stiletto_Knife",
+        "name": "Stiletto Knife",
+        "image": "images/knife/stilleto.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Survival_Knife",
+        "name": "Survival Knife",
+        "image": "images/knife/survival.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Talon_Knife",
+        "name": "Talon Knife",
+        "image": "images/knife/talon.png",
+        "description": "Описание: Быстрорез."
+    },
+    {
+        "id": "Ursus_Knife",
+        "name": "Ursus Knife",
+        "image": "images/knife/ursus.png",
+        "description": "Описание: Быстрорез."
+    }
+]

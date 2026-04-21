@@ -1,0 +1,162 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* ---------- Контейнер ---------- */
+.rent-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.mailbox-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px; /* отступ слева и справа */
+}
+
+/* ---------- Основной блок с правилами и фото ---------- */
+.mailbox-block {
+    display: grid;
+    grid-template-columns: 1fr 400px; /* левый столбец текст, правый фото */
+    gap: 20px;
+    align-items: start;
+    margin: 20px 0;
+    max-width: 100%;
+    min-height: 556px;
+}
+
+/* ---------- Левый столбец ---------- */
+.mailbox-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* отступ между правилами и расширением */
+}
+
+/* ---------- Фото ---------- */
+.mailbox-image {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; /* ограничение ширины фото */
+}
+
+.mailbox-image img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.img-caption {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+/* ---------- Важные правила ---------- */
+.warning-soft-red {
+    border-left: 4px solid #c94a4a;
+    background-color: #241b1b;
+    padding: 20px 22px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
+}
+
+.warning-soft-red h3 {
+    color: #e07070;
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+.warning-soft-red strong {
+    color: #fff;
+}
+
+.warning-soft-red .muted {
+    color: #aaa;
+    font-size: 13px;
+}
+
+/* ---------- Ссылки ---------- */
+.wargm-link {
+    color: #ffb000;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffb000;
+    transition: color 0.2s, border-bottom-color 0.2s;
+}
+
+.wargm-link:hover {
+    color: #ffaa00;
+    border-bottom-color: #ffaa00;
+}
+
+/* ---------- Тултипы ---------- */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.tooltip-icon,
+.coin-tooltip-trigger {
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+    box-shadow: 0 0 12px rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e1e1e transparent transparent transparent;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 800px) {
+    .mailbox-block {
+        grid-template-columns: 1fr; /* одна колонка */
+    }
+
+    .mailbox-image {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+}
+
+/* Заголовки h2 внутри блока rent-info */
+.rent-info h2 {
+    color: #ffb000; /* золотой цвет */
+    font-size: 22px;
+    margin-bottom: 6px;
+}

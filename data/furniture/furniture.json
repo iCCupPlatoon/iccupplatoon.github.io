@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Оружейный стенд",
+        "description": "9 слотов под оружие.",
+        "price": "22.000 Игровой валюты",
+        "image": "images/furniture/stand.png"
+    },
+    {
+        "name": "Оружейная стойка",
+        "description": "7 слотов под оружие.",
+        "price": "18.00 Игровой валюты",
+        "image": "images/furniture/rack.png"
+    },
+    {
+        "name": "Двойная оружейная стойка",
+        "description": "14 слотов под оружие.",
+        "price": "35.000 Игровой валюты",
+        "image": "images/furniture/rack_duble.png"
+    },
+    {
+        "name": "Маленький локер",
+        "description": "Возможно положить 1  защитный ящик(все виды кейсов), слоты под шлем и жилет, 2 слота под оружие, 100 слотов под вещи.",
+        "price": "52.000 Игровой валюты",
+        "image": "images/furniture/small_locker.png"
+    },
+    {
+        "name": "Локер",
+        "description": "300 слотов под вещи.",
+        "price": "45.000 Игровой валюты",
+        "image": "images/furniture/locker.png"
+    },
+    {
+        "name": "Большой локер",
+        "description": "Слоты под одежу: шлем, жилет, куртку, штаны, ботинки, повязку(шеврон). 5 слотов под оружие, 500 слотов под вещи.",
+        "price": "217.000 Игровой валюты",
+        "image": "images/furniture/locker_roll.png"
+    },
+    {
+        "name": "Оружейный локер",
+        "description": "20 слотов под оружие, имеет 100 слотов под вещи.",
+        "price": "74.000 Игровой валюты",
+        "image": "images/furniture/gun_locker.png"
+    },
+    {
+        "name": "Металлический шкаф",
+        "description": "Слоты под одежду: шлем. 10 слотов под оружие, 100 слотов под вещи.",
+        "price": "45.000 Игровой валюты",
+        "image": "images/furniture/cabinet_gray.png"
+    },
+    {
+        "name": "Тумба с ящиками",
+        "description": "200 слотов под вещи.",
+        "price": "35.000 Игровой валюты",
+        "image": "images/furniture/plastic_table.png"
+    },
+    {
+        "name": "Сейф",
+        "description": "Можно положить 3 ванильных ящика, имеет 100 слотов под вещи.",
+        "price": "65.000 Игровой валюты",
+        "image": "images/furniture/safe.png"
+    },
+    {
+        "name": "Деревянный ящик(ванильный)",
+        "description": "150 слотов под вещи.",
+        "price": "22.000 Игровой валюты",
+        "image": "images/furniture/WoodenCrate.png"
+    },
+    {
+        "name": "Деревянный ящик(мод)",
+        "description": "100 слотов под вещи.",
+        "price": "13.00 Игровой валюты",
+        "image": "images/furniture/wooden_crate.png"
+    },
+    {
+        "name": "Пластиковый ящик",
+        "description": "150 слотов под вещи.",
+        "price": "18.000 Игровой валюты",
+        "image": "images/furniture/plastic_crate.png"
+    },
+    {
+        "name": "Металлический ящик",
+        "description": "200 слотов под вещи.",
+        "price": "22.000 Игровой валюты",
+        "image": "images/furniture/metal_crate.png"
+    },
+    {
+        "name": "Ретекстур флага с Вашей картинкой.",
+        "description": "Нужно написать тикет и приложить фото для флага.",
+        "price": "325.000 Игровой валюты",
+        "image": "images/furniture/flag.png"
+    },
+    {
+        "name": "Металлическая дверь.",
+        "description": "Выдается при покупке дома.",
+        "price": "Бесплатно",
+        "image": "images/furniture/door.png"
+    }
+]

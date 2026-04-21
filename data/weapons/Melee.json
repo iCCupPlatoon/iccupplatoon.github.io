@@ -1,0 +1,227 @@
+[
+    {
+        "name": "Нож из нержавеющей стали",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Крафт.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/knife_stainless_steel.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Bowie Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/bowie.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Butterfly Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/butterfly.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Classic Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/classic.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Falchion Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/falchion.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Gut Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/gut.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Karambit Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/karambit.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "M9 Bayonet",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/m9.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nomad Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/nomad.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Paracord Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/paracord.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Skeleton Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/skeleton.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Stiletto Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/stilleto.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Survival Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/survival.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Talon Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/talon.png"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ursus Knife",
+        "variants": [
+            {
+                "rank": "Без ранга",
+                "description": "Быстрорез.",
+                "obtain": "Покупка за серебряные монеты.",
+                "slots": [],
+                "stats": {},
+                "images": [
+                    "images/knife/ursus.png"
+                ]
+            }
+        ]
+    }
+]

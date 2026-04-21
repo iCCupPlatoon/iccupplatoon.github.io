@@ -1,0 +1,82 @@
+<!-- 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крафты — GroteskStalker PvE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Основные css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/crafting.css">
+    <link rel="stylesheet" href="css/scroll_layout.css">
+
+    <!-- Компоненты css -->
+    <link rel="stylesheet" href="css/components/garland.css">
+    <link rel="stylesheet" href="css/components/fon.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+
+    <!-- Компоненты js -->
+    <script src="js/components/components.js"></script>
+</head>
+
+<body>
+    <!-- гирлянда -->
+    <div id="garland"></div>
+
+    <header>
+        <h1>Крафты</h1>
+    </header>
+
+    <!-- меню -->
+    <div id="nav"></div>
+
+    <main>
+        <!-- Поиск -->
+        <div class="crafting-search-container">
+            <input type="text" id="craftingSearch" placeholder="Поиск..." />
+        </div>
+
+        <!-- Категории -->
+        <div class="categories">
+            <button class="category-button" onclick="filterCategory('Auto_chargers')">Авто-зарядники</button>
+            <button class="category-button" onclick="filterCategory('Laser_sights')">Лазерные прицелы</button>
+            <button class="category-button" onclick="filterCategory('Ammunition')">Патроны</button>
+            <button class="category-button" onclick="filterCategory('Miscellaneous')">Разное</button>
+            <button class="category-button" onclick="filterCategory('Containers')">Контейнеры</button>
+            <button class="category-button" onclick="filterCategory('Belts')">Ремни</button>
+            <button class="category-button" onclick="filterCategory('Detectors')">Детекторы</button>
+            <button class="category-button" onclick="filterCategory('NVG')">ПНВ</button>
+            <button class="category-button" onclick="filterCategory('Weapons_and_magazines')">Оружие и магазины</button>
+            <button class="category-button" onclick="filterCategory('Exoskeletons')">Экзоскелеты</button>
+            <button class="category-button" onclick="filterCategory('Damage_Boost_Modules')">Модуль усиления</button>
+        </div>
+
+<!-- Модальное окно -->
+<div id="modalOverlay" class="modal-overlay">
+    <div id="modalContent" class="modal-content">
+        <button id="modalClose" class="close-button">Закрыть</button>
+        <!-- Здесь будет содержимое модалки -->
+    </div>
+</div>
+
+        <!-- Раздел с крафтами -->
+        <div id="crafting-recipes">
+            <!-- Рецепты будут добавляться динамически -->
+        </div>
+    </main>
+
+    <!-- футер -->
+    <div id="footer"></div>
+
+    <!-- Основные js -->
+    <script src="js/crafting.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+/* 
+  Copyright (c) 2025 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+*/
+
+/* ---------- Контейнер сетки ---------- */
+.caliber-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 1400px;
+    overflow-y: auto;
+}
+
+main {
+    margin-top: 20px;
+}
+
+/* ---------- Карточки ---------- */
+.caliber-card {
+    width: 180px;
+    height: 90px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    border: 2px solid #444;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    margin-bottom: 12px;
+}
+
+.caliber-name,
+.caliber-damage {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #e7a03d;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+/* ---------- Цвета по типу ---------- */
+.caliber-card[data-type="big"] { border-color: #ff4c4c; }
+.caliber-card[data-type="anomaly"] { border-color: #9b59ff; }
+.caliber-card[data-type="gauss"] { border-color: #4dc7ff; }
+
+.caliber-card[data-type="big"]:hover { box-shadow: 0 0 20px rgba(255,76,76,0.6), 0 0 30px rgba(255,100,100,0.4); }
+.caliber-card[data-type="anomaly"]:hover { box-shadow: 0 0 20px rgba(155,89,255,0.6), 0 0 30px rgba(170,120,255,0.4); }
+.caliber-card[data-type="gauss"]:hover { box-shadow: 0 0 20px rgba(77,199,255,0.6), 0 0 30px rgba(100,220,255,0.4); }
+
+/* ---------- Эффект свечения по рангу ---------- */
+.caliber-card[data-rank="Новичок"]:hover {
+    animation: glow-green 2s ease-in-out infinite alternate;
+}
+.caliber-card[data-rank="Ветеран"]:hover {
+    animation: glow-purple 2.5s ease-in-out infinite alternate;
+}
+.caliber-card[data-rank="Мастер"]:hover {
+    animation: glow-red 2.5s ease-in-out infinite alternate;
+}
+.caliber-card[data-rank="Легенда"]:hover {
+    animation: glow-gold 2.5s ease-in-out infinite alternate;
+}
+
+/* ---------- Анимации свечения ---------- */
+@keyframes glow-green {
+    0% { border-color: #4CAF50; box-shadow: 0 0 10px #4CAF50AA; }
+    50% { border-color: #66FF66; box-shadow: 0 0 18px #66FF66AA; }
+    100% { border-color: #4CAF50; box-shadow: 0 0 10px #4CAF50AA; }
+}
+
+@keyframes glow-purple {
+    0% { border-color: #9B59FF; box-shadow: 0 0 10px #9B59FFAA; }
+    50% { border-color: #B266FF; box-shadow: 0 0 18px #B266FFAA; }
+    100% { border-color: #9B59FF; box-shadow: 0 0 10px #9B59FFAA; }
+}
+
+@keyframes glow-red {
+    0% { border-color: #C0392B; box-shadow: 0 0 10px #C0392BAA; }
+    50% { border-color: #E74C3C; box-shadow: 0 0 18px #E74C3CAA; }
+    100% { border-color: #C0392B; box-shadow: 0 0 10px #C0392BAA; }
+}
+
+@keyframes glow-gold {
+    0% { border-color: #D4AF37; box-shadow: 0 0 10px #D4AF37AA; }
+    50% { border-color: #FFD700; box-shadow: 0 0 18px #FFD700AA; }
+    100% { border-color: #D4AF37; box-shadow: 0 0 10px #D4AF37AA; }
+}
+
+/* ---------- Скрол ---------- */
+.caliber-grid::-webkit-scrollbar { width: 8px; }
+.caliber-grid::-webkit-scrollbar-track { background: #1c1c1c; border-radius: 4px; }
+.caliber-grid::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ffb000, #c48a00); border-radius: 4px; }
+.caliber-grid::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #ffd36a, #ffb000); }
+
+/* Firefox */
+.caliber-grid { scrollbar-width: thin; scrollbar-color: #ffb000 #1c1c1c; }
+
+.caliber-search-container input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2b2b2b;
+    color: #e7a03d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.caliber-search-container input::placeholder {
+    color: #888;
+}
+
+.caliber-search-container input:focus {
+    outline: none;
+    border-color: #ffb000;
+    box-shadow: 0 0 8px #ffb00055, 0 0 12px #ffd36a33;
+}

@@ -1,0 +1,109 @@
+[
+    {
+        "assemble": [
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 1
+            },
+            {
+                "class_name": "Порох Сокол",
+                "quantity": 5
+            },
+            {
+                "class_name": "Гвозди",
+                "quantity": 99
+            }
+        ],
+        "image": "Ammo_12gaSlug.png",
+        "description": "Патроны 12 калибра с 1 нарезом. Используется в дробовиках.",
+        "item_name": "Патроны 12 калибра с нарезами"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": ".338 Lapua Magnum FMJ",
+                "quantity": 500
+            },
+            {
+                "class_name": "Порох Сокол",
+                "quantity": 2
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 2
+            },
+            {
+                "class_name": "Пламя Тир I",
+                "count": 1
+            }
+        ],
+        "image": "Ammo_338LM_APanom.png",
+        "description": "Патрон .338 Lapua Magnum AP Аномальные.",
+        "item_name": ".338 Lapua Magnum AP Аномальные"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": ".408 Cheyenne Tactical",
+                "quantity": 500
+            },
+            {
+                "class_name": "Порох Сокол",
+                "quantity": 2
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 2
+            },
+            {
+                "class_name": "Душа Тир I",
+                "count": 1
+            }
+        ],
+        "image": "Ammo_408_APanom.png",
+        "description": "Патрон .408 Cheyenne Tactical Аномальные.",
+        "item_name": ".408 Cheyenne Tactical Аномальные"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Патроны 9х39 мм",
+                "quantity": 500
+            },
+            {
+                "class_name": "Порох Сокол",
+                "quantity": 2
+            },
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 2
+            },
+            {
+                "class_name": "Снежинка Тир I",
+                "count": 1
+            }
+        ],
+        "image": "Ammo_9x39_BPanom.png",
+        "description": "Патрон 9х39 БП гс Аномальные.",
+        "item_name": "9х39 БП гс Аномальные"
+    },
+    {
+        "assemble": [
+            {
+                "class_name": "Набор инструментов для черновых работ",
+                "quantity": 20
+            },
+            {
+                "class_name": "Порох Сокол",
+                "quantity": 30
+            },
+            {
+                "class_name": "12.7х108мм Б-32",
+                "quantity": 500
+            }
+        ],
+        "image": "Kuvalda_Ammo_12x7mmmod.png",
+        "description": "Патрон 12.7х108мм Модифицированный.",
+        "item_name": "12.7х108мм Модифицированный"
+    }
+]

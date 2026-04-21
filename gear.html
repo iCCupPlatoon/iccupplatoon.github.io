@@ -1,0 +1,79 @@
+        <!-- 
+          Copyright (c) 2025 Vanish7667 and bartholomewlaw
+          All Rights Reserved
+        -->
+        <!DOCTYPE html>
+        <html lang="ru">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Одежда — GroteskStalker PvE Wiki</title>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+        <!-- Основные css -->
+            <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="css/gear.css">
+            <link rel="stylesheet" href="css/scroll_layout.css">
+            <!-- Компоненты css -->
+            <link rel="stylesheet" href="css/components/garland.css">
+            <link rel="stylesheet" href="css/components/fon.css">
+            <link rel="stylesheet" href="css/components/footer.css">
+            <link rel="stylesheet" href="css/components/nav.css">
+        </head>
+        <body>
+            <!-- гирлянда -->
+            <div id="garland"></div>
+
+        <header>
+            <h1>Одежда</h1>
+        </header>
+
+            <!-- меню -->
+            <div id="nav"></div>
+
+        <main>
+            <div class="gear-categories">
+                <button class="category-btn active" data-cat="all">Все</button>
+                <button class="category-btn" data-cat="Combat">Боевые</button>
+                <button class="category-btn" data-cat="Scientific">Научные</button>
+                <button class="category-btn" data-cat="Secretive">Скрытные</button>
+                <button class="category-btn" data-cat="Backpacks">Рюкзаки</button>
+            </div>
+
+            <div id="kits-grid" class="kits-grid"></div>
+
+            <!-- Модальное окно -->
+            <div id="kitModal" class="modal hidden">
+                <div class="modal-content">
+                    <span id="modalClose" class="modal-close">&times;</span>
+                    <div class="modal-header">
+                        <h2 id="modalKitName"></h2>
+                        <div id="modalKitCategory" class="modal-category"></div>
+                    </div>
+                    <div id="modalRankButtons" class="modal-ranks"></div>
+                    <div class="modal-body">
+                        <div class="modal-img-wrap">
+                            <img id="modalMainImage" src="" alt="">
+                        </div>
+                        <div class="modal-desc-stats">
+                            <div id="modalDesc" class="modal-desc"></div>
+                            <div id="modalStats" class="modal-stats"></div>
+                        </div>
+                    </div>
+                    <div class="modal-slots">
+                        <h3>Слоты</h3>
+                        <div id="modalSlots" class="slots-container"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+            <!-- футер -->
+            <div id="footer"></div>
+
+        <!-- Компоненты js -->
+        <script src="js/components/components.js"></script>
+        <!-- Основные js -->
+        <script src="js/gear.js"></script>
+        </body>
+        </html>
