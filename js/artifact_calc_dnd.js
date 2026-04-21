@@ -335,28 +335,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-        function updateStats() {
+    function updateStats() {
         const totals = {};
+        let rawAccumulation = 0; // Накопление радиации
+        let rawOutput = 0;       // Вывод радиации
 
-        // ---------- Суммируем статы ----------
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
             if (!artData) return;
-            const tierStats = artData.tiers[item.tier-1]?.stats || {};
-            for (const [k, v] of Object.entries(tierStats)) {
-                const val = typeof v === 'string' ? parseFloat(v.replace(',', '.')) : Number(v);
-                if (isNaN(val)) continue;
+            const tierStats = artData.tiers[item.tier - 1]?.stats || {};
 
-                // Объединяем все виды радиации в одну строку "Радиация"
-                if (k.toLowerCase().includes('радиация')) {
-                    totals['Радиация'] = (totals['Радиация'] || 0) + val * item.copies;
+            for (const [key, value] of Object.entries(tierStats)) {
+                const numVal = typeof value === 'string' ? parseFloat(value.replace(',', '.')) : Number(value);
+                if (isNaN(numVal)) continue;
+
+                const k = key.toLowerCase();
+
+                if (k.includes('накопление') && k.includes('радиации')) {
+                    rawAccumulation += numVal * item.copies;
+                } else if ((k.includes('вывод') || k.includes('защита') || k.includes('сопротивление')) && k.includes('радиации')) {
+                    rawOutput += numVal * item.copies;
                 } else {
-                    totals[k] = (totals[k] || 0) + val * item.copies;
+                    totals[key] = (totals[key] || 0) + numVal * item.copies;
                 }
             }
         });
 
-        // ---------- Логика раскраски ----------
+        totals['Радиация'] = rawAccumulation - rawOutput;
+
+        // ---------- Логика цветов ----------
         const goodPositive = [
             'Вода', 'Выносливость', 'Высота прыжка', 'Еда',
             'Защита от аномалий', 'Защита от пуль', 'Защита от ударов',
@@ -365,37 +372,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const badPositive = ['Шанс на порез', 'Шанс перелома'];
 
         function getColorClass(key, value) {
-            // Радиация: < 0 хорошо, > 0 плохо
             if (key === 'Радиация') {
                 return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
             }
-            // Температура: -20...+40 нейтрально, иначе плохо
             if (key === 'Температура') {
                 return (value >= -20 && value <= 40) ? '' : 'negative';
             }
-            // Остальные "полезные" статы
             if (goodPositive.includes(key)) {
                 return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
             }
-            // Остальные "вредные" статы
             if (badPositive.includes(key)) {
                 return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
             }
-            // По умолчанию для неизвестных статов
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
-        // ---------- 3. Рендер панели ----------
+        // ---------- Рендер ----------
         statsPanel.innerHTML = '';
         Object.keys(totals).sort().forEach(k => {
             const val = totals[k];
-            if (Math.abs(val) < 0.01) return; // Скрываем нули для чистоты
+            if (Math.abs(val) < 0.01) return; // Скрываем нули
 
             const colorClass = getColorClass(k, val);
-            const isRad = k === 'Радиация';
             const row = document.createElement('div');
-
-            row.className = `stat-row ${colorClass}${isRad ? ' radiation' : ''}`.trim();
+            row.className = `stat-row ${colorClass}`.trim();
             row.innerHTML = `<span>${k}</span><span>${val > 0 ? '+' : ''}${parseFloat(val.toFixed(2))}</span>`;
             statsPanel.appendChild(row);
         });
