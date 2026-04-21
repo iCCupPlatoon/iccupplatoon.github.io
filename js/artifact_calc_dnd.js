@@ -335,32 +335,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function updateStats() {
-        const totals = {}; let radGain = 0, radProt = 0;
+        function updateStats() {
+        const totals = {};
+
+        // ---------- Суммируем статы ----------
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
             if (!artData) return;
             const tierStats = artData.tiers[item.tier-1]?.stats || {};
             for (const [k, v] of Object.entries(tierStats)) {
-                totals[k] = (totals[k] || 0) + v * item.copies;
-                if (k.toLowerCase().includes('радиация')) v > 0 ? radGain += v * item.copies : radProt += Math.abs(v) * item.copies;
+                const val = typeof v === 'string' ? parseFloat(v.replace(',', '.')) : Number(v);
+                if (isNaN(val)) continue;
+
+                // Объединяем все виды радиации в одну строку "Радиация"
+                if (k.toLowerCase().includes('радиация')) {
+                    totals['Радиация'] = (totals['Радиация'] || 0) + val * item.copies;
+                } else {
+                    totals[k] = (totals[k] || 0) + val * item.copies;
+                }
             }
         });
+
+        // ---------- Логика раскраски ----------
+        const goodPositive = [
+            'Вода', 'Выносливость', 'Высота прыжка', 'Еда',
+            'Защита от аномалий', 'Защита от пуль', 'Защита от ударов',
+            'Здоровье', 'Кровь', 'Лечение переломов', 'Лечение порезов', 'Стойкость'
+        ];
+        const badPositive = ['Шанс на порез', 'Шанс перелома'];
+
+        function getColorClass(key, value) {
+            // Радиация: < 0 хорошо, > 0 плохо
+            if (key === 'Радиация') {
+                return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
+            }
+            // Температура: -20...+40 нейтрально, иначе плохо
+            if (key === 'Температура') {
+                return (value >= -20 && value <= 40) ? '' : 'negative';
+            }
+            // Остальные "полезные" статы
+            if (goodPositive.includes(key)) {
+                return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+            }
+            // Остальные "вредные" статы
+            if (badPositive.includes(key)) {
+                return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
+            }
+            // По умолчанию для неизвестных статов
+            return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+        }
+
+        // ---------- 3. Рендер панели ----------
         statsPanel.innerHTML = '';
         Object.keys(totals).sort().forEach(k => {
             const val = totals[k];
+            if (Math.abs(val) < 0.01) return; // Скрываем нули для чистоты
+
+            const colorClass = getColorClass(k, val);
+            const isRad = k === 'Радиация';
             const row = document.createElement('div');
-            row.className = 'stat-row' + (val > 0 ? ' positive' : val < 0 ? ' negative' : '') + (k.toLowerCase().includes('радиация') ? ' radiation' : '');
-            row.innerHTML = '<span>' + k + '</span><span>' + (val > 0 ? '+' : '') + parseFloat(val.toFixed(2)) + '</span>';
+
+            row.className = `stat-row ${colorClass}${isRad ? ' radiation' : ''}`.trim();
+            row.innerHTML = `<span>${k}</span><span>${val > 0 ? '+' : ''}${parseFloat(val.toFixed(2))}</span>`;
             statsPanel.appendChild(row);
         });
-        if (radGain > 0 || radProt > 0) {
-            const balance = radProt - radGain;
-            const row = document.createElement('div');
-            row.className = 'stat-row' + (balance >= 0 ? ' positive' : ' negative');
-            row.innerHTML = '<span>Баланс радиации</span><span class="balance">' + (balance >= 0 ? '+' : '') + balance + '</span>';
-            statsPanel.insertBefore(row, statsPanel.firstChild);
-        }
     }
 
     function getSavedBuilds() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; } }

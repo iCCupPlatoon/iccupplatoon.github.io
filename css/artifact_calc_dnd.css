@@ -389,6 +389,7 @@ html, body {
 .artifact-tooltip .tooltip-stats::-webkit-scrollbar-thumb:hover {
     background: #4ecca3;
 }
+.stat-row.neutral { color: #888; border-left-color: #444; }
 
 /* ---------- Адаптив ---------- */
 @media (max-width: 1000px) {
