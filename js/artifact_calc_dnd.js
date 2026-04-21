@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return res;
     }
 
-    // ---------- Рендер палитры (ИСПРАВЛЕНО) ----------
+    // ---------- Рендер палитры ----------
     function renderPalette(arts) {
         palette.innerHTML = '';
         if (arts.length === 0) {
@@ -346,10 +346,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateStats() {
+        // ---------- Сбор данных в отдельные корзины ----------
+        let radGood = 0, radBad = 0;
+        let cutGood = 0, cutBad = 0;
+        let fracGood = 0, fracBad = 0;
         const totals = {};
-        let radAcc = 0, radOut = 0;
-        let cutNet = 0;
-        let fracNet = 0;
+
+        // Функция для определения "плохих" ключей
+        function isBadKey(k) {
+            return k.includes('шанс') || k.includes('накопление') || k.includes('заражение');
+        }
 
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
@@ -361,25 +367,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isNaN(num)) continue;
                 const k = key.toLowerCase();
 
-                if (k.includes('накопление') && k.includes('радиации')) radAcc += num * item.copies;
-                else if ((k.includes('вывод') || k.includes('защита') || k.includes('сопротивление')) && k.includes('радиации')) radOut += num * item.copies;
-                else if (k.includes('порез')) cutNet += num * item.copies;
-                else if (k.includes('перелом')) fracNet += num * item.copies;
-                else totals[key] = (totals[key] || 0) + num * item.copies;
+                if (k.includes('радиации')) {
+                    if (isBadKey(k)) radBad += num * item.copies;
+                    else radGood += num * item.copies;
+                }
+                else if (k.includes('порез')) {
+                    if (isBadKey(k)) cutBad += num * item.copies;
+                    else cutGood += num * item.copies;
+                }
+                else if (k.includes('перелом')) {
+                    if (isBadKey(k)) fracBad += num * item.copies;
+                    else fracGood += num * item.copies;
+                }
+                else {
+                    totals[key] = (totals[key] || 0) + num * item.copies;
+                }
             }
         });
 
-        const radNet = radAcc - radOut;
-        if (radNet > 0) totals['Накопление радиации'] = radNet;
-        else if (radNet < 0) totals['Вывод радиации'] = Math.abs(radNet);
+        // ---------- Формируем названия и значения ----------
+        const radNet = radGood - radBad;
+        if (radNet > 0) totals['Вывод радиации'] = radNet;
+        else if (radNet < 0) totals['Накопление радиации'] = Math.abs(radNet);
 
+        const cutNet = cutGood - cutBad;
         if (cutNet > 0) totals['Лечение порезов'] = cutNet;
         else if (cutNet < 0) totals['Шанс пореза'] = Math.abs(cutNet);
 
+        const fracNet = fracGood - fracBad;
         if (fracNet > 0) totals['Лечение переломов'] = fracNet;
         else if (fracNet < 0) totals['Шанс перелома'] = Math.abs(fracNet);
 
-        // Группировка
+        // ---------- Группировка ----------
         const groups = {
             'Радиация': ['Вывод радиации', 'Накопление радиации'],
             'Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
@@ -405,21 +424,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!placed) ungrouped[key] = value;
         }
 
-        // Логика цветов
+        // ---------- Логика цветов ----------
         function getColorClass(key, value) {
             const k = key.toLowerCase();
-            if (k.includes('накопление радиации')) return 'negative';
-            if (k.includes('вывод радиации')) return 'positive';
-            if (k.includes('шанс')) return 'negative';
-            if (k.includes('лечение')) return 'positive';
+            if (k.includes('накопление радиации') || k.includes('шанс')) return 'negative';
+            if (k.includes('вывод радиации') || k.includes('лечение')) return 'positive';
+            
             if (k === 'температура') return (value >= -20 && value <= 40) ? '' : 'negative';
 
             const goodPos = ['Вода', 'Выносливость', 'Высота прыжка', 'Еда', 'Защита от аномалий', 'Защита от пуль', 'Защита от ударов', 'Здоровье', 'Кровь', 'Стойкость'];
             if (goodPos.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+            
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
-        // Рендер
+        // ---------- Рендер ----------
         statsPanel.innerHTML = '';
         const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
         
@@ -449,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
             groupDiv.className = 'stat-group';
             const header = document.createElement('div');
             header.className = 'stat-group-header';
-            header.textContent = '📦 Остальное';
+            header.textContent = 'Остальное';
             groupDiv.appendChild(header);
             
             Object.keys(ungrouped).sort().forEach(key => {
