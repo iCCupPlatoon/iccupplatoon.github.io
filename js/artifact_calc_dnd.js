@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.addEventListener('mouseleave', () => { hideTooltip(); });
                 
                 cell.addEventListener('dragstart', e => {
-                    e.dataTransfer.setData('application/json', JSON.stringify({ id: art.id, name: art.name, tier: t.tier, img: t.img }));
+                    e.dataTransfer.setData('text/plain', JSON.stringify({ id: art.id, name: art.name, tier: t.tier, img: t.img }));
                     e.dataTransfer.effectAllowed = 'copy';
                 });
                 row.appendChild(cell);
@@ -283,9 +283,20 @@ document.addEventListener('DOMContentLoaded', () => {
     buildZone.addEventListener('dragover', e => { e.preventDefault(); buildZone.classList.add('drag-over'); e.dataTransfer.dropEffect = 'copy'; });
     buildZone.addEventListener('dragleave', e => { if (!buildZone.contains(e.relatedTarget)) buildZone.classList.remove('drag-over'); });
     buildZone.addEventListener('drop', e => {
-        e.preventDefault(); buildZone.classList.remove('drag-over');
-        try { addArtifactToBuild(JSON.parse(e.dataTransfer.getData('application/json'))); } 
-        catch (err) { console.error('Drop error:', err); }
+        e.preventDefault();
+        buildZone.classList.remove('drag-over');
+        try {
+            const rawData = e.dataTransfer.getData('text/plain');
+            if (!rawData || rawData.trim() === '') {
+                console.warn('Drop: пустые данные');
+                return;
+            }
+            const data = JSON.parse(rawData);
+            if (!data.id || !data.name) throw new Error('Некорректная структура');
+            addArtifactToBuild(data);
+        } catch (err) {
+            console.error('Drop error:', err);
+        }
     });
 
     function addArtifactToBuild(data) {
