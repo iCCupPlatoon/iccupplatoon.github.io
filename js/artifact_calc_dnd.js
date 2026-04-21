@@ -348,8 +348,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateStats() {
         const totals = {};
-        let rawAccumulation = 0;
-        let rawOutput = 0;
+        let radAcc = 0, radOut = 0;
+        let cutNet = 0;
+        let fracNet = 0;
 
         // ---------- Сбор данных ----------
         buildList.forEach(item => {
@@ -358,39 +359,39 @@ document.addEventListener('DOMContentLoaded', () => {
             const tierStats = artData.tiers[item.tier - 1]?.stats || {};
 
             for (const [key, value] of Object.entries(tierStats)) {
-                const numVal = typeof value === 'string' ? parseFloat(value.replace(',', '.')) : Number(value);
-                if (isNaN(numVal)) continue;
-
+                const num = typeof value === 'string' ? parseFloat(value.replace(',', '.')) : Number(value);
+                if (isNaN(num)) continue;
                 const k = key.toLowerCase();
 
-                if (k.includes('накопление') && k.includes('радиации')) {
-                    rawAccumulation += numVal * item.copies;
-                } else if ((k.includes('вывод') || k.includes('защита') || k.includes('сопротивление')) && k.includes('радиации')) {
-                    rawOutput += numVal * item.copies;
-                } else {
-                    totals[key] = (totals[key] || 0) + numVal * item.copies;
-                }
+                if (k.includes('накопление') && k.includes('радиации')) radAcc += num * item.copies;
+                else if ((k.includes('вывод') || k.includes('защита') || k.includes('сопротивление')) && k.includes('радиации')) radOut += num * item.copies;
+                else if (k.includes('порез')) cutNet += num * item.copies;
+                else if (k.includes('перелом')) fracNet += num * item.copies;
+                else totals[key] = (totals[key] || 0) + num * item.copies;
             }
         });
 
-        totals['Радиация'] = rawAccumulation - rawOutput;
+        // ---------- Динамические названия ----------
+        const radNet = radAcc - radOut;
+        totals[radNet > 0 ? 'Вывод радиации' : 'Накопление радиации'] = radNet;
 
-        // ---------- Группировка статов ----------
+        totals[cutNet < 0 ? 'Шанс пореза' : 'Лечение порезов'] = cutNet;
+        totals[fracNet < 0 ? 'Шанс перелома' : 'Лечение переломов'] = fracNet;
+
+        // ---------- Группировка ----------
         const groups = {
-            '• Радиация': ['Радиация'],
-            '• Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
-            '• Еда и Вода': ['Еда', 'Вода'],
-            '• Лечение': ['Лечение переломов', 'Лечение порезов', 'Кровь', 'Здоровье'],
-            '• Параметры': ['Выносливость', 'Высота прыжка', 'Температура', 'Шанс на порез', 'Шанс перелома']
+            'Радиация': ['Вывод радиации', 'Накопление радиации'],
+            'Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
+            'Еда и Вода': ['Еда', 'Вода'],
+            'Лечение и Травмы': ['Лечение порезов', 'Шанс пореза', 'Лечение переломов', 'Шанс перелома', 'Кровь', 'Здоровье'],
+            'Параметры': ['Выносливость', 'Высота прыжка', 'Температура']
         };
 
-        // Распределяем статы по группам
         const grouped = {};
         const ungrouped = {};
 
         for (const [key, value] of Object.entries(totals)) {
             if (Math.abs(value) < 0.01) continue; // Скрываем нули
-
             let placed = false;
             for (const [groupName, members] of Object.entries(groups)) {
                 if (members.includes(key)) {
@@ -400,45 +401,39 @@ document.addEventListener('DOMContentLoaded', () => {
                     break;
                 }
             }
-            if (!placed) {
-                ungrouped[key] = value;
-            }
+            if (!placed) ungrouped[key] = value;
         }
 
         // ---------- Логика цветов ----------
-        const goodPositive = [
-            'Вода', 'Выносливость', 'Высота прыжка', 'Еда',
-            'Защита от аномалий', 'Защита от пуль', 'Защита от ударов',
-            'Здоровье', 'Кровь', 'Лечение переломов', 'Лечение порезов', 'Стойкость'
-        ];
-        const badPositive = ['Шанс на порез', 'Шанс перелома'];
-
         function getColorClass(key, value) {
-            if (key === 'Радиация') return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
-            if (key === 'Температура') return (value >= -20 && value <= 40) ? '' : 'negative';
-            if (goodPositive.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
-            if (badPositive.includes(key)) return value < 0 ? 'positive' : (value > 0 ? 'negative' : '');
+            const k = key.toLowerCase();
+            if (k.includes('радиации')) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+            if (k.includes('порез') || k.includes('перелом')) return value < 0 ? 'negative' : (value > 0 ? 'positive' : '');
+            if (k === 'температура') return (value >= -20 && value <= 40) ? '' : 'negative';
+
+            // Остальные статы по спискам
+            const goodPos = ['Вода', 'Выносливость', 'Высота прыжка', 'Еда', 'Защита от аномалий', 'Защита от пуль', 'Защита от ударов', 'Здоровье', 'Кровь', 'Стойкость'];
+            if (goodPos.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
+            
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
         // ---------- Рендер ----------
         statsPanel.innerHTML = '';
-
-        // Рендерим группы в заданном порядке
-        const groupOrder = ['• Радиация', '• Защита', '• Еда и Вода', '• Лечение', '• Параметры'];
+        const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
         
-        groupOrder.forEach(groupName => {
-            if (!grouped[groupName] || grouped[groupName].length === 0) return;
+        groupOrder.forEach(name => {
+            if (!grouped[name] || grouped[name].length === 0) return;
             
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             
             const header = document.createElement('div');
             header.className = 'stat-group-header';
-            header.textContent = groupName;
+            header.textContent = name;
             groupDiv.appendChild(header);
             
-            grouped[groupName].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
+            grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
@@ -448,14 +443,13 @@ document.addEventListener('DOMContentLoaded', () => {
             statsPanel.appendChild(groupDiv);
         });
 
-        // Рендерим негруппированные статы (если есть)
+        // Негруппированные статы (на всякий)
         if (Object.keys(ungrouped).length > 0) {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
-            
             const header = document.createElement('div');
             header.className = 'stat-group-header';
-            header.textContent = '• Остальное';
+            header.textContent = 'Остальное';
             groupDiv.appendChild(header);
             
             Object.keys(ungrouped).sort().forEach(key => {
@@ -465,7 +459,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
                 groupDiv.appendChild(row);
             });
-            
             statsPanel.appendChild(groupDiv);
         }
     }
