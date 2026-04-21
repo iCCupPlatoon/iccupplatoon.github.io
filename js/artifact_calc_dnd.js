@@ -65,33 +65,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showTooltip(e, artifactId, tier) {
         if (!allArtifacts.length) return;
-        
         const artifact = allArtifacts.find(a => a.id === artifactId);
         if (!artifact) return;
-        
         const tierData = artifact.tiers.find(t => t.tier === tier) || artifact.tiers[0];
         if (!tierData) return;
-        
+
         createTooltip();
         currentTooltipArtifact = { artifact, tier: tierData };
-        
-        // Формируем HTML
+
         let statsHtml = '';
         const skipKeys = ['Имя', 'Тир', 'images', 'name', 'level', 'tier'];
-        
+
+        // Цвета в тултипе привязаны к смыслу ключа
+        function getTooltipColor(key, val) {
+            const k = key.toLowerCase();
+            if (k.includes('накопление радиации') || k.includes('шанс')) return 'negative';
+            if (k.includes('вывод радиации') || k.includes('лечение') || k.includes('защита')) return 'positive';
+            return val > 0 ? 'positive' : (val < 0 ? 'negative' : 'neutral');
+        }
+
         Object.entries(tierData.stats).forEach(([key, value]) => {
             if (skipKeys.includes(key)) return;
-            
             const numValue = parseFloat(value) || 0;
-            let valueClass = 'neutral';
-            if (numValue > 0) valueClass = 'positive';
-            else if (numValue < 0) valueClass = 'negative';
-            
             const formattedValue = numValue > 0 ? `+${numValue}` : `${numValue}`;
-            
-            statsHtml += `<span class="stat-name">${key}</span><span class="stat-value ${valueClass}">${formattedValue}</span>`;
+            const colorClass = getTooltipColor(key, numValue);
+            statsHtml += `<span class="stat-name">${key}</span><span class="stat-value ${colorClass}">${formattedValue}</span>`;
         });
-        
+
         tooltip.innerHTML = `
             <div class="tooltip-header">
                 <span class="tooltip-name">${artifact.name}</span>
@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <div class="tooltip-stats">${statsHtml}</div>
         `;
-        
         updateTooltipPosition(e);
         tooltip.classList.add('visible');
     }
@@ -352,7 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let cutNet = 0;
         let fracNet = 0;
 
-        // ---------- Сбор данных ----------
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
             if (!artData) return;
@@ -371,14 +369,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // ---------- Динамические названия ----------
         const radNet = radAcc - radOut;
-        totals[radNet > 0 ? 'Вывод радиации' : 'Накопление радиации'] = radNet;
+        if (radNet > 0) totals['Накопление радиации'] = radNet;
+        else if (radNet < 0) totals['Вывод радиации'] = Math.abs(radNet);
 
-        totals[cutNet < 0 ? 'Шанс пореза' : 'Лечение порезов'] = cutNet;
-        totals[fracNet < 0 ? 'Шанс перелома' : 'Лечение переломов'] = fracNet;
+        if (cutNet > 0) totals['Лечение порезов'] = cutNet;
+        else if (cutNet < 0) totals['Шанс пореза'] = Math.abs(cutNet);
 
-        // ---------- Группировка ----------
+        if (fracNet > 0) totals['Лечение переломов'] = fracNet;
+        else if (fracNet < 0) totals['Шанс перелома'] = Math.abs(fracNet);
+
+        // Группировка
         const groups = {
             'Радиация': ['Вывод радиации', 'Накопление радиации'],
             'Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
@@ -391,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ungrouped = {};
 
         for (const [key, value] of Object.entries(totals)) {
-            if (Math.abs(value) < 0.01) continue; // Скрываем нули
+            if (Math.abs(value) < 0.01) continue;
             let placed = false;
             for (const [groupName, members] of Object.entries(groups)) {
                 if (members.includes(key)) {
@@ -404,21 +405,21 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!placed) ungrouped[key] = value;
         }
 
-        // ---------- Логика цветов ----------
+        // Логика цветов
         function getColorClass(key, value) {
             const k = key.toLowerCase();
-            if (k.includes('радиации')) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
-            if (k.includes('порез') || k.includes('перелом')) return value < 0 ? 'negative' : (value > 0 ? 'positive' : '');
+            if (k.includes('накопление радиации')) return 'negative';
+            if (k.includes('вывод радиации')) return 'positive';
+            if (k.includes('шанс')) return 'negative';
+            if (k.includes('лечение')) return 'positive';
             if (k === 'температура') return (value >= -20 && value <= 40) ? '' : 'negative';
 
-            // Остальные статы по спискам
             const goodPos = ['Вода', 'Выносливость', 'Высота прыжка', 'Еда', 'Защита от аномалий', 'Защита от пуль', 'Защита от ударов', 'Здоровье', 'Кровь', 'Стойкость'];
             if (goodPos.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
-            
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
-        // ---------- Рендер ----------
+        // Рендер
         statsPanel.innerHTML = '';
         const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
         
@@ -443,13 +444,12 @@ document.addEventListener('DOMContentLoaded', () => {
             statsPanel.appendChild(groupDiv);
         });
 
-        // Негруппированные статы (на всякий)
         if (Object.keys(ungrouped).length > 0) {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             const header = document.createElement('div');
             header.className = 'stat-group-header';
-            header.textContent = 'Остальное';
+            header.textContent = '📦 Остальное';
             groupDiv.appendChild(header);
             
             Object.keys(ungrouped).sort().forEach(key => {
