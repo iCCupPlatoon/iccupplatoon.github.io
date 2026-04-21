@@ -1,0 +1,403 @@
+/* ---------- Глобальные настройки ---------- */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+#content { padding-bottom: 40px; }
+
+/* ---------- Кнопки и инпуты ---------- */
+.btn-calc {
+    padding: 6px 12px;
+    background: #2a2a35;
+    border: 1px solid #444;
+    color: #d0d0d5;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    transition: all 0.15s;
+    white-space: nowrap;
+}
+.btn-calc:hover { background: #3a3a45; border-color: #666; }
+.btn-calc:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary { background: #4ecca3; border-color: #4ecca3; color: #000; }
+.btn-primary:hover { background: #3db892; }
+
+.btn-danger { border-color: #a34d4d; color: #ff6b6b; background: #2a2020; }
+.btn-danger:hover:not(:disabled) { background: #a34d4d; color: #fff; }
+
+.select-calc, .input-calc {
+    padding: 6px 8px;
+    background: #222;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    border-radius: 3px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+}
+.select-calc:focus, .input-calc:focus { outline: none; border-color: #4ecca3; }
+
+/* ---------- Сетка колонок ---------- */
+.artifact-column {
+    background: rgba(30, 30, 40, 0.6);
+    border: 1px solid #3a3a45;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.palette-col { flex: 0 0 26%; min-width: 260px; }
+.build-col { flex: 1 1 auto; min-width: 380px; }
+.stats-col { flex: 0 0 300px; min-width: 280px; }
+
+/* ---------- Скроллбары ---------- */
+.palette-col::-webkit-scrollbar,
+.build-zone::-webkit-scrollbar,
+.stats-panel::-webkit-scrollbar {
+    width: 8px;
+}
+.palette-col::-webkit-scrollbar-track,
+.build-zone::-webkit-scrollbar-track,
+.stats-panel::-webkit-scrollbar-track {
+    background: #141418;
+    border-radius: 4px;
+}
+.palette-col::-webkit-scrollbar-thumb,
+.build-zone::-webkit-scrollbar-thumb,
+.stats-panel::-webkit-scrollbar-thumb {
+    background: #3a3a45;
+    border-radius: 4px;
+    border: 2px solid #141418;
+}
+.palette-col::-webkit-scrollbar-thumb:hover,
+.build-zone::-webkit-scrollbar-thumb:hover,
+.stats-panel::-webkit-scrollbar-thumb:hover {
+    background: #4ecca3;
+}
+
+/* ---------- Палитра ---------- */
+.palette-col {
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+}
+.palette-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 4px;
+}
+.artifact-row {
+    display: grid;
+    grid-template-columns: 90px repeat(4, 1fr);
+    gap: 4px;
+    align-items: center;
+    padding: 5px;
+    background: rgba(20, 20, 30, 0.5);
+    border: 1px solid #333;
+    border-radius: 3px;
+}
+.artifact-name {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: #d0d0d5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tier-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: grab;
+    padding: 3px;
+    border-radius: 3px;
+    transition: background 0.15s;
+}
+.tier-cell:hover { background: rgba(78, 204, 163, 0.2); }
+.tier-cell:active { cursor: grabbing; }
+.tier-cell img {
+    width: 100%;
+    height: 36px;
+    object-fit: contain;
+    background: #2f2e2e;
+    border: 1px solid #444;
+    border-radius: 3px;
+    pointer-events: none;
+}
+.tier-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: #888;
+    text-align: center;
+}
+
+/* ---------- Зона сборки ---------- */
+#artifact-count-display {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9rem;
+    color: #999;
+    margin: 0 0 10px;
+}
+.build-zone {
+    min-height: 260px;
+    max-height: 65vh;
+    overflow-y: auto;
+    border: 2px dashed #444;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: flex-start;
+    justify-content: flex-start;
+    background: rgba(20, 20, 30, 0.5);
+    transition: border-color 0.2s, background 0.2s;
+}
+.build-zone.drag-over {
+    border-color: #4ecca3;
+    background: rgba(78, 204, 163, 0.1);
+}
+.drop-placeholder {
+    width: 100%;
+    text-align: center;
+    color: #666;
+    padding: 90px 0;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9rem;
+}
+
+/* Слот артефакта */
+.build-slot {
+    flex: 0 0 calc(20% - 8px);
+    min-width: 135px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px 5px;
+    background: rgba(30, 30, 40, 0.9);
+    border: 1px solid #444;
+    border-radius: 4px;
+    position: relative;
+}
+.build-slot img {
+    width: 85px;
+    height: 68px;
+    object-fit: contain;
+    background: #2f2e2e;
+    border-radius: 3px;
+    border: 1px solid #444;
+    pointer-events: none;
+}
+.build-slot .name-tier {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.2;
+    color: #e0e0e0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.build-slot .name-tier span { color: #4ecca3; }
+.build-slot .qty-controls { display: flex; align-items: center; gap: 6px; }
+.build-slot .qty-btn {
+    width: 20px; height: 20px; padding: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Share Tech Mono', monospace; font-weight: bold; font-size: 1rem;
+    background: #222; border: 1px solid #444; color: #d0d0d5; border-radius: 3px; cursor: pointer;
+}
+.build-slot .qty-btn:hover { background: #4ecca3; color: #000; border-color: #4ecca3; }
+.build-slot .qty-val {
+    font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; min-width: 16px; text-align: center; color: #e0e0e0;
+}
+.build-slot .tier-btns { display: flex; gap: 5px; }
+.build-slot .tier-btn {
+    width: 24px; height: 22px; padding: 0;
+    font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
+    border: 1px solid #444; background: #222; color: #888; border-radius: 3px; cursor: pointer;
+}
+.build-slot .tier-btn:hover { border-color: #666; color: #bbb; }
+.build-slot .tier-btn.active { background: #4ecca3; color: #000; border-color: #4ecca3; }
+.build-slot .remove {
+    position: absolute; top: -6px; right: -6px;
+    width: 18px; height: 18px; padding: 0;
+    background: #a34d4d; color: #fff; border: 2px solid #1e1e28; border-radius: 50%;
+    font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; line-height: 1;
+    display: flex; align-items: center; justify-content: center; z-index: 2; cursor: pointer;
+}
+.build-slot .remove:hover { background: #c45555; }
+
+/* ---------- Итоговые характеристики ---------- */
+.stats-panel {
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    padding-right: 4px;
+}
+.stat-row {
+    display: flex; justify-content: space-between; padding: 6px 8px;
+    background: rgba(30, 30, 40, 0.7); border-left: 3px solid transparent; border-radius: 3px;
+}
+.stat-row.positive { color: #4ecca3; border-left-color: #4ecca3; }
+.stat-row.negative { color: #ff6b6b; border-left-color: #ff6b6b; }
+.stat-row.radiation { border-left-color: #c29545; background: rgba(194, 149, 69, 0.15); }
+.stat-row .balance { font-weight: bold; color: #e0e0e0; }
+
+.loading {
+    text-align: center; color: #666; padding: 16px;
+    font-family: 'Share Tech Mono', monospace; font-size: 0.85rem;
+}
+
+/* ---------- Системная модалка ---------- */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.75); z-index: 1000; justify-content: center; align-items: center;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+    background: #1e1e28; border: 1px solid #555; border-radius: 4px; padding: 24px;
+    max-width: 450px; width: 90%; box-shadow: 0 4px 24px rgba(0,0,0,0.6);
+    font-family: 'Share Tech Mono', monospace; position: relative; max-height: 80vh; overflow-y: auto;
+}
+.modal-close {
+    position: absolute; top: 12px; right: 16px; font-size: 1.5rem; color: #777; cursor: pointer; line-height: 1;
+}
+.modal-close:hover { color: #e0e0e0; }
+#modalTitle { margin: 0 0 16px; color: #4ecca3; font-size: 1.1rem; font-family: 'Share Tech Mono', monospace; }
+#modalBody { color: #e0e0e0; margin-bottom: 20px; line-height: 1.5; font-size: 0.9rem; }
+#modalBody input[type="text"] {
+    width: 100%; padding: 8px 10px; background: #222; border: 1px solid #444; color: #e0e0e0;
+    border-radius: 3px; font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; box-sizing: border-box;
+}
+#modalBody input[type="text"]:focus { outline: none; border-color: #4ecca3; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-actions button {
+    padding: 8px 16px; background: #2a2a35; border: 1px solid #444; color: #e0e0e0;
+    border-radius: 3px; cursor: pointer; font-family: 'Share Tech Mono', monospace; font-size: 0.9rem; transition: all 0.15s;
+}
+.modal-actions button:hover { background: #4ecca3; border-color: #4ecca3; color: #000; }
+.modal-actions button.danger { border-color: #a34d4d; color: #ff6b6b; background: #2a2020; }
+.modal-actions button.danger:hover { background: #a34d4d; color: #fff; }
+
+/* ---------- Тултипы ---------- */
+.artifact-tooltip {
+    position: fixed;
+    z-index: 10000;
+    background: rgba(20, 20, 28, 0.98);
+    border: 2px solid #4ecca3;
+    border-radius: 6px;
+    padding: 12px 16px;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(78, 204, 163, 0.3);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    transform: translate(10px, 10px);
+}
+
+.artifact-tooltip.visible {
+    opacity: 1;
+}
+
+.artifact-tooltip .tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #3a3a45;
+}
+
+.artifact-tooltip .tooltip-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4ecca3;
+    text-shadow: 0 0 10px rgba(78, 204, 163, 0.5);
+}
+
+.artifact-tooltip .tooltip-tier {
+    background: #4ecca3;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.artifact-tooltip .tooltip-stats {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.artifact-tooltip .stat-name {
+    color: #888;
+    text-align: left;
+}
+
+.artifact-tooltip .stat-value {
+    text-align: right;
+    font-weight: 600;
+}
+
+.artifact-tooltip .stat-value.positive {
+    color: #4ecca3;
+}
+
+.artifact-tooltip .stat-value.negative {
+    color: #ff6b6b;
+}
+
+.artifact-tooltip .stat-value.neutral {
+    color: #d0d0d5;
+}
+
+/* Скроллбар для тултипа */
+.artifact-tooltip .tooltip-stats::-webkit-scrollbar {
+    width: 6px;
+}
+.artifact-tooltip .tooltip-stats::-webkit-scrollbar-track {
+    background: #141418;
+    border-radius: 3px;
+}
+.artifact-tooltip .tooltip-stats::-webkit-scrollbar-thumb {
+    background: #3a3a45;
+    border-radius: 3px;
+}
+.artifact-tooltip .tooltip-stats::-webkit-scrollbar-thumb:hover {
+    background: #4ecca3;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 1100px) {
+    #artifacts-tab { flex-wrap: wrap; }
+    .palette-col, .build-col, .stats-col { flex: 0 0 100%; min-width: 100%; max-height: none; overflow: visible; }
+    .build-zone { max-height: 50vh; }
+    .build-slot { flex: 0 0 calc(25% - 8px); }
+}
+@media (max-width: 600px) {
+    .build-slot { flex: 0 0 calc(50% - 8px); }
+    .artifact-row { grid-template-columns: 80px repeat(4, 1fr); }
+}

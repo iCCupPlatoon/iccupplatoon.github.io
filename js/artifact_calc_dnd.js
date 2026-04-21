@@ -1,3 +1,8 @@
+// -------------------------------------------------
+//  Copyright (c) 2026 Vanish7667 and bartholomewlaw
+//  All Rights Reserved
+// -------------------------------------------------
+
 document.addEventListener('DOMContentLoaded', () => {
     // ---------- Элементы DOM ----------
     const palette = document.getElementById('artifact-palette');

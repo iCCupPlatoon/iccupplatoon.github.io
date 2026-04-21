@@ -1,0 +1,101 @@
+<!-- 
+  Copyright (c) 2026 Vanish7667 and bartholomewlaw
+  All Rights Reserved
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор артефактов (NEW) - GroteskStalker PvE Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Основные css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/artifact_calc.css">
+    <link rel="stylesheet" href="css/artifact_calc_dnd.css">
+    <!-- Компоненты css -->
+    <link rel="stylesheet" href="css/components/garland.css">
+    <link rel="stylesheet" href="css/components/fon.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/nav.css">
+</head>
+<body>
+    <!-- гирлянда -->
+    <div id="garland"></div>
+
+    <header>
+        <h1>Калькулятор Артефактов (Drag & Drop)</h1>
+    </header>
+
+    <!-- меню -->
+    <div id="nav"></div>
+
+    <div class="container">
+        <main id="content">
+            <div id="artifacts-tab" class="tab-content" style="display:flex; gap:15px; flex-wrap:nowrap; align-items: flex-start;">
+
+                <!-- Левая колонка: палитра -->
+                <div class="artifact-column palette-col">
+                    <h3>Все артефакты</h3>
+                    <input type="search" id="palette-search" placeholder="Поиск..." style="width:100%; margin-bottom:10px; padding:6px; font-size:0.85rem;">
+                    <div id="artifact-palette" class="palette-container">
+                        <div class="loading">Загрузка данных...</div>
+                    </div>
+                </div>
+
+                <!-- Средняя колонка: сборка -->
+                <div class="artifact-column build-col">
+                    <h3>Ваша сборка</h3>
+                    <p id="artifact-count-display">Артефактов в сборке: 0</p>
+                    
+                    <!-- Кнопки -->
+                    <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap: wrap;align-items:center;flex-direction: row;align-content: center;justify-content: space-between;">
+                        <button id="clear-build" class="btn-calc">Очистить</button>
+                        <button id="save-build" class="btn-calc">Сохранить</button>
+                        <select id="saved-builds-select" class="select-calc">
+                            <option value="">Загрузить сборку...</option>
+                        </select>
+                        <button id="delete-build" disabled class="btn-calc btn-danger">Удалить</button>
+                        <button id="share-build" class="btn-calc">Поделиться</button>
+                    </div>
+                    
+                    <div style="display:flex; gap:8px; margin-bottom:12px;">
+                        <input type="text" id="load-from-url" placeholder="Вставьте ссылку для загрузки" class="input-calc" style="flex:1;">
+                        <button id="load-url-btn" class="btn-calc btn-primary">Загрузить</button>
+                    </div>
+                    
+                    <div id="build-zone" class="build-zone drop-area" style="padding-bottom: 50px;">
+                        <div class="drop-placeholder">Перетащите артефакты сюда</div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка: характеристики -->
+                <div class="artifact-column stats-col">
+                    <h3>Итоговые характеристики</h3>
+                    <div id="calculation-result" class="outlined-box stats-panel"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- футер -->
+    <div id="footer"></div>
+    
+    <!-- Модальное окно -->
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 id="modalTitle">Заголовок</h3>
+            <div id="modalBody"></div>
+            <div id="modalActions" class="modal-actions"></div>
+        </div>
+    </div>
+    
+    <!-- Компоненты js -->
+    <script src="js/components/components.js"></script>
+    <!-- Основные js -->
+    <script src="js/artifact_calc_dnd.js"></script>
+</body>
+</html>
