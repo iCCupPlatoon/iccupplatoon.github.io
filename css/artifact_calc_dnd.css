@@ -391,13 +391,68 @@ html, body {
 }
 
 /* ---------- Адаптив ---------- */
-@media (max-width: 1100px) {
-    #artifacts-tab { flex-wrap: wrap; }
-    .palette-col, .build-col, .stats-col { flex: 0 0 100%; min-width: 100%; max-height: none; overflow: visible; }
-    .build-zone { max-height: 50vh; }
-    .build-slot { flex: 0 0 calc(25% - 8px); }
-}
-@media (max-width: 600px) {
-    .build-slot { flex: 0 0 calc(50% - 8px); }
-    .artifact-row { grid-template-columns: 80px repeat(4, 1fr); }
+@media (max-width: 1000px) {
+    /* 1. Переключаем главную сетку в колонку */
+    #artifacts-tab {
+        flex-direction: column !important;
+        gap: 15px;
+    }
+
+    /* 2. Все колонки занимают 100% ширины */
+    .palette-col, .build-col, .stats-col {
+        flex: 0 0 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        max-height: none !important; /* Убираем ограничение высоты, скроллится вся страница */
+        overflow-y: visible !important;
+    }
+
+    /* 3. Палитра: уменьшаем ячейки, чтобы влезло на узком экране */
+    .artifact-row {
+        grid-template-columns: 65px repeat(4, 1fr) !important;
+        gap: 2px;
+        padding: 3px 4px;
+    }
+    .artifact-name {
+        font-size: 0.7rem;
+        padding-right: 2px;
+    }
+    .tier-cell img {
+        height: 30px;
+    }
+    .tier-label {
+        font-size: 0.55rem;
+    }
+
+    /* 4. Зона сборки: карточки по 2 в ряд */
+    .build-zone {
+        max-height: none !important; /* Скроллится страница, а не блок */
+        overflow-y: visible !important;
+    }
+    .build-slot {
+        flex: 0 0 calc(50% - 8px) !important; /* 2 карточки в ряд */
+        min-width: 140px !important;
+        height: 180px;
+    }
+    
+    /* Уменьшаем картинку внутри карточки для мобильных */
+    .build-slot img {
+        width: 70px;
+        height: 56px;
+    }
+    
+    /* 5. Статы: убираем фиксированную высоту */
+    .stats-panel {
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    /* 6. Кнопки и инпуты чуть крупнее для пальцев */
+    .btn-calc, .qty-btn, .tier-btn {
+        padding: 8px 12px;
+        min-height: 36px; /* Чтобы легче было попасть пальцем */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
