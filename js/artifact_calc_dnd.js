@@ -76,12 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
         let statsHtml = '';
         const skipKeys = ['Имя', 'Тир', 'images', 'name', 'level', 'tier'];
 
-        // Цвета в тултипе привязаны к смыслу ключа
+        // ---------- Логика цветов для тултипа ----------
         function getTooltipColor(key, val) {
             const k = key.toLowerCase();
-            if (k.includes('накопление радиации') || k.includes('шанс')) return 'negative';
-            if (k.includes('вывод радиации') || k.includes('лечение') || k.includes('защита')) return 'positive';
-            return val > 0 ? 'positive' : (val < 0 ? 'negative' : 'neutral');
+            
+            if (k.includes('накопление радиации') || k.includes('шанс') || k.includes('заражение')) {
+                return 'negative';
+            }
+            
+            if (k.includes('защита') || k.includes('лечение') || k.includes('вывод радиации') ||
+                k.includes('выносливость') || k.includes('стойкость') || k.includes('здоровье') ||
+                k.includes('кровь') || k.includes('вода') || k.includes('еда') || k.includes('высота прыжка')) {
+                return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
+            }
+            
+            if (k === 'температура') {
+                return (val >= -20 && val <= 40) ? '' : 'negative';
+            }
+            
+            return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
         }
 
         Object.entries(tierData.stats).forEach(([key, value]) => {
