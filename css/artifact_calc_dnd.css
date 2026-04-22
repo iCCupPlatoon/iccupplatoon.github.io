@@ -496,6 +496,83 @@ html, body {
 .tier-cell.highlight-bad.highlight-good {
     border-color: #ff6b6b; 
 }
+
+/* ---------- Переключатель режимов ---------- */
+.filter-mode-switcher {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.mode-btn {
+    flex: 1;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #888;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s;
+}
+
+.mode-btn:hover {
+    color: #e0e0e0;
+    background: rgba(50, 50, 60, 0.5);
+}
+
+.mode-btn.active {
+    background: #4ecca3;
+    border-color: #4ecca3;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Контейнер фильтров (динамический скролл если кнопок много) */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 150px; /* Ограничим высоту */
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.filter-container::-webkit-scrollbar { width: 4px; }
+.filter-container::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
+/* Кнопки-фильтры (категории и характеристики) */
+.filter-btn {
+    padding: 5px 8px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.75rem;
+    background: rgba(30, 30, 40, 0.8);
+    border: 1px solid #444;
+    color: #bbb;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    border-color: #666;
+    background: rgba(50, 50, 60, 0.9);
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #4ecca3;
+    border-color: #4ecca3;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 6px rgba(78, 204, 163, 0.4);
+}
 /* ---------- Адаптив ---------- */
 @media (max-width: 1000px) {
     /* 1. Переключаем главную сетку в колонку */

@@ -241,9 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return res;
     }
+	
+	// ---------- Глобальные переменные для фильтров ----------
+    let activeFilterMode = 'category'; // 'category' или 'detailed'
+    let currentFilterValue = 'all';    // Значение фильтра
+    let availableStats = new Set();    // Список всех уникальных статов
 
-    // ---------- Рендер палитры (ОБНОВЛЕНО С ФИЛЬТРАМИ) ----------
-    function renderPalette(arts, activeFilter = 'all') {
+    /// ---------- Рендер Палитры (ОБНОВЛЕННЫЙ) ----------
+    function renderPalette(arts) {
         palette.innerHTML = '';
         if (arts.length === 0) {
             palette.innerHTML = '<div class="loading">Ничего не найдено</div>';
@@ -253,12 +258,12 @@ document.addEventListener('DOMContentLoaded', () => {
         arts.forEach(art => {
             const row = document.createElement('div');
             row.className = 'artifact-row';
-            
+
             const nameCell = document.createElement('div');
             nameCell.className = 'artifact-name';
             nameCell.textContent = art.name;
             row.appendChild(nameCell);
-            
+
             art.tiers.forEach(t => {
                 const cell = document.createElement('div');
                 cell.className = 'tier-cell';
@@ -267,78 +272,77 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.dataset.artifactId = art.id;
                 cell.dataset.tier = t.tier;
 
-                // --- Логика подсветки фильтров ---
-                if (activeFilter !== 'all' && t.stats) {
-                    let isGood = false;
-                    let isBad = false;
+                // --- Логика подсветки (Универсальная) ---
+                let isMatch = false;
+                let isGood = false;
+                let isBad = false;
 
-                    // Проверяем каждый стат артефакта на соответствие фильтру
+                if (currentFilterValue !== 'all' && t.stats) {
                     Object.entries(t.stats).forEach(([key, val]) => {
                         const k = key.toLowerCase();
                         const v = parseFloat(val) || 0;
                         
                         let relevant = false;
-                        let positiveEffect = false; // true если это хорошо, false если плохо
 
-                        // Категории фильтров
-                        if (activeFilter === 'radiation' && k.includes('радиации')) {
-                            relevant = true;
-                            // Накопление (+) = Плохо, Защита (-) = Хорошо.
-                            // Но в JSON обычно "Накопление": 100.
-                            if (k.includes('накопление') && v > 0) positiveEffect = false;
-                            if ((k.includes('вывод') || k.includes('защита')) && v > 0) positiveEffect = true;
-                            // Если в JSON защита записана как отрицательное накопление (например -100), то v < 0 = хорошо
-                            if (k.includes('накопление') && v < 0) positiveEffect = true; 
-                        }
-                        
-                        if (activeFilter === 'protection' && (k.includes('защита') || k.includes('стойкость'))) {
-                            relevant = true;
-                            positiveEffect = v > 0;
+                        // РЕЖИМ КАТЕГОРИЙ
+                        if (activeFilterMode === 'category') {
+                            if (currentFilterValue === 'radiation' && k.includes('радиации')) relevant = true;
+                            if (currentFilterValue === 'protection' && (k.includes('защита') || k.includes('стойкость'))) relevant = true;
+                            if (currentFilterValue === 'food' && (k === 'еда' || k === 'вода')) relevant = true;
+                            if (currentFilterValue === 'healing' && (k.includes('лечение') || k.includes('здоровье') || k.includes('кровь'))) relevant = true;
+                            if (currentFilterValue === 'healing' && k.includes('шанс')) relevant = true;
+                            if (currentFilterValue === 'stats' && (k.includes('выносливость') || k.includes('прыжка') || k === 'температура')) relevant = true;
                         }
 
-                        if (activeFilter === 'food' && (k === 'еда' || k === 'вода')) {
+                        // РЕЖИМ ХАРАКТЕРИСТИК (Точное совпадение)
+                        if (activeFilterMode === 'detailed' && k === currentFilterValue) {
                             relevant = true;
-                            positiveEffect = v > 0;
-                        }
-
-                        if (activeFilter === 'healing' && (k.includes('лечение') || k.includes('здоровье') || k.includes('кровь'))) {
-                            relevant = true;
-                            positiveEffect = v > 0;
-                        }
-                        if (activeFilter === 'healing' && k.includes('шанс')) { // Шанс травмы
-                             relevant = true;
-                             positiveEffect = v < 0; // Меньше шанс - лучше
-                        }
-
-                        if (activeFilter === 'stats' && (k.includes('выносливость') || k.includes('прыжка'))) {
-                            relevant = true;
-                            positiveEffect = v > 0;
-                        }
-                        if (activeFilter === 'stats' && k.includes('температура')) {
-                            relevant = true;
-                            positiveEffect = (v >= -20 && v <= 40); // В диапазоне - хорошо
                         }
 
                         if (relevant) {
-                            if (positiveEffect) isGood = true;
-                            else isBad = true;
+                            isMatch = true;
+                            // Логика Good/Bad
+                            if (k.includes('шанс') || k.includes('накопление')) {
+                                if (v > 0) isBad = true; 
+                            } else if (k === 'температура') {
+                                if (v < -20 || v > 40) isBad = true;
+                                else isGood = true;
+                            } else {
+                                // Остальные: плюс это хорошо, минус плохо (кроме радиации/шансов)
+                                // Но в detailed режиме нам нужно знать контекст. 
+                                // Если это ключ "накопление радиации", то плюс это плохо.
+                                if (k.includes('накопление') && k.includes('радиации')) {
+                                    if (v > 0) isBad = true;
+                                    else isGood = true;
+                                } else if (k.includes('вывод') || k.includes('защита')) {
+                                    if (v > 0) isGood = true;
+                                } else {
+                                    if (v > 0) isGood = true; // Стандартно
+                                }
+                            }
                         }
                     });
+                }
 
+                if (isMatch) {
                     if (isBad) cell.classList.add('highlight-bad');
                     else if (isGood) cell.classList.add('highlight-good');
+                    // Если есть и то, и то (спорный арт), даем приоритет плохому или добавляем mixed класс
+                    if (isBad && isGood) {
+                        cell.classList.remove('highlight-good');
+                        cell.classList.add('highlight-bad'); 
+                    }
                 }
-                // -------------------------------
+                // --------------------------------------
 
-                // ---------- Двойной клик для добавления ----------
+                // ---------- Двойной клик ----------
                 cell.addEventListener('dblclick', () => {
                     addArtifactToBuild({ id: art.id, name: art.name, tier: t.tier, img: t.img });
                     cell.style.transform = 'scale(0.9)';
                     setTimeout(() => cell.style.transform = '', 100);
                 });
-                // -------------------------------------------------
 
-                // Тултип события
+                // Тултип
                 cell.addEventListener('mouseenter', (e) => { showTooltip(e, art.id, t.tier); });
                 cell.addEventListener('mousemove', (e) => {
                     if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) updateTooltipPosition(e);
@@ -355,27 +359,90 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 	
-    // ---------- Обработчики фильтров ----------
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    let currentFilter = 'all';
+    // ---------- Управление фильтрами ----------
+    const filterContainer = document.getElementById('filters');
+    const modeCategoryBtn = document.getElementById('mode-category');
+    const modeDetailedBtn = document.getElementById('mode-detailed');
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Смена активного класса кнопок
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            // Обновление фильтра и перерисовка
-            currentFilter = btn.dataset.filter;
-            renderPalette(allArtifacts, currentFilter);
-        });
-    });
+    // Статические категории
+    const categories = [
+        { id: 'all', label: 'Все' },
+        { id: 'radiation', label: 'Радиация' },
+        { id: 'protection', label: 'Защита' },
+        { id: 'food', label: 'Пища' },
+        { id: 'healing', label: 'Лечение' },
+        { id: 'stats', label: 'Параметры' }
+    ];
 	
-    // Обновляем слушатель поиска, чтобы он учитывал фильтр при вводе
+	function renderFilters() {
+        filterContainer.innerHTML = '';
+        
+        // 1. Кнопка сброса "Все" (общая для обоих режимов)
+        const resetBtn = document.createElement('button');
+        resetBtn.className = `filter-btn ${currentFilterValue === 'all' ? 'active' : ''}`;
+        resetBtn.textContent = 'Все';
+        resetBtn.onclick = () => { currentFilterValue = 'all'; renderFilters(); renderPalette(allArtifacts); };
+        filterContainer.appendChild(resetBtn);
+
+        // 2. Рендер специфичных кнопок
+        if (activeFilterMode === 'category') {
+            categories.forEach(cat => {
+                if (cat.id === 'all') return; // Уже добавили
+                const btn = document.createElement('button');
+                btn.className = `filter-btn ${currentFilterValue === cat.id ? 'active' : ''}`;
+                btn.textContent = cat.label;
+                btn.onclick = () => { currentFilterValue = cat.id; renderFilters(); renderPalette(allArtifacts); };
+                filterContainer.appendChild(btn);
+            });
+        } else {
+            // Detailed mode: берем уникальные статы
+            const sortedStats = Array.from(availableStats).sort();
+            sortedStats.forEach(stat => {
+                const btn = document.createElement('button');
+                btn.className = `filter-btn ${currentFilterValue === stat ? 'active' : ''}`;
+                btn.textContent = stat;
+                btn.onclick = () => { currentFilterValue = stat; renderFilters(); renderPalette(allArtifacts); };
+                filterContainer.appendChild(btn);
+            });
+        }
+    }
+	
+	// Переключатели режимов
+    modeCategoryBtn.onclick = () => {
+        activeFilterMode = 'category';
+        currentFilterValue = 'all'; // Сбрасываем фильтр при смене режима
+        modeCategoryBtn.classList.add('active');
+        modeDetailedBtn.classList.remove('active');
+        renderFilters();
+        renderPalette(allArtifacts);
+    };
+
+    modeDetailedBtn.onclick = () => {
+        activeFilterMode = 'detailed';
+        currentFilterValue = 'all';
+        modeDetailedBtn.classList.add('active');
+        modeCategoryBtn.classList.remove('active');
+        renderFilters();
+        renderPalette(allArtifacts);
+    };
+	
+	// Инициализация списка статов (вызывается после загрузки данных)
+    function extractStats() {
+        availableStats.clear();
+        allArtifacts.forEach(art => {
+            art.tiers.forEach(t => {
+                if (t.stats) {
+                    Object.keys(t.stats).forEach(k => availableStats.add(k));
+                }
+            });
+        });
+    }
+	
+    // Слушатель поиска
     searchInput.addEventListener('input', e => {
         const q = e.target.value.toLowerCase().trim();
         const filtered = allArtifacts.filter(a => a.name.toLowerCase().includes(q));
-        renderPalette(filtered, currentFilter); // Передаем текущий фильтр
+        renderPalette(filtered);
     });
 
     buildZone.addEventListener('dragover', e => { e.preventDefault(); buildZone.classList.add('drag-over'); e.dataTransfer.dropEffect = 'copy'; });

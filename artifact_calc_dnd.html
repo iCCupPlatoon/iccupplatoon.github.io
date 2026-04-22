@@ -38,18 +38,18 @@
                 <!-- Левая колонка: палитра -->
                 <div class="artifact-column palette-col">
                     <h3>Все артефакты</h3>
-                    <input type="search" id="palette-search" placeholder="Поиск..." style="width:100%; margin-bottom:10px; padding:6px; font-size:0.85rem;">
-					
-					<!-- Новые кнопки-фильтры -->
-                    <div id="filters" class="filter-container">
-                        <button class="filter-btn active" data-filter="all">Все</button>
-                        <button class="filter-btn" data-filter="radiation">Радиация</button>
-                        <button class="filter-btn" data-filter="protection">Защита</button>
-                        <button class="filter-btn" data-filter="food">Пища</button>
-                        <button class="filter-btn" data-filter="healing">Лечение</button>
-                        <button class="filter-btn" data-filter="stats">Параметры</button>
+                
+                    <input type="search" id="palette-search" placeholder="Поиск по названию..." style="width:100%; margin-bottom:8px; padding:6px; font-size:0.85rem;">
+                    
+                    <!-- Переключатель режимов -->
+                    <div class="filter-mode-switcher">
+                        <button id="mode-category" class="mode-btn active" data-mode="category">📂 Категории</button>
+                        <button id="mode-detailed" class="mode-btn" data-mode="detailed">🔍 Характеристики</button>
                     </div>
-					
+				    
+                    <!-- Контейнер для динамических кнопок -->
+                    <div id="filters" class="filter-container"></div>
+				    
                     <div id="artifact-palette" class="palette-container">
                         <div class="loading">Загрузка данных...</div>
                     </div>
