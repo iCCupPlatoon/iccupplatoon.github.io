@@ -1,4 +1,4 @@
-<!-- 
+<!--
   Copyright (c) 2026 Vanish7667 and bartholomewlaw
   All Rights Reserved
 -->
@@ -38,18 +38,17 @@
                 <!-- Левая колонка: палитра -->
                 <div class="artifact-column palette-col">
                     <h3>Все артефакты</h3>
-                
-                    <input type="search" id="palette-search" placeholder="Поиск по названию..." style="width:100%; margin-bottom:8px; padding:6px; font-size:0.85rem;">
+                    <input type="search" id="palette-search" placeholder="Поиск..." style="width:100%; margin-bottom:10px; padding:6px; font-size:0.85rem;">
                     
-                    <!-- Переключатель режимов -->
+                    <!-- Переключатель режимов фильтров -->
                     <div class="filter-mode-switcher">
-                        <button id="mode-category" class="mode-btn active" data-mode="category">📂 Категории</button>
-                        <button id="mode-detailed" class="mode-btn" data-mode="detailed">🔍 Характеристики</button>
+                        <button id="mode-category" class="mode-btn active" data-mode="category">Категории</button>
+                        <button id="mode-detailed" class="mode-btn" data-mode="detailed">Характеристики</button>
                     </div>
-				    
-                    <!-- Контейнер для динамических кнопок -->
+                    
+                    <!-- Контейнер фильтров -->
                     <div id="filters" class="filter-container"></div>
-				    
+                    
                     <div id="artifact-palette" class="palette-container">
                         <div class="loading">Загрузка данных...</div>
                     </div>
@@ -60,7 +59,6 @@
                     <h3>Ваша сборка</h3>
                     <p id="artifact-count-display">Артефактов в сборке: 0</p>
                     
-                    <!-- Кнопки -->
                     <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap: wrap;align-items:center;flex-direction: row;align-content: center;justify-content: space-between;">
                         <button id="clear-build" class="btn-calc">Очистить</button>
                         <button id="save-build" class="btn-calc">Сохранить</button>

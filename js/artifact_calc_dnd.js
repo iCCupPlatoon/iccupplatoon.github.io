@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLoadedBuildName = null;
     const STORAGE_KEY = 'grotesk_artifact_builds_dnd';
 
+    // ---------- Глобальные переменные для фильтров ----------
+    let activeFilterMode = 'category';
+    let currentFilterValue = 'all';
+    let availableStats = new Set();
+
     // ---------- Системная модалка ----------
     const modalOverlay = document.getElementById('modalOverlay');
     const modalTitle = document.getElementById('modalTitle');
@@ -76,24 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
         let statsHtml = '';
         const skipKeys = ['Имя', 'Тир', 'images', 'name', 'level', 'tier'];
 
-        // ---------- Логика цветов для тултипа ----------
         function getTooltipColor(key, val) {
             const k = key.toLowerCase();
-            
             if (k.includes('накопление радиации') || k.includes('шанс') || k.includes('заражение')) {
                 return 'negative';
             }
-            
             if (k.includes('защита') || k.includes('лечение') || k.includes('вывод радиации') ||
                 k.includes('выносливость') || k.includes('стойкость') || k.includes('здоровье') ||
                 k.includes('кровь') || k.includes('вода') || k.includes('еда') || k.includes('высота прыжка')) {
                 return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
             }
-            
             if (k === 'температура') {
                 return (val >= -20 && val <= 40) ? '' : 'negative';
             }
-            
             return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
         }
 
@@ -118,19 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateTooltipPosition(e) {
         if (!tooltip) return;
-        
         const rect = tooltip.getBoundingClientRect();
         const viewportWidth = window.innerWidth;
         const viewportHeight = window.innerHeight;
-        
         let x = e.clientX + 15;
         let y = e.clientY + 15;
-        
         if (x + rect.width > viewportWidth) x = e.clientX - rect.width - 10;
         if (y + rect.height > viewportHeight) y = e.clientY - rect.height - 10;
         if (x < 10) x = 10;
         if (y < 10) y = 10;
-        
         tooltip.style.left = x + 'px';
         tooltip.style.top = y + 'px';
     }
@@ -152,8 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function normalizeSharedBuild(rawData) {
         try {
             const data = JSON.parse(rawData);
-            
-            // Старый формат: { v: 1, a: [ [name, tier, copies], ... ] }
             if (data && data.a && Array.isArray(data.a)) {
                 return data.a.map(item => {
                     if (Array.isArray(item) && item.length >= 3) {
@@ -161,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const name = String(rawName).trim();
                         const tier = parseInt(rawTier) || 1;
                         const copies = parseInt(rawCopies) || 1;
-                        
                         const match = allArtifacts.find(a => a.name === name);
                         if (match) {
                             const tData = match.tiers.find(t => t.tier === tier) || match.tiers[0];
@@ -177,8 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return null;
                 }).filter(i => i !== null && i.name);
             }
-            
-            // Новый формат: массив объектов
             if (Array.isArray(data)) {
                 return data.map(item => {
                     const name = item.name || item['Имя'] || item.title || item.artifact || '';
@@ -186,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const copies = parseInt(item.copies || item.count || item['Копии'] || item.quantity || 1) || 1;
                     let id = item.id || item['Имя'] || name;
                     let img = item.img || item['images'] || item.icon || '';
-
                     if (!id || !img) {
                         const match = allArtifacts.find(a => a.name === name || a.id === id);
                         if (match) {
@@ -200,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return { id, name, tier, img, copies };
                 }).filter(i => i.name && i.id);
             }
-            
             return [];
         } catch (e) {
             console.warn('Не удалось распарсить сборку:', e);
@@ -221,6 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     stats: parseStats(v)
                 }))
             }));
+            
+            // Инициализация фильтров
+            extractStats();
+            renderFilters();
+            
             renderPalette(allArtifacts);
             updateStats();
             updateBuildsDropdown();
@@ -241,13 +235,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return res;
     }
-	
-	// ---------- Глобальные переменные для фильтров ----------
-    let activeFilterMode = 'category'; // 'category' или 'detailed'
-    let currentFilterValue = 'all';    // Значение фильтра
-    let availableStats = new Set();    // Список всех уникальных статов
 
-    /// ---------- Рендер Палитры (ОБНОВЛЕННЫЙ) ----------
+    // ---------- Инициализация списка статов ----------
+    function extractStats() {
+        availableStats.clear();
+        allArtifacts.forEach(art => {
+            art.tiers.forEach(t => {
+                if (t.stats) {
+                    Object.keys(t.stats).forEach(k => availableStats.add(k));
+                }
+            });
+        });
+    }
+
+    // ---------- Рендер палитры ----------
     function renderPalette(arts) {
         palette.innerHTML = '';
         if (arts.length === 0) {
@@ -272,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.dataset.artifactId = art.id;
                 cell.dataset.tier = t.tier;
 
-                // --- Логика подсветки (Универсальная) ---
+                // Логика подсветки
                 let isMatch = false;
                 let isGood = false;
                 let isBad = false;
@@ -281,10 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     Object.entries(t.stats).forEach(([key, val]) => {
                         const k = key.toLowerCase();
                         const v = parseFloat(val) || 0;
-                        
                         let relevant = false;
 
-                        // РЕЖИМ КАТЕГОРИЙ
                         if (activeFilterMode === 'category') {
                             if (currentFilterValue === 'radiation' && k.includes('радиации')) relevant = true;
                             if (currentFilterValue === 'protection' && (k.includes('защита') || k.includes('стойкость'))) relevant = true;
@@ -294,30 +293,25 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (currentFilterValue === 'stats' && (k.includes('выносливость') || k.includes('прыжка') || k === 'температура')) relevant = true;
                         }
 
-                        // РЕЖИМ ХАРАКТЕРИСТИК (Точное совпадение)
-                        if (activeFilterMode === 'detailed' && k === currentFilterValue) {
+                        if (activeFilterMode === 'detailed' && k === currentFilterValue.toLowerCase()) {
                             relevant = true;
                         }
 
                         if (relevant) {
                             isMatch = true;
-                            // Логика Good/Bad
                             if (k.includes('шанс') || k.includes('накопление')) {
-                                if (v > 0) isBad = true; 
+                                if (v > 0) isBad = true;
                             } else if (k === 'температура') {
                                 if (v < -20 || v > 40) isBad = true;
                                 else isGood = true;
                             } else {
-                                // Остальные: плюс это хорошо, минус плохо (кроме радиации/шансов)
-                                // Но в detailed режиме нам нужно знать контекст. 
-                                // Если это ключ "накопление радиации", то плюс это плохо.
                                 if (k.includes('накопление') && k.includes('радиации')) {
                                     if (v > 0) isBad = true;
                                     else isGood = true;
                                 } else if (k.includes('вывод') || k.includes('защита')) {
                                     if (v > 0) isGood = true;
                                 } else {
-                                    if (v > 0) isGood = true; // Стандартно
+                                    if (v > 0) isGood = true;
                                 }
                             }
                         }
@@ -325,17 +319,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 if (isMatch) {
-                    if (isBad) cell.classList.add('highlight-bad');
-                    else if (isGood) cell.classList.add('highlight-good');
-                    // Если есть и то, и то (спорный арт), даем приоритет плохому или добавляем mixed класс
-                    if (isBad && isGood) {
+                    if (isBad) {
+                        cell.classList.add('highlight-bad');
                         cell.classList.remove('highlight-good');
-                        cell.classList.add('highlight-bad'); 
+                    } else if (isGood) {
+                        cell.classList.add('highlight-good');
+                        cell.classList.remove('highlight-bad');
                     }
+                } else {
+                    cell.classList.remove('highlight-good', 'highlight-bad');
                 }
-                // --------------------------------------
 
-                // ---------- Двойной клик ----------
+                // Двойной клик
                 cell.addEventListener('dblclick', () => {
                     addArtifactToBuild({ id: art.id, name: art.name, tier: t.tier, img: t.img });
                     cell.style.transform = 'scale(0.9)';
@@ -345,7 +340,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Тултип
                 cell.addEventListener('mouseenter', (e) => { showTooltip(e, art.id, t.tier); });
                 cell.addEventListener('mousemove', (e) => {
-                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) updateTooltipPosition(e);
+                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) {
+                        updateTooltipPosition(e);
+                    }
                 });
                 cell.addEventListener('mouseleave', () => { hideTooltip(); });
 
@@ -358,13 +355,12 @@ document.addEventListener('DOMContentLoaded', () => {
             palette.appendChild(row);
         });
     }
-	
+
     // ---------- Управление фильтрами ----------
     const filterContainer = document.getElementById('filters');
     const modeCategoryBtn = document.getElementById('mode-category');
     const modeDetailedBtn = document.getElementById('mode-detailed');
 
-    // Статические категории
     const categories = [
         { id: 'all', label: 'Все' },
         { id: 'radiation', label: 'Радиация' },
@@ -373,44 +369,53 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'healing', label: 'Лечение' },
         { id: 'stats', label: 'Параметры' }
     ];
-	
-	function renderFilters() {
+
+    function renderFilters() {
+        if (!filterContainer) return;
         filterContainer.innerHTML = '';
-        
-        // 1. Кнопка сброса "Все" (общая для обоих режимов)
+
         const resetBtn = document.createElement('button');
-        resetBtn.className = `filter-btn ${currentFilterValue === 'all' ? 'active' : ''}`;
+        resetBtn.className = 'filter-btn ' + (currentFilterValue === 'all' ? 'active' : '');
         resetBtn.textContent = 'Все';
-        resetBtn.onclick = () => { currentFilterValue = 'all'; renderFilters(); renderPalette(allArtifacts); };
+        resetBtn.onclick = () => {
+            currentFilterValue = 'all';
+            renderFilters();
+            renderPalette(allArtifacts);
+        };
         filterContainer.appendChild(resetBtn);
 
-        // 2. Рендер специфичных кнопок
         if (activeFilterMode === 'category') {
             categories.forEach(cat => {
-                if (cat.id === 'all') return; // Уже добавили
+                if (cat.id === 'all') return;
                 const btn = document.createElement('button');
-                btn.className = `filter-btn ${currentFilterValue === cat.id ? 'active' : ''}`;
+                btn.className = 'filter-btn ' + (currentFilterValue === cat.id ? 'active' : '');
                 btn.textContent = cat.label;
-                btn.onclick = () => { currentFilterValue = cat.id; renderFilters(); renderPalette(allArtifacts); };
+                btn.onclick = () => {
+                    currentFilterValue = cat.id;
+                    renderFilters();
+                    renderPalette(allArtifacts);
+                };
                 filterContainer.appendChild(btn);
             });
         } else {
-            // Detailed mode: берем уникальные статы
             const sortedStats = Array.from(availableStats).sort();
             sortedStats.forEach(stat => {
                 const btn = document.createElement('button');
-                btn.className = `filter-btn ${currentFilterValue === stat ? 'active' : ''}`;
+                btn.className = 'filter-btn ' + (currentFilterValue === stat ? 'active' : '');
                 btn.textContent = stat;
-                btn.onclick = () => { currentFilterValue = stat; renderFilters(); renderPalette(allArtifacts); };
+                btn.onclick = () => {
+                    currentFilterValue = stat;
+                    renderFilters();
+                    renderPalette(allArtifacts);
+                };
                 filterContainer.appendChild(btn);
             });
         }
     }
-	
-	// Переключатели режимов
+
     modeCategoryBtn.onclick = () => {
         activeFilterMode = 'category';
-        currentFilterValue = 'all'; // Сбрасываем фильтр при смене режима
+        currentFilterValue = 'all';
         modeCategoryBtn.classList.add('active');
         modeDetailedBtn.classList.remove('active');
         renderFilters();
@@ -425,20 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderFilters();
         renderPalette(allArtifacts);
     };
-	
-	// Инициализация списка статов (вызывается после загрузки данных)
-    function extractStats() {
-        availableStats.clear();
-        allArtifacts.forEach(art => {
-            art.tiers.forEach(t => {
-                if (t.stats) {
-                    Object.keys(t.stats).forEach(k => availableStats.add(k));
-                }
-            });
-        });
-    }
-	
-    // Слушатель поиска
+
     searchInput.addEventListener('input', e => {
         const q = e.target.value.toLowerCase().trim();
         const filtered = allArtifacts.filter(a => a.name.toLowerCase().includes(q));
@@ -475,18 +467,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderBuild() {
         buildZone.innerHTML = '';
         countDisplay.textContent = 'Артефактов в сборке: ' + buildList.reduce((a, b) => a + b.copies, 0);
-        
         if (buildList.length === 0) {
             buildZone.innerHTML = '<div class="drop-placeholder">Перетащите артефакты сюда</div>';
             return;
         }
-        
         buildList.forEach((item, idx) => {
             const slot = document.createElement('div');
             slot.className = 'build-slot';
             slot.innerHTML = '<button class="remove">&times;</button><img src="' + item.img + '"><div class="name-tier">' + item.name + ' <span>T' + item.tier + '</span></div><div class="qty-controls"><button class="qty-btn dec">&minus;</button><span class="qty-val">' + item.copies + '</span><button class="qty-btn inc">&plus;</button></div><div class="tier-btns"><button class="tier-btn" data-t="1">1</button><button class="tier-btn" data-t="2">2</button><button class="tier-btn" data-t="3">3</button><button class="tier-btn" data-t="4">4</button></div>';
-            
-            // Тултип для картинки в сборке
+
             const img = slot.querySelector('img');
             img.addEventListener('mouseenter', (e) => { showTooltip(e, item.id, item.tier); });
             img.addEventListener('mousemove', (e) => {
@@ -495,7 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             img.addEventListener('mouseleave', () => { hideTooltip(); });
-            
+
             slot.querySelector('.remove').onclick = () => { buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
             slot.querySelector('.dec').onclick = () => { item.copies > 1 ? item.copies-- : buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
             slot.querySelector('.inc').onclick = () => { item.copies++; renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
@@ -512,13 +501,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateStats() {
-        // ---------- Сбор данных в отдельные корзины ----------
         let radGood = 0, radBad = 0;
         let cutGood = 0, cutBad = 0;
         let fracGood = 0, fracBad = 0;
         const totals = {};
 
-        // Функция для определения "плохих" ключей
         function isBadKey(k) {
             return k.includes('шанс') || k.includes('накопление') || k.includes('заражение');
         }
@@ -527,31 +514,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const artData = allArtifacts.find(a => a.id === item.id);
             if (!artData) return;
             const tierStats = artData.tiers[item.tier - 1]?.stats || {};
-
             for (const [key, value] of Object.entries(tierStats)) {
                 const num = typeof value === 'string' ? parseFloat(value.replace(',', '.')) : Number(value);
                 if (isNaN(num)) continue;
                 const k = key.toLowerCase();
-
                 if (k.includes('радиации')) {
                     if (isBadKey(k)) radBad += num * item.copies;
                     else radGood += num * item.copies;
-                }
-                else if (k.includes('порез')) {
+                } else if (k.includes('порез')) {
                     if (isBadKey(k)) cutBad += num * item.copies;
                     else cutGood += num * item.copies;
-                }
-                else if (k.includes('перелом')) {
+                } else if (k.includes('перелом')) {
                     if (isBadKey(k)) fracBad += num * item.copies;
                     else fracGood += num * item.copies;
-                }
-                else {
+                } else {
                     totals[key] = (totals[key] || 0) + num * item.copies;
                 }
             }
         });
 
-        // ---------- Формируем названия и значения ----------
         const radNet = radGood - radBad;
         if (radNet > 0) totals['Вывод радиации'] = radNet;
         else if (radNet < 0) totals['Накопление радиации'] = Math.abs(radNet);
@@ -564,7 +545,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (fracNet > 0) totals['Лечение переломов'] = fracNet;
         else if (fracNet < 0) totals['Шанс перелома'] = Math.abs(fracNet);
 
-        // ---------- Группировка ----------
         const groups = {
             'Радиация': ['Вывод радиации', 'Накопление радиации'],
             'Защита': ['Защита от ударов', 'Защита от пуль', 'Защита от аномалий', 'Стойкость'],
@@ -590,49 +570,40 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!placed) ungrouped[key] = value;
         }
 
-        // ---------- Логика цветов ----------
         function getColorClass(key, value) {
             const k = key.toLowerCase();
             if (k.includes('накопление радиации') || k.includes('шанс')) return 'negative';
             if (k.includes('вывод радиации') || k.includes('лечение')) return 'positive';
-            
             if (k === 'температура') return (value >= -20 && value <= 40) ? '' : 'negative';
-
             const goodPos = ['Вода', 'Выносливость', 'Высота прыжка', 'Еда', 'Защита от аномалий', 'Защита от пуль', 'Защита от ударов', 'Здоровье', 'Кровь', 'Стойкость'];
             if (goodPos.includes(key)) return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
-            
             return value > 0 ? 'positive' : (value < 0 ? 'negative' : '');
         }
 
-        // ---------- Рендер ----------
         statsPanel.innerHTML = '';
         const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
-        
+
         groupOrder.forEach(name => {
             if (!grouped[name] || grouped[name].length === 0) return;
-            
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
-            
             grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
-                row.className = `stat-row ${getColorClass(key, value)}`.trim();
-                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
+                row.className = ('stat-row ' + getColorClass(key, value)).trim();
+                row.innerHTML = '<span>' + key + '</span><span>' + (value > 0 ? '+' : '') + parseFloat(value.toFixed(2)) + '</span>';
                 groupDiv.appendChild(row);
             });
-            
             statsPanel.appendChild(groupDiv);
         });
 
         if (Object.keys(ungrouped).length > 0) {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
-            
             Object.keys(ungrouped).sort().forEach(key => {
                 const value = ungrouped[key];
                 const row = document.createElement('div');
-                row.className = `stat-row ${getColorClass(key, value)}`.trim();
-                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
+                row.className = ('stat-row ' + getColorClass(key, value)).trim();
+                row.innerHTML = '<span>' + key + '</span><span>' + (value > 0 ? '+' : '') + parseFloat(value.toFixed(2)) + '</span>';
                 groupDiv.appendChild(row);
             });
             statsPanel.appendChild(groupDiv);
@@ -641,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getSavedBuilds() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; } }
     function saveBuilds(builds) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(builds)); updateBuildsDropdown(); } catch { showModal('Ошибка', 'Не удалось сохранить.', [{ label: 'OK' }]); } }
-    
+
     function updateBuildsDropdown() {
         const builds = getSavedBuilds();
         selectBuilds.innerHTML = '<option value="">Загрузить сборку...</option>';
@@ -650,7 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         if (currentLoadedBuildName && !builds[currentLoadedBuildName]) setCurrentLoadedBuild(null);
     }
-    
+
     function setCurrentLoadedBuild(name) { currentLoadedBuildName = name; selectBuilds.value = name || ''; deleteBuildBtn.disabled = !name; }
 
     document.getElementById('save-build').onclick = () => {
