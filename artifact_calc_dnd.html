@@ -31,7 +31,7 @@
     <!-- меню -->
     <div id="nav"></div>
 
-    <div class="container">
+    <div class="container wide-container">
         <main id="content">
             <div id="artifacts-tab" class="tab-content" style="display:flex; gap:15px; flex-wrap:nowrap; align-items: flex-start;">
 
@@ -39,6 +39,17 @@
                 <div class="artifact-column palette-col">
                     <h3>Все артефакты</h3>
                     <input type="search" id="palette-search" placeholder="Поиск..." style="width:100%; margin-bottom:10px; padding:6px; font-size:0.85rem;">
+					
+					<!-- Новые кнопки-фильтры -->
+                    <div id="filters" class="filter-container">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="radiation">Радиация</button>
+                        <button class="filter-btn" data-filter="protection">Защита</button>
+                        <button class="filter-btn" data-filter="food">Пища</button>
+                        <button class="filter-btn" data-filter="healing">Лечение</button>
+                        <button class="filter-btn" data-filter="stats">Параметры</button>
+                    </div>
+					
                     <div id="artifact-palette" class="palette-container">
                         <div class="loading">Загрузка данных...</div>
                     </div>

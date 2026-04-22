@@ -434,6 +434,68 @@ html, body {
     gap: 3px;
 }
 .stat-group-header, .stat-group-header::before { display: none; }
+
+/* ---------- Расширенный контейнер ---------- */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ---------- Панель фильтров ---------- */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
+
+.filter-btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 6px 4px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    background: rgba(30, 30, 40, 0.5);
+    border: 1px solid #444;
+    color: #888;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    background: rgba(50, 50, 60, 0.8);
+    color: #d0d0d5;
+}
+
+.filter-btn.active {
+    background: #4ecca3;
+    border-color: #4ecca3;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(78, 204, 163, 0.4);
+}
+
+/* ---------- Подсветка ячеек ---------- */
+.tier-cell.highlight-good {
+    border: 2px solid #4ecca3;
+    box-shadow: 0 0 6px rgba(78, 204, 163, 0.3);
+    background: rgba(78, 204, 163, 0.05);
+}
+
+.tier-cell.highlight-bad {
+    border: 2px solid #ff6b6b;
+    box-shadow: 0 0 6px rgba(255, 107, 107, 0.3);
+    background: rgba(255, 107, 107, 0.05);
+}
+
+.tier-cell.highlight-bad.highlight-good {
+    border-color: #ff6b6b; 
+}
 /* ---------- Адаптив ---------- */
 @media (max-width: 1000px) {
     /* 1. Переключаем главную сетку в колонку */

@@ -242,14 +242,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return res;
     }
 
-    // ---------- Рендер палитры ----------
-    function renderPalette(arts) {
+    // ---------- Рендер палитры (ОБНОВЛЕНО С ФИЛЬТРАМИ) ----------
+    function renderPalette(arts, activeFilter = 'all') {
         palette.innerHTML = '';
         if (arts.length === 0) {
             palette.innerHTML = '<div class="loading">Ничего не найдено</div>';
             return;
         }
-        
+
         arts.forEach(art => {
             const row = document.createElement('div');
             row.className = 'artifact-row';
@@ -266,31 +266,85 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.innerHTML = '<img src="' + t.img + '" alt="T' + t.tier + '" loading="lazy"><span class="tier-label">T' + t.tier + '</span>';
                 cell.dataset.artifactId = art.id;
                 cell.dataset.tier = t.tier;
-                
-				// ---------- Двойной клик для добавления ----------
-                cell.addEventListener('dblclick', () => {
-                    // Используем ту же логику, что и при дропе
-                    addArtifactToBuild({ 
-                        id: art.id, 
-                        name: art.name, 
-                        tier: t.tier, 
-                        img: t.img 
+
+                // --- Логика подсветки фильтров ---
+                if (activeFilter !== 'all' && t.stats) {
+                    let isGood = false;
+                    let isBad = false;
+
+                    // Проверяем каждый стат артефакта на соответствие фильтру
+                    Object.entries(t.stats).forEach(([key, val]) => {
+                        const k = key.toLowerCase();
+                        const v = parseFloat(val) || 0;
+                        
+                        let relevant = false;
+                        let positiveEffect = false; // true если это хорошо, false если плохо
+
+                        // Категории фильтров
+                        if (activeFilter === 'radiation' && k.includes('радиации')) {
+                            relevant = true;
+                            // Накопление (+) = Плохо, Защита (-) = Хорошо.
+                            // Но в JSON обычно "Накопление": 100.
+                            if (k.includes('накопление') && v > 0) positiveEffect = false;
+                            if ((k.includes('вывод') || k.includes('защита')) && v > 0) positiveEffect = true;
+                            // Если в JSON защита записана как отрицательное накопление (например -100), то v < 0 = хорошо
+                            if (k.includes('накопление') && v < 0) positiveEffect = true; 
+                        }
+                        
+                        if (activeFilter === 'protection' && (k.includes('защита') || k.includes('стойкость'))) {
+                            relevant = true;
+                            positiveEffect = v > 0;
+                        }
+
+                        if (activeFilter === 'food' && (k === 'еда' || k === 'вода')) {
+                            relevant = true;
+                            positiveEffect = v > 0;
+                        }
+
+                        if (activeFilter === 'healing' && (k.includes('лечение') || k.includes('здоровье') || k.includes('кровь'))) {
+                            relevant = true;
+                            positiveEffect = v > 0;
+                        }
+                        if (activeFilter === 'healing' && k.includes('шанс')) { // Шанс травмы
+                             relevant = true;
+                             positiveEffect = v < 0; // Меньше шанс - лучше
+                        }
+
+                        if (activeFilter === 'stats' && (k.includes('выносливость') || k.includes('прыжка'))) {
+                            relevant = true;
+                            positiveEffect = v > 0;
+                        }
+                        if (activeFilter === 'stats' && k.includes('температура')) {
+                            relevant = true;
+                            positiveEffect = (v >= -20 && v <= 40); // В диапазоне - хорошо
+                        }
+
+                        if (relevant) {
+                            if (positiveEffect) isGood = true;
+                            else isBad = true;
+                        }
                     });
-                    
+
+                    if (isBad) cell.classList.add('highlight-bad');
+                    else if (isGood) cell.classList.add('highlight-good');
+                }
+                // -------------------------------
+
+                // ---------- Двойной клик для добавления ----------
+                cell.addEventListener('dblclick', () => {
+                    addArtifactToBuild({ id: art.id, name: art.name, tier: t.tier, img: t.img });
                     cell.style.transform = 'scale(0.9)';
                     setTimeout(() => cell.style.transform = '', 100);
                 });
-				
                 // -------------------------------------------------
+
                 // Тултип события
                 cell.addEventListener('mouseenter', (e) => { showTooltip(e, art.id, t.tier); });
                 cell.addEventListener('mousemove', (e) => {
-                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) {
-                        updateTooltipPosition(e);
-                    }
+                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) updateTooltipPosition(e);
                 });
                 cell.addEventListener('mouseleave', () => { hideTooltip(); });
-                
+
                 cell.addEventListener('dragstart', e => {
                     e.dataTransfer.setData('text/plain', JSON.stringify({ id: art.id, name: art.name, tier: t.tier, img: t.img }));
                     e.dataTransfer.effectAllowed = 'copy';
@@ -300,11 +354,28 @@ document.addEventListener('DOMContentLoaded', () => {
             palette.appendChild(row);
         });
     }
+	
+    // ---------- Обработчики фильтров ----------
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    let currentFilter = 'all';
 
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Смена активного класса кнопок
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Обновление фильтра и перерисовка
+            currentFilter = btn.dataset.filter;
+            renderPalette(allArtifacts, currentFilter);
+        });
+    });
+	
+    // Обновляем слушатель поиска, чтобы он учитывал фильтр при вводе
     searchInput.addEventListener('input', e => {
         const q = e.target.value.toLowerCase().trim();
         const filtered = allArtifacts.filter(a => a.name.toLowerCase().includes(q));
-        renderPalette(filtered);
+        renderPalette(filtered, currentFilter); // Передаем текущий фильтр
     });
 
     buildZone.addEventListener('dragover', e => { e.preventDefault(); buildZone.classList.add('drag-over'); e.dataTransfer.dropEffect = 'copy'; });
@@ -476,17 +547,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             
-            const content = document.createElement('div');
-            content.className = 'stat-group-content';
-            
             grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
-                content.appendChild(row);
+                groupDiv.appendChild(row);
             });
             
-            groupDiv.appendChild(content);
             statsPanel.appendChild(groupDiv);
         });
 
@@ -494,18 +561,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             
-            const content = document.createElement('div');
-            content.className = 'stat-group-content';
-            
             Object.keys(ungrouped).sort().forEach(key => {
                 const value = ungrouped[key];
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
-                content.appendChild(row);
+                groupDiv.appendChild(row);
             });
-            
-            groupDiv.appendChild(content);
             statsPanel.appendChild(groupDiv);
         }
     }
