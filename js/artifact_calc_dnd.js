@@ -468,10 +468,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ---------- Рендер ----------
         statsPanel.innerHTML = '';
-        const groupOrder = ['☢️', '🛡️', '💧', '❤️', '⚡'];
+        const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
         
-        groupOrder.forEach(gKey => {
-            if (!grouped[gKey] || !grouped[gKey].items.length) return;
+        groupOrder.forEach(name => {
+            if (!grouped[name] || grouped[name].length === 0) return;
             
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
@@ -479,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = document.createElement('div');
             content.className = 'stat-group-content';
             
-            grouped[gKey].items.sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
+            grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
