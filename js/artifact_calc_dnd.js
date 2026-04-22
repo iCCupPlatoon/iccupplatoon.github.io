@@ -374,9 +374,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!filterContainer) return;
         filterContainer.innerHTML = '';
 
+        // Карта эмодзи для категорий
+        const categoryEmojis = {
+            'all': '🔄',
+            'radiation': '☢️',
+            'protection': '🛡️',
+            'food': '🍽️',
+            'healing': '❤️',
+            'stats': '⚡'
+        };
+
+        // Карта эмодзи для характеристик
+        const statEmojis = {
+            'вода': '💧',
+            'вывод радиации': '🔻☢️',
+            'выносливость': '💪',
+            'высота прыжка': '🦘',
+            'еда': '🍽️',
+            'защита от аномалий': '🛡🌀',
+            'защита от пуль': '🛡🔫',
+            'защита от ударов': '🛡👊',
+            'здоровье': '💊❤️',
+            'кровь': '💊🩸',
+            'лечение переломов': '💊🦴',
+            'лечение порезов': '💊🔪',
+            'накопление радиации': '🔺☢️',
+            'стойкость': '🧱',
+            'температура': '🌡️',
+            'шанс на порез': '🍀🔪',
+            'шанс перелома': '🍀🦴'
+        };
+
+        // Кнопка "Все"
         const resetBtn = document.createElement('button');
         resetBtn.className = 'filter-btn ' + (currentFilterValue === 'all' ? 'active' : '');
-        resetBtn.textContent = 'Все';
+        resetBtn.textContent = categoryEmojis['all'];
+        resetBtn.title = 'Все';
         resetBtn.onclick = () => {
             currentFilterValue = 'all';
             renderFilters();
@@ -389,7 +422,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (cat.id === 'all') return;
                 const btn = document.createElement('button');
                 btn.className = 'filter-btn ' + (currentFilterValue === cat.id ? 'active' : '');
-                btn.textContent = cat.label;
+                btn.textContent = categoryEmojis[cat.id] || '❓';
+                btn.title = cat.label;
                 btn.onclick = () => {
                     currentFilterValue = cat.id;
                     renderFilters();
@@ -401,8 +435,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const sortedStats = Array.from(availableStats).sort();
             sortedStats.forEach(stat => {
                 const btn = document.createElement('button');
+                const statLower = stat.toLowerCase();
                 btn.className = 'filter-btn ' + (currentFilterValue === stat ? 'active' : '');
-                btn.textContent = stat;
+                btn.textContent = statEmojis[statLower] || '📦';
+                btn.title = stat;
                 btn.onclick = () => {
                     currentFilterValue = stat;
                     renderFilters();
