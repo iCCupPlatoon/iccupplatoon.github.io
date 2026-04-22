@@ -468,44 +468,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ---------- Рендер ----------
         statsPanel.innerHTML = '';
-        const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
+        const groupOrder = ['☢️', '🛡️', '💧', '❤️', '⚡'];
         
-        groupOrder.forEach(name => {
-            if (!grouped[name] || grouped[name].length === 0) return;
+        groupOrder.forEach(gKey => {
+            if (!grouped[gKey] || !grouped[gKey].items.length) return;
             
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             
-            const header = document.createElement('div');
-            header.className = 'stat-group-header';
-            header.textContent = name;
-            groupDiv.appendChild(header);
+            const content = document.createElement('div');
+            content.className = 'stat-group-content';
             
-            grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
+            grouped[gKey].items.sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
-                groupDiv.appendChild(row);
+                content.appendChild(row);
             });
             
+            groupDiv.appendChild(content);
             statsPanel.appendChild(groupDiv);
         });
 
         if (Object.keys(ungrouped).length > 0) {
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
-            const header = document.createElement('div');
-            header.className = 'stat-group-header';
-            header.textContent = 'Остальное';
-            groupDiv.appendChild(header);
+            
+            const content = document.createElement('div');
+            content.className = 'stat-group-content';
             
             Object.keys(ungrouped).sort().forEach(key => {
                 const value = ungrouped[key];
                 const row = document.createElement('div');
                 row.className = `stat-row ${getColorClass(key, value)}`.trim();
                 row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
-                groupDiv.appendChild(row);
+                content.appendChild(row);
             });
+            
+            groupDiv.appendChild(content);
             statsPanel.appendChild(groupDiv);
         }
     }
