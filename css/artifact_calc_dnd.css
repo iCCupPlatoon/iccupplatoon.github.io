@@ -120,6 +120,8 @@ html, body {
     padding: 3px;
     border-radius: 3px;
     transition: background 0.15s;
+	user-select: none;
+    -webkit-user-select: none;
 }
 .tier-cell:hover { background: rgba(78, 204, 163, 0.2); }
 .tier-cell:active { cursor: grabbing; }

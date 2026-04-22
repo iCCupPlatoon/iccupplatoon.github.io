@@ -267,6 +267,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.dataset.artifactId = art.id;
                 cell.dataset.tier = t.tier;
                 
+				// ---------- Двойной клик для добавления ----------
+                cell.addEventListener('dblclick', () => {
+                    // Используем ту же логику, что и при дропе
+                    addArtifactToBuild({ 
+                        id: art.id, 
+                        name: art.name, 
+                        tier: t.tier, 
+                        img: t.img 
+                    });
+                    
+                    cell.style.transform = 'scale(0.9)';
+                    setTimeout(() => cell.style.transform = '', 100);
+                });
+				
+                // -------------------------------------------------
                 // Тултип события
                 cell.addEventListener('mouseenter', (e) => { showTooltip(e, art.id, t.tier); });
                 cell.addEventListener('mousemove', (e) => {
