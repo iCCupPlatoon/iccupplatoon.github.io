@@ -36,6 +36,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modalBody');
     const modalActions = document.getElementById('modalActions');
     const modalClose = document.querySelector('.modal-close');
+	
+	// ---------- Сжатое кодирование сборок ----------
+    // Формат: [[artifactIndex, tier, copies], ...]
+    const ARTIFACT_INDEX = {}; // Заполняется при загрузке art.json
+
+    function buildToCompact(buildList) {
+        return buildList.map(item => {
+            const idx = ARTIFACT_INDEX[item.id] ?? ARTIFACT_INDEX[item.name];
+            if (idx === undefined) return null;
+            return [idx, item.tier, item.copies];
+        }).filter(i => i !== null);
+    }
+
+    function compactToBuild(compact) {
+        return compact.map(([idx, tier, copies]) => {
+            const art = allArtifacts[idx];
+            if (!art) return null;
+            return {
+                id: art.id,
+                name: art.name,
+                tier: tier,
+                copies: copies,
+                img: art.tiers[tier - 1]?.img || art.tiers[0]?.img || ''
+            };
+        }).filter(i => i !== null);
+    }
+
+    function encodeBuild(buildList) {
+        const compact = buildToCompact(buildList);
+        const json = JSON.stringify(compact);
+        
+        // Сжатие gzip через pako
+        if (typeof pako !== 'undefined') {
+            const compressed = pako.deflate(json, { level: 9 });
+            let binary = '';
+            for (let i = 0; i < compressed.length; i++) {
+                binary += String.fromCharCode(compressed[i]);
+            }
+            return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+        }
+        // Фоллбэк без сжатия
+        return btoa(unescape(encodeURIComponent(json)))
+            .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    function decodeBuild(b64) {
+        try {
+            let base64 = b64.replace(/-/g, '+').replace(/_/g, '/');
+            while (base64.length % 4) base64 += '=';
+            
+            let json;
+            // Пробуем распаковать как gzip
+            if (typeof pako !== 'undefined') {
+                try {
+                    const binary = atob(base64);
+                    const compressed = new Uint8Array(binary.length);
+                    for (let i = 0; i < binary.length; i++) {
+                        compressed[i] = binary.charCodeAt(i);
+                    }
+                    json = pako.inflate(compressed, { to: 'string' });
+                } catch {
+                    // Если не gzip — декодируем как обычный JSON
+                    json = decodeURIComponent(escape(atob(base64)));
+                }
+            } else {
+                json = decodeURIComponent(escape(atob(base64)));
+            }
+            
+            const compact = JSON.parse(json);
+            return Array.isArray(compact) ? compactToBuild(compact) : [];
+        } catch (e) {
+            console.warn('Decode error:', e);
+            return [];
+        }
+    }
 
     function showModal(title, bodyHtml, buttons) {
         modalTitle.textContent = title;
@@ -201,6 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }))
             }));
             
+			// Заполняем индекс артефактов для компактного кодирования
+            allArtifacts.forEach((art, idx) => {
+                ARTIFACT_INDEX[art.id] = idx;
+                ARTIFACT_INDEX[art.name] = idx;
+            });
+			
             extractStats();
             renderFilters();
             renderPalette(allArtifacts);
@@ -620,8 +701,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!b64) throw new Error('Нет параметра ?b=');
             let base64 = b64.replace(/-/g, '+').replace(/_/g, '/');
             while (base64.length % 4) base64 += '=';
-            const rawJson = decodeURIComponent(escape(atob(base64)));
-            const normalized = normalizeSharedBuild(rawJson);
+            let normalized = decodeBuild(b64);
+
+            // Если не распарсилось — пробуем старый формат для обратной совместимости
+            if (normalized.length === 0 && buildList.length === 0) {
+                try {
+                    let base64 = b64.replace(/-/g, '+').replace(/_/g, '/');
+                    while (base64.length % 4) base64 += '=';
+                    const rawJson = decodeURIComponent(escape(atob(base64)));
+                    normalized = normalizeSharedBuild(rawJson);
+                } catch (e) {
+                    console.warn('Fallback decode error:', e);
+                }
+            }
+			
             if (normalized.length > 0) {
                 buildList = normalized; renderBuild(); updateStats(); setCurrentLoadedBuild(null);
                 if (loadFromUrlInput) loadFromUrlInput.value = ''; scrollToBuildBottom();
@@ -654,7 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareBtn = document.getElementById('share-build');
     if (shareBtn) shareBtn.onclick = () => {
         if (!buildList.length) return showModal('Внимание', 'Сборка пуста.', [{ label: 'OK' }]);
-        let b64 = btoa(unescape(encodeURIComponent(JSON.stringify(buildList)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+        let b64 = encodeBuild(buildList);
         const url = window.location.origin + window.location.pathname + '?b=' + b64;
         showModal('Ссылка на сборку', '<input type="text" id="share-url" value="' + url + '" readonly>', [
             { label: 'Закрыть' }, { label: 'Копировать', action: async () => {
