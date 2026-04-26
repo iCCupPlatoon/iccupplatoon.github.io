@@ -726,14 +726,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loadFromUrlInput) loadFromUrlInput.addEventListener('keypress', e => { if (e.key === 'Enter') loadBuildFromUrlField(); });
 
     function tryLoadFromUrl() {
-        const b64 = new URLSearchParams(window.location.search).get('b'); if (!b64) return;
+        const b64 = new URLSearchParams(window.location.search).get('b');
+        if (!b64) return;
+        
         try {
-            let base64 = b64.replace(/-/g, '+').replace(/_/g, '/');
-            while (base64.length % 4) base64 += '=';
-            const rawJson = decodeURIComponent(escape(atob(base64)));
-            const normalized = normalizeSharedBuild(rawJson);
-            if (normalized.length > 0) { buildList = normalized; renderBuild(); updateStats(); setCurrentLoadedBuild(null); history.replaceState(null, '', window.location.pathname); scrollToBuildBottom(); }
-        } catch (e) { console.warn('Ошибка автозагрузки из URL:', e); }
+            // Пробуем новый формат (сжатый)
+            let normalized = decodeBuild(b64);
+            
+            // Если не распарсилось — пробуем старый формат для обратной совместимости
+            if (normalized.length === 0) {
+                try {
+                    let base64 = b64.replace(/-/g, '+').replace(/_/g, '/');
+                    while (base64.length % 4) base64 += '=';
+                    const rawJson = decodeURIComponent(escape(atob(base64)));
+                    normalized = normalizeSharedBuild(rawJson);
+                } catch (e) {
+                    console.warn('Fallback decode error:', e);
+                }
+            }
+            
+            if (normalized.length > 0) {
+                buildList = normalized;
+                renderBuild();
+                updateStats();
+                setCurrentLoadedBuild(null);
+                history.replaceState(null, '', window.location.pathname);
+                scrollToBuildBottom();
+            }
+        } catch (e) {
+            console.warn('Ошибка автозагрузки из URL:', e);
+        }
     }
 
     const clearBtn = document.getElementById('clear-build');
