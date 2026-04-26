@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
         modalOverlay.classList.add('active');
     }
     function hideModal() { modalOverlay.classList.remove('active'); }
-    modalClose.onclick = hideModal;
-    modalOverlay.onclick = (e) => { if (e.target === modalOverlay) hideModal(); };
+    if (modalClose) modalClose.onclick = hideModal;
+    if (modalOverlay) modalOverlay.onclick = (e) => { if (e.target === modalOverlay) hideModal(); };
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hideModal(); });
 
     // ---------- Автоскролл зоны сборки ----------
     function scrollToBuildBottom() {
-        requestAnimationFrame(() => { buildZone.scrollTop = buildZone.scrollHeight; });
+        requestAnimationFrame(() => { if (buildZone) buildZone.scrollTop = buildZone.scrollHeight; });
     }
 
     // ---------- Показ тултипа ----------
@@ -83,17 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getTooltipColor(key, val) {
             const k = key.toLowerCase();
-            if (k.includes('накопление радиации') || k.includes('шанс') || k.includes('заражение')) {
-                return 'negative';
-            }
+            if (k.includes('накопление радиации') || k.includes('шанс') || k.includes('заражение')) return 'negative';
             if (k.includes('защита') || k.includes('лечение') || k.includes('вывод радиации') ||
                 k.includes('выносливость') || k.includes('стойкость') || k.includes('здоровье') ||
                 k.includes('кровь') || k.includes('вода') || k.includes('еда') || k.includes('высота прыжка')) {
                 return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
             }
-            if (k === 'температура') {
-                return (val >= -20 && val <= 40) ? '' : 'negative';
-            }
+            if (k === 'температура') return (val >= -20 && val <= 40) ? '' : 'negative';
             return val > 0 ? 'positive' : (val < 0 ? 'negative' : '');
         }
 
@@ -158,13 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const match = allArtifacts.find(a => a.name === name);
                         if (match) {
                             const tData = match.tiers.find(t => t.tier === tier) || match.tiers[0];
-                            return {
-                                id: match.id,
-                                name: match.name,
-                                tier: tier,
-                                copies: copies,
-                                img: tData ? tData.img : ''
-                            };
+                            return { id: match.id, name: match.name, tier, copies, img: tData ? tData.img : '' };
                         }
                     }
                     return null;
@@ -211,10 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }))
             }));
             
-            // Инициализация фильтров
             extractStats();
             renderFilters();
-            
             renderPalette(allArtifacts);
             updateStats();
             updateBuildsDropdown();
@@ -222,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => {
             console.error('Ошибка загрузки art.json:', err);
-            palette.innerHTML = '<p class="loading">Ошибка загрузки данных</p>';
+            if (palette) palette.innerHTML = '<p class="loading">Ошибка загрузки данных</p>';
         });
 
     function parseStats(obj) {
@@ -236,22 +224,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return res;
     }
 
-    // ---------- Инициализация списка статов ----------
     function extractStats() {
         availableStats.clear();
         allArtifacts.forEach(art => {
             art.tiers.forEach(t => {
-                if (t.stats) {
-                    Object.keys(t.stats).forEach(k => availableStats.add(k));
-                }
+                if (t.stats) Object.keys(t.stats).forEach(k => availableStats.add(k));
             });
         });
     }
 
     // ---------- Рендер палитры ----------
     function renderPalette(arts) {
+        if (!palette) return;
         palette.innerHTML = '';
-        if (arts.length === 0) {
+        if (!arts || arts.length === 0) {
             palette.innerHTML = '<div class="loading">Ничего не найдено</div>';
             return;
         }
@@ -273,10 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.dataset.artifactId = art.id;
                 cell.dataset.tier = t.tier;
 
-                // Логика подсветки
-                let isMatch = false;
-                let isGood = false;
-                let isBad = false;
+                // --- Логика подсветки фильтров ---
+                let isMatch = false, isGood = false, isBad = false;
 
                 if (currentFilterValue !== 'all' && t.stats) {
                     Object.entries(t.stats).forEach(([key, val]) => {
@@ -286,48 +270,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         if (activeFilterMode === 'category') {
                             if (currentFilterValue === 'radiation' && k.includes('радиации')) relevant = true;
-                            if (currentFilterValue === 'protection' && (k.includes('защита') || k.includes('стойкость'))) relevant = true;
+                            if (currentFilterValue === 'protection' && (k.includes('защита') || k === 'стойкость')) relevant = true;
                             if (currentFilterValue === 'food' && (k === 'еда' || k === 'вода')) relevant = true;
                             if (currentFilterValue === 'healing' && (k.includes('лечение') || k.includes('здоровье') || k.includes('кровь'))) relevant = true;
                             if (currentFilterValue === 'healing' && k.includes('шанс')) relevant = true;
                             if (currentFilterValue === 'stats' && (k.includes('выносливость') || k.includes('прыжка') || k === 'температура')) relevant = true;
                         }
 
-                        if (activeFilterMode === 'detailed' && k === currentFilterValue.toLowerCase()) {
-                            relevant = true;
-                        }
+                        if (activeFilterMode === 'detailed' && k === currentFilterValue.toLowerCase()) relevant = true;
 
                         if (relevant) {
                             isMatch = true;
                             if (k.includes('шанс') || k.includes('накопление')) {
-                                if (v > 0) isBad = true;
+                                if (v > 0) isBad = true; else isGood = true;
                             } else if (k === 'температура') {
-                                if (v < -20 || v > 40) isBad = true;
-                                else isGood = true;
+                                if (v < -20 || v > 40) isBad = true; else isGood = true;
                             } else {
                                 if (k.includes('накопление') && k.includes('радиации')) {
-                                    if (v > 0) isBad = true;
-                                    else isGood = true;
-                                } else if (k.includes('вывод') || k.includes('защита')) {
-                                    if (v > 0) isGood = true;
+                                    if (v > 0) isBad = true; else isGood = true;
+                                } else if (k.includes('вывод') || k.includes('защита') || k === 'стойкость') {
+                                    if (v > 0) isGood = true; else isBad = true; // Стойкость: минус = плохо
                                 } else {
-                                    if (v > 0) isGood = true;
+                                    if (v > 0) isGood = true; else isBad = true;
                                 }
                             }
                         }
                     });
                 }
 
+                // Применение классов подсветки
+                cell.classList.remove('highlight-good', 'highlight-bad', 'highlight-mixed');
                 if (isMatch) {
-                    if (isBad) {
-                        cell.classList.add('highlight-bad');
-                        cell.classList.remove('highlight-good');
-                    } else if (isGood) {
-                        cell.classList.add('highlight-good');
-                        cell.classList.remove('highlight-bad');
-                    }
-                } else {
-                    cell.classList.remove('highlight-good', 'highlight-bad');
+                    if (isGood && isBad) cell.classList.add('highlight-mixed');
+                    else if (isBad) cell.classList.add('highlight-bad');
+                    else if (isGood) cell.classList.add('highlight-good');
                 }
 
                 // Двойной клик
@@ -340,9 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Тултип
                 cell.addEventListener('mouseenter', (e) => { showTooltip(e, art.id, t.tier); });
                 cell.addEventListener('mousemove', (e) => {
-                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) {
-                        updateTooltipPosition(e);
-                    }
+                    if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === art.id) updateTooltipPosition(e);
                 });
                 cell.addEventListener('mouseleave', () => { hideTooltip(); });
 
@@ -374,47 +348,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!filterContainer) return;
         filterContainer.innerHTML = '';
 
-        // Карта эмодзи для категорий
-        const categoryEmojis = {
-            'all': '🔄',
-            'radiation': '☢️',
-            'protection': '🛡️',
-            'food': '🍽️',
-            'healing': '❤️',
-            'stats': '⚡'
-        };
-
-        // Карта эмодзи для характеристик
+        const categoryEmojis = { 'all': '🔄', 'radiation': '☢️', 'protection': '🛡️', 'food': '🍽️', 'healing': '❤️', 'stats': '⚡' };
         const statEmojis = {
-            'вода': '💧',
-            'вывод радиации': '🔻☢️',
-            'выносливость': '💪',
-            'высота прыжка': '🦘',
-            'еда': '🍽️',
-            'защита от аномалий': '🛡🌀',
-            'защита от пуль': '🛡🔫',
-            'защита от ударов': '🛡👊',
-            'здоровье': '💊❤️',
-            'кровь': '💊🩸',
-            'лечение переломов': '💊🦴',
-            'лечение порезов': '💊🔪',
-            'накопление радиации': '🔺☢️',
-            'стойкость': '🧱',
-            'температура': '🌡️',
-            'шанс на порез': '🍀🔪',
-            'шанс перелома': '🍀🦴'
+            'вода': '💧', 'вывод радиации': '🔻☢️', 'выносливость': '💪', 'высота прыжка': '🦘', 'еда': '🍖',
+            'защита от аномалий': '🛡🌀', 'защита от пуль': '🛡🔫', 'защита от ударов': '🛡👊',
+            'здоровье': '💊❤️', 'кровь': '💊🩸', 'лечение переломов': '💊🦴', 'лечение порезов': '💊🩹',
+            'накопление радиации': '🔺☢️', 'стойкость': '🧱', 'температура': '🌡️',
+            'шанс на порез': '⚠️🩹', 'шанс перелома': '⚠️🦴'
         };
 
-        // Кнопка "Все"
         const resetBtn = document.createElement('button');
         resetBtn.className = 'filter-btn ' + (currentFilterValue === 'all' ? 'active' : '');
         resetBtn.textContent = categoryEmojis['all'];
         resetBtn.title = 'Все';
-        resetBtn.onclick = () => {
-            currentFilterValue = 'all';
-            renderFilters();
-            renderPalette(allArtifacts);
-        };
+        resetBtn.onclick = () => { currentFilterValue = 'all'; renderFilters(); renderPalette(allArtifacts); };
         filterContainer.appendChild(resetBtn);
 
         if (activeFilterMode === 'category') {
@@ -424,106 +371,94 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.className = 'filter-btn ' + (currentFilterValue === cat.id ? 'active' : '');
                 btn.textContent = categoryEmojis[cat.id] || '❓';
                 btn.title = cat.label;
-                btn.onclick = () => {
-                    currentFilterValue = cat.id;
-                    renderFilters();
-                    renderPalette(allArtifacts);
-                };
+                btn.onclick = () => { currentFilterValue = cat.id; renderFilters(); renderPalette(allArtifacts); };
                 filterContainer.appendChild(btn);
             });
         } else {
-            const sortedStats = Array.from(availableStats).sort();
-            sortedStats.forEach(stat => {
+            Array.from(availableStats).sort().forEach(stat => {
                 const btn = document.createElement('button');
                 const statLower = stat.toLowerCase();
                 btn.className = 'filter-btn ' + (currentFilterValue === stat ? 'active' : '');
                 btn.textContent = statEmojis[statLower] || '📦';
                 btn.title = stat;
-                btn.onclick = () => {
-                    currentFilterValue = stat;
-                    renderFilters();
-                    renderPalette(allArtifacts);
-                };
+                btn.onclick = () => { currentFilterValue = stat; renderFilters(); renderPalette(allArtifacts); };
                 filterContainer.appendChild(btn);
             });
         }
     }
 
-    modeCategoryBtn.onclick = () => {
-        activeFilterMode = 'category';
-        currentFilterValue = 'all';
+    if (modeCategoryBtn) modeCategoryBtn.onclick = () => {
+        activeFilterMode = 'category'; currentFilterValue = 'all';
         modeCategoryBtn.classList.add('active');
-        modeDetailedBtn.classList.remove('active');
-        renderFilters();
-        renderPalette(allArtifacts);
+        if (modeDetailedBtn) modeDetailedBtn.classList.remove('active');
+        renderFilters(); renderPalette(allArtifacts);
     };
 
-    modeDetailedBtn.onclick = () => {
-        activeFilterMode = 'detailed';
-        currentFilterValue = 'all';
+    if (modeDetailedBtn) modeDetailedBtn.onclick = () => {
+        activeFilterMode = 'detailed'; currentFilterValue = 'all';
         modeDetailedBtn.classList.add('active');
-        modeCategoryBtn.classList.remove('active');
-        renderFilters();
-        renderPalette(allArtifacts);
+        if (modeCategoryBtn) modeCategoryBtn.classList.remove('active');
+        renderFilters(); renderPalette(allArtifacts);
     };
 
-    searchInput.addEventListener('input', e => {
+    if (searchInput) searchInput.addEventListener('input', e => {
         const q = e.target.value.toLowerCase().trim();
         const filtered = allArtifacts.filter(a => a.name.toLowerCase().includes(q));
         renderPalette(filtered);
     });
 
-    buildZone.addEventListener('dragover', e => { e.preventDefault(); buildZone.classList.add('drag-over'); e.dataTransfer.dropEffect = 'copy'; });
-    buildZone.addEventListener('dragleave', e => { if (!buildZone.contains(e.relatedTarget)) buildZone.classList.remove('drag-over'); });
-    buildZone.addEventListener('drop', e => {
-        e.preventDefault();
-        buildZone.classList.remove('drag-over');
-        try {
-            const rawData = e.dataTransfer.getData('text/plain');
-            if (!rawData || rawData.trim() === '') {
-                console.warn('Drop: пустые данные');
-                return;
-            }
-            const data = JSON.parse(rawData);
-            if (!data.id || !data.name) throw new Error('Некорректная структура');
-            addArtifactToBuild(data);
-        } catch (err) {
-            console.error('Drop error:', err);
-        }
-    });
+    if (buildZone) {
+        buildZone.addEventListener('dragover', e => { e.preventDefault(); buildZone.classList.add('drag-over'); e.dataTransfer.dropEffect = 'copy'; });
+        buildZone.addEventListener('dragleave', e => { if (!buildZone.contains(e.relatedTarget)) buildZone.classList.remove('drag-over'); });
+        buildZone.addEventListener('drop', e => {
+            e.preventDefault(); buildZone.classList.remove('drag-over');
+            try {
+                const rawData = e.dataTransfer.getData('text/plain');
+                if (!rawData || rawData.trim() === '') { console.warn('Drop: пустые данные'); return; }
+                const data = JSON.parse(rawData);
+                if (!data.id || !data.name) throw new Error('Некорректная структура');
+                addArtifactToBuild(data);
+            } catch (err) { console.error('Drop error:', err); }
+        });
+    }
 
     function addArtifactToBuild(data) {
         const existing = buildList.find(b => b.id === data.id && b.tier === data.tier);
         if (existing) existing.copies++; else buildList.push({ ...data, copies: 1 });
-        renderBuild(); updateStats(); setCurrentLoadedBuild(null);
-        scrollToBuildBottom();
+        renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom();
     }
 
-    // ---------- Рендер сборки ----------
     function renderBuild() {
+        if (!buildZone) return;
         buildZone.innerHTML = '';
-        countDisplay.textContent = 'Артефактов в сборке: ' + buildList.reduce((a, b) => a + b.copies, 0);
+        if (countDisplay) countDisplay.textContent = 'Артефактов в сборке: ' + buildList.reduce((a, b) => a + b.copies, 0);
+        
         if (buildList.length === 0) {
             buildZone.innerHTML = '<div class="drop-placeholder">Перетащите артефакты сюда</div>';
             return;
         }
+        
         buildList.forEach((item, idx) => {
             const slot = document.createElement('div');
             slot.className = 'build-slot';
             slot.innerHTML = '<button class="remove">&times;</button><img src="' + item.img + '"><div class="name-tier">' + item.name + ' <span>T' + item.tier + '</span></div><div class="qty-controls"><button class="qty-btn dec">&minus;</button><span class="qty-val">' + item.copies + '</span><button class="qty-btn inc">&plus;</button></div><div class="tier-btns"><button class="tier-btn" data-t="1">1</button><button class="tier-btn" data-t="2">2</button><button class="tier-btn" data-t="3">3</button><button class="tier-btn" data-t="4">4</button></div>';
 
             const img = slot.querySelector('img');
-            img.addEventListener('mouseenter', (e) => { showTooltip(e, item.id, item.tier); });
-            img.addEventListener('mousemove', (e) => {
-                if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === item.id) {
-                    updateTooltipPosition(e);
-                }
-            });
-            img.addEventListener('mouseleave', () => { hideTooltip(); });
+            if (img) {
+                img.addEventListener('mouseenter', (e) => { showTooltip(e, item.id, item.tier); });
+                img.addEventListener('mousemove', (e) => { if (currentTooltipArtifact && currentTooltipArtifact.artifact.id === item.id) updateTooltipPosition(e); });
+                img.addEventListener('mouseleave', () => { hideTooltip(); });
+            }
 
-            slot.querySelector('.remove').onclick = () => { buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
-            slot.querySelector('.dec').onclick = () => { item.copies > 1 ? item.copies-- : buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
-            slot.querySelector('.inc').onclick = () => { item.copies++; renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
+            const removeBtn = slot.querySelector('.remove');
+            if (removeBtn) removeBtn.onclick = () => { buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
+            
+            const decBtn = slot.querySelector('.dec');
+            if (decBtn) decBtn.onclick = () => { item.copies > 1 ? item.copies-- : buildList.splice(idx, 1); renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
+            
+            const incBtn = slot.querySelector('.inc');
+            if (incBtn) incBtn.onclick = () => { item.copies++; renderBuild(); updateStats(); setCurrentLoadedBuild(null); scrollToBuildBottom(); };
+            
             slot.querySelectorAll('.tier-btn').forEach(btn => {
                 const t = parseInt(btn.dataset.t);
                 if (t === item.tier) btn.classList.add('active');
@@ -537,14 +472,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateStats() {
-        let radGood = 0, radBad = 0;
-        let cutGood = 0, cutBad = 0;
-        let fracGood = 0, fracBad = 0;
+        if (!statsPanel) return;
+        let radGood = 0, radBad = 0, cutGood = 0, cutBad = 0, fracGood = 0, fracBad = 0;
         const totals = {};
 
-        function isBadKey(k) {
-            return k.includes('шанс') || k.includes('накопление') || k.includes('заражение');
-        }
+        function isBadKey(k) { return k.includes('шанс') || k.includes('накопление') || k.includes('заражение'); }
 
         buildList.forEach(item => {
             const artData = allArtifacts.find(a => a.id === item.id);
@@ -554,18 +486,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const num = typeof value === 'string' ? parseFloat(value.replace(',', '.')) : Number(value);
                 if (isNaN(num)) continue;
                 const k = key.toLowerCase();
-                if (k.includes('радиации')) {
-                    if (isBadKey(k)) radBad += num * item.copies;
-                    else radGood += num * item.copies;
-                } else if (k.includes('порез')) {
-                    if (isBadKey(k)) cutBad += num * item.copies;
-                    else cutGood += num * item.copies;
-                } else if (k.includes('перелом')) {
-                    if (isBadKey(k)) fracBad += num * item.copies;
-                    else fracGood += num * item.copies;
-                } else {
-                    totals[key] = (totals[key] || 0) + num * item.copies;
-                }
+                if (k.includes('радиации')) { if (isBadKey(k)) radBad += num * item.copies; else radGood += num * item.copies; }
+                else if (k.includes('порез')) { if (isBadKey(k)) cutBad += num * item.copies; else cutGood += num * item.copies; }
+                else if (k.includes('перелом')) { if (isBadKey(k)) fracBad += num * item.copies; else fracGood += num * item.copies; }
+                else totals[key] = (totals[key] || 0) + num * item.copies;
             }
         });
 
@@ -589,9 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Параметры': ['Выносливость', 'Высота прыжка', 'Температура']
         };
 
-        const grouped = {};
-        const ungrouped = {};
-
+        const grouped = {}, ungrouped = {};
         for (const [key, value] of Object.entries(totals)) {
             if (Math.abs(value) < 0.01) continue;
             let placed = false;
@@ -599,8 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (members.includes(key)) {
                     if (!grouped[groupName]) grouped[groupName] = [];
                     grouped[groupName].push({ key, value });
-                    placed = true;
-                    break;
+                    placed = true; break;
                 }
             }
             if (!placed) ungrouped[key] = value;
@@ -617,16 +538,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         statsPanel.innerHTML = '';
-        const groupOrder = ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'];
-
-        groupOrder.forEach(name => {
-            if (!grouped[name] || grouped[name].length === 0) return;
+        ['Радиация', 'Защита', 'Еда и Вода', 'Лечение и Травмы', 'Параметры'].forEach(name => {
+            if (!grouped[name] || !grouped[name].length) return;
             const groupDiv = document.createElement('div');
             groupDiv.className = 'stat-group';
             grouped[name].sort((a, b) => a.key.localeCompare(b.key)).forEach(({ key, value }) => {
                 const row = document.createElement('div');
                 row.className = ('stat-row ' + getColorClass(key, value)).trim();
-                row.innerHTML = '<span>' + key + '</span><span>' + (value > 0 ? '+' : '') + parseFloat(value.toFixed(2)) + '</span>';
+                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
                 groupDiv.appendChild(row);
             });
             statsPanel.appendChild(groupDiv);
@@ -639,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const value = ungrouped[key];
                 const row = document.createElement('div');
                 row.className = ('stat-row ' + getColorClass(key, value)).trim();
-                row.innerHTML = '<span>' + key + '</span><span>' + (value > 0 ? '+' : '') + parseFloat(value.toFixed(2)) + '</span>';
+                row.innerHTML = `<span>${key}</span><span>${value > 0 ? '+' : ''}${parseFloat(value.toFixed(2))}</span>`;
                 groupDiv.appendChild(row);
             });
             statsPanel.appendChild(groupDiv);
@@ -650,6 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function saveBuilds(builds) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(builds)); updateBuildsDropdown(); } catch { showModal('Ошибка', 'Не удалось сохранить.', [{ label: 'OK' }]); } }
 
     function updateBuildsDropdown() {
+        if (!selectBuilds) return;
         const builds = getSavedBuilds();
         selectBuilds.innerHTML = '<option value="">Загрузить сборку...</option>';
         Object.keys(builds).sort().forEach(name => {
@@ -658,9 +578,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentLoadedBuildName && !builds[currentLoadedBuildName]) setCurrentLoadedBuild(null);
     }
 
-    function setCurrentLoadedBuild(name) { currentLoadedBuildName = name; selectBuilds.value = name || ''; deleteBuildBtn.disabled = !name; }
+    function setCurrentLoadedBuild(name) { currentLoadedBuildName = name; if (selectBuilds) selectBuilds.value = name || ''; if (deleteBuildBtn) deleteBuildBtn.disabled = !name; }
 
-    document.getElementById('save-build').onclick = () => {
+    const saveBtn = document.getElementById('save-build');
+    if (saveBtn) saveBtn.onclick = () => {
         if (!buildList.length) return showModal('Внимание', 'Сборка пуста.', [{ label: 'OK' }]);
         showModal('Сохранить сборку', '<input type="text" id="save-build-name" placeholder="Название..." autofocus>', [
             { label: 'Отмена' }, { label: 'Сохранить', action: () => {
@@ -674,13 +595,13 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { const inp = document.getElementById('save-build-name'); if (inp) inp.focus(); }, 50);
     };
 
-    selectBuilds.onchange = () => {
+    if (selectBuilds) selectBuilds.onchange = () => {
         const name = selectBuilds.value; if (!name) return;
         const builds = getSavedBuilds();
         if (builds[name]) { buildList = JSON.parse(JSON.stringify(builds[name])); renderBuild(); updateStats(); setCurrentLoadedBuild(name); scrollToBuildBottom(); }
     };
 
-    deleteBuildBtn.onclick = () => {
+    if (deleteBuildBtn) deleteBuildBtn.onclick = () => {
         if (!currentLoadedBuildName) return;
         showModal('Удалить сборку?', 'Удалить "' + currentLoadedBuildName + '"?', [
             { label: 'Отмена' }, { label: 'Удалить', danger: true, action: () => {
@@ -692,7 +613,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function loadBuildFromUrlField() {
-        const url = loadFromUrlInput.value.trim(); if (!url) return;
+        const url = loadFromUrlInput ? loadFromUrlInput.value.trim() : '';
+        if (!url) return;
         try {
             let b64 = url.includes('?b=') ? new URLSearchParams(url.split('?')[1]).get('b') : url;
             if (!b64) throw new Error('Нет параметра ?b=');
@@ -701,19 +623,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const rawJson = decodeURIComponent(escape(atob(base64)));
             const normalized = normalizeSharedBuild(rawJson);
             if (normalized.length > 0) {
-                buildList = normalized;
-                renderBuild(); updateStats(); setCurrentLoadedBuild(null);
-                loadFromUrlInput.value = ''; scrollToBuildBottom();
+                buildList = normalized; renderBuild(); updateStats(); setCurrentLoadedBuild(null);
+                if (loadFromUrlInput) loadFromUrlInput.value = ''; scrollToBuildBottom();
                 showModal('Успех', 'Сборка загружена (формат адаптирован).', [{ label: 'OK' }]);
-            } else {
-                showModal('Ошибка', 'Не удалось распознать данные сборки.', [{ label: 'OK' }]);
-            }
-        } catch (e) {
-            console.error(e); showModal('Ошибка', 'Некорректная ссылка.', [{ label: 'OK' }]);
-        }
+            } else { showModal('Ошибка', 'Не удалось распознать данные сборки.', [{ label: 'OK' }]); }
+        } catch (e) { console.error(e); showModal('Ошибка', 'Некорректная ссылка.', [{ label: 'OK' }]); }
     }
-    loadUrlBtn.onclick = loadBuildFromUrlField;
-    loadFromUrlInput.addEventListener('keypress', e => { if (e.key === 'Enter') loadBuildFromUrlField(); });
+    if (loadUrlBtn) loadUrlBtn.onclick = loadBuildFromUrlField;
+    if (loadFromUrlInput) loadFromUrlInput.addEventListener('keypress', e => { if (e.key === 'Enter') loadBuildFromUrlField(); });
 
     function tryLoadFromUrl() {
         const b64 = new URLSearchParams(window.location.search).get('b'); if (!b64) return;
@@ -722,21 +639,20 @@ document.addEventListener('DOMContentLoaded', () => {
             while (base64.length % 4) base64 += '=';
             const rawJson = decodeURIComponent(escape(atob(base64)));
             const normalized = normalizeSharedBuild(rawJson);
-            if (normalized.length > 0) {
-                buildList = normalized; renderBuild(); updateStats(); setCurrentLoadedBuild(null);
-                history.replaceState(null, '', window.location.pathname); scrollToBuildBottom();
-            }
+            if (normalized.length > 0) { buildList = normalized; renderBuild(); updateStats(); setCurrentLoadedBuild(null); history.replaceState(null, '', window.location.pathname); scrollToBuildBottom(); }
         } catch (e) { console.warn('Ошибка автозагрузки из URL:', e); }
     }
 
-    document.getElementById('clear-build').onclick = () => {
+    const clearBtn = document.getElementById('clear-build');
+    if (clearBtn) clearBtn.onclick = () => {
         if (!buildList.length) return;
         showModal('Очистить?', 'Удалить все артефакты?', [
             { label: 'Отмена' }, { label: 'Очистить', danger: true, action: () => { buildList = []; renderBuild(); updateStats(); setCurrentLoadedBuild(null); } }
         ]);
     };
 
-    document.getElementById('share-build').onclick = () => {
+    const shareBtn = document.getElementById('share-build');
+    if (shareBtn) shareBtn.onclick = () => {
         if (!buildList.length) return showModal('Внимание', 'Сборка пуста.', [{ label: 'OK' }]);
         let b64 = btoa(unescape(encodeURIComponent(JSON.stringify(buildList)))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
         const url = window.location.origin + window.location.pathname + '?b=' + b64;

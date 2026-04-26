@@ -601,6 +601,13 @@ html, body {
     box-shadow: 0 0 6px rgba(255, 107, 107, 0.3);
     background: rgba(255, 107, 107, 0.05);
 }
+
+.tier-cell.highlight-mixed {
+    border: 2px dashed;
+    border-color: #4ecca3 #ff6b6b #4ecca3 #ff6b6b;
+    box-shadow: 0 0 6px rgba(255, 165, 0, 0.25);
+    background: rgba(255, 165, 0, 0.05);
+}
 /* ---------- Адаптив ---------- */
 @media (max-width: 1000px) {
     /* 1. Переключаем главную сетку в колонку */
